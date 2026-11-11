@@ -1,0 +1,39 @@
+/* MARK: RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    scrollbar-width: none;
+}
+
+ol,
+ul,
+dl,
+menu {
+    list-style-type: "";
+}
+
+blockquote:before,
+q:before {
+    content: '“';
+}
+
+blockquote:after,
+q:after {
+    content: '”';
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}

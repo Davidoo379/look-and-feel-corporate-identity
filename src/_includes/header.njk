@@ -1,0 +1,29 @@
+<a href="/index.html">
+  {% include 'svgs/logo.njk' %}
+</a>
+<h1>{{ title }}</h1>
+<button>
+  {% include 'svgs/hamburger.njk' %}
+</button>
+<nav>
+  <button>
+    {% include 'svgs/x.njk' %}
+  </button>
+  <a class="opportunities" href="./content/opportunities.html">
+    <span>Opportunities</span>
+    {% include 'svgs/airhorn.njk' %}
+  </a>
+
+  <a
+    class="events-and-conventions"
+    href="./content/events-and-conventions.html"
+  >
+    <span>Events & conventions</span>
+    {% include 'svgs/calendar.njk' %}
+  </a>
+
+  <a class="colleagues" href="./content/colleagues.html">
+    <span>Colleagues</span>
+    {% include 'svgs/group.njk' %}
+  </a>
+</nav>

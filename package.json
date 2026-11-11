@@ -1,0 +1,25 @@
+{
+  "name": "look-and-feel-corporate-identity",
+  "version": "1.0.0",
+  "description": "Ontwerp en maak voor een opdrachtgever een website op basis van een bestaande huisstijl.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davidoo379/look-and-feel-corporate-identity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Davidoo379/look-and-feel-corporate-identity/issues"
+  },
+  "homepage": "https://github.com/Davidoo379/look-and-feel-corporate-identity#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}
