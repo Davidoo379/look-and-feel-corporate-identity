@@ -56,3 +56,43 @@ layout: "base.njk"
     <p>Swipe left to see more recommendations</p>
   </div>
 </section>
+<section>
+  <h2>Your booked marked content</h2>
+  <div>
+    <select name="bookmark-filter" id="bookmark-filter">
+      <option value="show-all-content">Show all content</option>
+      <option value="colleagues">Colleagues</option>
+      <option value="opportunities">Opportunities</option>
+      <option value="open-questions">Open questions</option>
+      <option value="events">Events</option>
+    </select>
+
+    <search>
+      <button popovertarget="bookmark-search-form">
+        {% include "svgs/magnifying-glass.njk" %}
+      </button>
+      <form action="search" popover id="bookmark-search-form">
+        <label for="bookmark-search">Search in bookmarks:</label>
+        <input
+          type="search"
+          id="bookmark-search"
+          placeholder="search in bookmarks"
+        >
+      </form>
+    </search>
+  </div>
+  <ul class="horizontal-carousel">
+    {%- for card in collections.bookmarked -%}
+      <li>
+        <article>
+          <h3>{{ card.data.name }}</h3>
+          <a href="{{ card.url | url}}">Open Card</a>
+        </article>
+      </li>
+    {%- endfor -%}
+  </ul>
+  <div class="swipe-tip">
+    {% include "svgs/hand-swipe.njk" %}
+    <p>Swipe left to see more recommendations</p>
+  </div>
+</section>
