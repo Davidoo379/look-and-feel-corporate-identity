@@ -44,10 +44,8 @@ layout: "base.njk"
   <ul class="horizontal-carousel">
     {%- for card in collections.recommended -%}
       <li>
-        <article>
-          <h3>{{ card.data.name }}</h3>
-          <a href="{{ card.url | url}}">Open Card</a>
-        </article>
+        {% set layout = card.data.layoutCard or "default" %}
+        {% include "cards/" + layout + ".njk" %}
       </li>
     {%- endfor -%}
   </ul>
@@ -84,10 +82,8 @@ layout: "base.njk"
   <ul class="horizontal-carousel">
     {%- for card in collections.bookmarked -%}
       <li>
-        <article>
-          <h3>{{ card.data.name }}</h3>
-          <a href="{{ card.url | url}}">Open Card</a>
-        </article>
+        {% set layout = card.data.layoutCard or "default" %}
+        {% include "cards/" + layout + ".njk" %}
       </li>
     {%- endfor -%}
   </ul>
