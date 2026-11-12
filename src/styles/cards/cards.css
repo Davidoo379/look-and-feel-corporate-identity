@@ -31,7 +31,7 @@ article {
         bottom: 100%;
         padding-left: 1.5rem;
         left: 0;
-        color: var(--d100-eclipse);
+        color: var(--text-darkest);
 
         li {
             border-radius: 8px 8px 0px 0px;
@@ -43,24 +43,24 @@ article {
         }
 
         .project {
-            background-color: var(--base-cockatoo);
+            background-color: var(--background-green);
         }
 
         .internship,
         .open-question {
-            background-color: var(--l500-cockatoo);
+            background-color: var(--background-green-bright);
         }
 
-        .webinar-tag {
-            background-color: var(--l400-lustful-wishes);
+        .webinar {
+            background-color: var(--background-pink);
         }
 
         .congress {
-            background-color: var(--d100-bleached-silk);
+            background-color: var(--background-dark);
         }
 
         .symposium {
-            background-color: var(--l400-xavier-blue);
+            background-color: var(--background-blue);
         }
     }
 

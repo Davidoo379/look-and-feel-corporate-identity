@@ -1,0 +1,60 @@
+.event {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: min-content 1.2rem 1.2rem 1.2rem 1fr min-content;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--d700-bleached-silk);
+
+    header {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    >time {
+        background-color: var(--base-bleached-silk);
+        grid-column: 1/2;
+        grid-row: 2/5;
+        justify-self: center;
+        align-self: start;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        color: var(--d700-cockatoo);
+
+        font-family: SF Pro Rounded;
+        font-weight: 700;
+        font-size: 16px;
+
+
+        span {
+            padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+            display: block;
+        }
+
+        span:last-of-type {
+            padding-top: 0.1rem;
+            background-color: var(--l700-cockatoo);
+            border-radius: 0px 0px 8px 8px;
+        }
+    }
+
+    .title {
+        grid-column: 1/3;
+        grid-row: 5/6;
+        font-weight: 600;
+        font-size: 22px;
+        color: var(--base-night-rider);
+        padding-top: 1rem;
+    }
+
+    p:has(.attendees) {
+        grid-column: 1/3;
+        padding-top: 1rem;
+    }
+}

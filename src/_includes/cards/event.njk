@@ -1,0 +1,28 @@
+<article class="event">
+  <a href="./details/event-details.html">Open Card</a>
+  {% include "cards/card-buttons.njk" %}
+
+  <time class="date">
+    <span class="dateShort">{{ card.data.time.dateShort }}</span>
+    <span class="weekday">{{ card.data.time.weekday }}</span>
+  </time>
+
+  <p class="location">Location: {{ card.data.location }}</p>
+
+  <p class="time">
+    Time: <time class="startTime">{{ card.data.time.start }} </time> - <time
+      class="endTime"
+    >{{ card.data.time.end }}</time>
+  </p>
+  <p class="organizer">Organizer: {{ card.data.organizer }}</p>
+  <h3 class="title">{{ card.data.cardTabs }}: {{ card.data.title }}</h3>
+  <p class="attendees">{{ card.data.attendees }} colleagues plan to attend</p>
+
+  <footer class="cardTags">
+    <ul class="cardTags">
+      {%- for cardTab in card.data.cardTabs -%}
+        <li class="{{ cardTab | kabab}}">{{ cardTab }}</li>
+      {%- endfor -%}
+    </ul>
+  </footer>
+</article>
