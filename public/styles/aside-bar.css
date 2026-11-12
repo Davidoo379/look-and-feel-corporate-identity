@@ -1,6 +1,6 @@
 aside {
-    background-color: var(--background-medium);
-    outline: 2px solid var(--background-dark);
+    background-color: var(--background-dark);
+    outline: 2px solid var(--background-medium);
     position: fixed;
     bottom: 0px;
     height: 86px;

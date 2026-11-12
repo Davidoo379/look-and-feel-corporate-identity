@@ -1,5 +1,5 @@
 header {
-    background-color: var(--background-dark);
+    background-color: var(--background-medium);
     position: sticky;
     top: 0;
     display: grid;
@@ -50,7 +50,7 @@ header {
             display: flex;
             height: 270px;
             top: 0;
-            background-color: var(--background-dark);
+            background-color: var(--background-medium);
             transition: 0.2s;
 
             a {
@@ -77,7 +77,7 @@ header {
 
             &:hover,
             &:focus-visible {
-                color: var(--text-lightest);
+                color: var(--text-darkest);
             }
 
             &.opportunities {
@@ -91,7 +91,7 @@ header {
                     background-color: var(--hover-green);
 
                     svg path {
-                        stroke: var(--icon-light);
+                        stroke: var(--icon-dark);
                     }
                 }
             }
@@ -107,7 +107,7 @@ header {
                     background-color: var(--hover-blue);
 
                     svg path {
-                        fill: var(--icon-light);
+                        fill: var(--icon-dark);
                     }
                 }
             }
@@ -123,7 +123,7 @@ header {
                     background-color: var(--hover-pink);
 
                     svg path {
-                        fill: var(--icon-light);
+                        fill: var(--icon-dark);
                     }
                 }
             }
