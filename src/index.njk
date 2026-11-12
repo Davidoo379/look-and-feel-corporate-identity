@@ -19,3 +19,40 @@ layout: "base.njk"
     </ul>
   </nav>
 </section>
+<section>
+  <h2>Recommend for you</h2>
+  <p>Projects, questions and colleagues selected based on your preferences</p>
+  <div>
+    <select name="recommended-filter" id="recommended-filter">
+      <option value="show-all-content">Show all content</option>
+      <option value="colleagues">Colleagues</option>
+      <option value="opportunities">Opportunities</option>
+      <option value="open-questions">Open questions</option>
+      <option value="events">Events</option>
+    </select>
+    <button
+      onclick="alert = 'Implementation missing'"
+      popovertarget="refresh-popover-menu"
+    >
+      {% include "svgs/arrow-spiral.njk" %}
+    </button>
+  </div>
+  <div popover id="refresh-popover-menu">
+    <a href="#">Refresh the suggestion</a>
+    <a href="/user/settings.html/#feed-prefrences">Change your preferences</a>
+  </div>
+  <ul class="horizontal-carousel">
+    {%- for card in collections.recommended -%}
+      <li>
+        <article>
+          <h3>{{ card.data.name }}</h3>
+          <a href="{{ card.url | url}}">Open Card</a>
+        </article>
+      </li>
+    {%- endfor -%}
+  </ul>
+  <div class="swipe-tip">
+    {% include "svgs/hand-swipe.njk" %}
+    <p>Swipe left to see more recommendations</p>
+  </div>
+</section>
