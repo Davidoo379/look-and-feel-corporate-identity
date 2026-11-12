@@ -1,0 +1,109 @@
+aside {
+    background-color: var(--background-medium);
+    outline: 2px solid var(--background-dark);
+    position: fixed;
+    bottom: 0px;
+    height: 86px;
+    width: 100%;
+    z-index: 2;
+
+    @media (min-width: 900px) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        position: static;
+        height: 100%;
+        z-index: 3;
+        outline: unset;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 20px;
+
+
+        @media (min-width: 900px) {
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            padding-block: 2rem;
+
+            a:nth-of-type(3) {
+                order: -1;
+                aspect-ratio: 1/1;
+                scale: 2;
+                display: flex;
+                align-items: center;
+                background-color: var(--COLOR-NEW-POST-BACKGROUND);
+                border-radius: 9999px;
+                width: unset;
+                /* margin-bottom: auto; */
+
+                span {
+                    display: none;
+                }
+            }
+
+            a:nth-of-type(1) {
+                margin-top: 1rem;
+            }
+        }
+
+        a {
+            padding: 8px;
+            border-radius: 5px;
+            background-color: transparent;
+            aspect-ratio: 1/1;
+            width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (min-width: 900px) {
+                gap: 10px;
+                width: 100%;
+
+                @media (prefers-reduced-motion: no-preference) {
+                    transition: 0.1s;
+                }
+            }
+
+            svg path {
+                stroke: transparent;
+                fill: var(--icon-dark)
+            }
+
+
+            &:hover {
+                background-color: var(--background-darkest);
+
+                svg path {
+                    stroke: transparent;
+                    fill: var(--icon-light)
+                }
+
+                span {
+                    color: var(--COLOR-BOTTOM-BAR-BUTTON-ICON-HIGHLIGHT);
+                }
+
+                @media (min-width: 900px) {
+                    border-radius: 50%;
+                }
+            }
+
+            span {
+                display: none;
+                color: var(--COLOR-BOTTOM-BAR-BUTTON-ICON);
+                font-size: 20px;
+
+                @media (min-width: 900px) {
+                    display: unset;
+                }
+            }
+        }
+
+    }
+}
