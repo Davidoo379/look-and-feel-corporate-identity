@@ -1,10 +1,11 @@
 article {
-    background-color: var(--white);
+    background-color: var(--background-light);
     border-radius: 1.5rem;
+    border: 3px solid var(--background-medium);
     padding: 1rem;
     margin-top: 2rem;
     position: relative;
-    box-shadow: 0px 0px 15px var(--d200-bleached-silk);
+    box-shadow: 0px 0px 15px var(--card-shadow);
     width: 100%;
 
 
@@ -75,6 +76,16 @@ article {
         background-color: transparent;
         width: 40px;
         anchor-name: --button;
+
+        svg {
+
+            path,
+            circle,
+            ellipse {
+                fill: var(--icon-medium);
+            }
+
+        }
     }
 
     [popover]:popover-open {
@@ -82,28 +93,112 @@ article {
         position-anchor: --button;
         top: anchor(bottom);
         right: anchor(right);
-        border-radius: 4px;
 
-        background-color: var(--base-night-rider);
+        background-color: var(--background-darkest);
         display: flex;
         flex-direction: column;
-        width: min-content;
+        width: 300px;
         justify-self: end;
         z-index: 0;
-
+        overflow: clip;
 
         a,
         button {
             width: 100%;
-            color: var(--white);
+            color: var(--text-lightest);
             white-space: nowrap;
             text-align: start;
             align-self: start;
             padding: 0.5rem;
+            display: flex;
+            gap: 8px;
+            font-size: 1em;
+
+            svg {
+
+                path,
+                circle,
+                ellipse {
+                    fill: var(--icon-light);
+                }
+            }
 
             &:hover {
-                color: var(--base-night-rider);
-                background-color: var(--white);
+                color: var(--text-darkest);
+                background-color: var(--background-light);
+            }
+        }
+
+        .suggested {
+            svg {
+
+                path,
+                circle,
+                ellipse {
+                    fill: var(--icon-light);
+                    stroke: transparent;
+                }
+            }
+
+            &:hover {
+                svg {
+
+                    path,
+                    circle,
+                    ellipse {
+                        fill: var(--icon-dark);
+                        stroke: transparent;
+                    }
+                }
+            }
+        }
+
+        .report {
+            svg {
+
+                path,
+                circle,
+                ellipse {
+                    fill: var(--icon-light);
+                    stroke: var(--icon-light);
+                }
+            }
+
+            &:hover {
+                svg {
+
+                    path,
+                    circle,
+                    ellipse {
+                        fill: var(--icon-dark);
+                        stroke: var(--icon-dark);
+                    }
+                }
+            }
+        }
+
+        .thumbs-up,
+        .thumbs-down {
+            svg {
+
+                path,
+                circle,
+                ellipse {
+                    fill: transparent;
+                    stroke: var(--icon-light);
+                }
+            }
+
+            &:hover {
+                svg {
+
+                    path,
+                    circle,
+                    ellipse {
+                        fill: transparent;
+                        stroke: var(--icon-dark);
+                    }
+                }
             }
         }
     }
@@ -116,10 +211,10 @@ article {
     z-index: 1;
     height: min-content;
 
-    p {
+    li {
         width: max-content;
-        color: var(--d700-bleached-silk);
-        border: 1px solid var(--d700-bleached-silk);
+        color: var(--text-medium);
+        border: 1px solid var(--text-medium);
         border-radius: 9999px;
         padding: 10px;
         font-weight: 400;

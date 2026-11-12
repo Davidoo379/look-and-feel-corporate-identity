@@ -79,10 +79,12 @@ section {
     }
 
     &.recommended {
-        button {
-            svg {
-                path {
-                    fill: var(--icon-dark)
+        .section-header {
+            button {
+                svg {
+                    path {
+                        fill: var(--icon-dark)
+                    }
                 }
             }
         }
@@ -91,10 +93,12 @@ section {
     &.bookmarked {
         padding-bottom: 100px;
 
-        button {
-            svg {
-                path {
-                    stroke: var(--icon-dark)
+        .section-header {
+            button {
+                svg {
+                    path {
+                        stroke: var(--icon-dark)
+                    }
                 }
             }
         }
