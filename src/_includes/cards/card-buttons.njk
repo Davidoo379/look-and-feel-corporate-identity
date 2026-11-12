@@ -1,0 +1,11 @@
+<div class="card-buttons">
+  <button onclick="alert(`Implementation missing!`)">
+    {% include "svgs/bookmark.njk" %}
+  </button>
+  <button popovertarget="opportunity-card-options">
+    {% include "svgs/vertical-dots.njk" %}
+  </button>
+  <div popover id="opportunity-card-options">
+    {% include "cards/card-options.njk" %}
+  </div>
+</div>

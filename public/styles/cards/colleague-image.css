@@ -1,6 +1,6 @@
 .colleague-image {
     display: grid;
-    grid-template-columns: min-content 1fr min-content;
+    grid-template-columns: min-content 1fr 25%;
     grid-template-rows: min-content 1.5rem 3rem min-content 2em 1fr;
     gap: 5px;
     column-gap: 10px;

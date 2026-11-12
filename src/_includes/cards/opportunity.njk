@@ -1,0 +1,21 @@
+<article class="opportunity">
+  <a href="{{ card.url | url }}">Open Card</a>
+  <cite>
+    <span>{{ card.data.name }}</span>
+    <span class="role">{{ card.data.role }}</span>
+  </cite>
+  {% include "cards/card-buttons.njk" %}
+  <h3>{{ card.data.title }}</h3>
+  <ul class="meshTerms">
+    {%- for meshTerm in card.data.meshTerms -%}
+      <li>{{ meshTerm }}</li>
+    {%- endfor -%}
+  </ul>
+  <footer>
+    <ul class="cardTags">
+      {%- for cardTab in card.data.cardTabs -%}
+        <li class="{{ cardTab | kabab}}">{{ cardTab }}</li>
+      {%- endfor -%}
+    </ul>
+  </footer>
+</article>

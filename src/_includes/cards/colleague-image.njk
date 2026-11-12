@@ -1,17 +1,7 @@
 <article class="colleague-image">
   <a href="{{ card.url | url }}">Open Card</a>
   <img src="{{ card.data.image | url}}" alt="{{ card.data.name }}">
-  <div class="card-buttons">
-    <button onclick="alert(`Implementation missing!`)">
-      {% include "svgs/bookmark.njk" %}
-    </button>
-    <button popovertarget="opportunity-card-options-1">
-      {% include "svgs/vertical-dots.njk" %}
-    </button>
-    <div popover id="opportunity-card-options-1">
-      {% include "cards/card-options.njk" %}
-    </div>
-  </div>
+  {% include "cards/card-buttons.njk" %}
   <h3>{{ card.data.name }}</h3>
   <p class="role">{{ card.data.role }}</p>
   <div class="horizontal-scroll subSpecialism">

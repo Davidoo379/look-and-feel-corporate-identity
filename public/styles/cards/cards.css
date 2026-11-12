@@ -6,7 +6,8 @@ article {
     margin-top: 2rem;
     position: relative;
     box-shadow: 0px 0px 15px var(--card-shadow);
-    width: 100%;
+    width: 348px;
+    height: 300px;
 
 
     >a {
@@ -23,7 +24,7 @@ article {
         position: relative;
     }
 
-    footer {
+    footer ul {
         position: absolute;
         display: flex;
         gap: 5px;
@@ -31,7 +32,7 @@ article {
         padding-left: 1.5rem;
         left: 0;
 
-        p {
+        li {
             border-radius: 8px 8px 0px 0px;
             padding: 0.4rem;
             font-weight: 400;
@@ -40,12 +41,12 @@ article {
             text-align: center;
         }
 
-        .project-tag {
+        .project {
             background-color: var(--base-cockatoo);
         }
 
-        .internship-tag,
-        .open-question-tag {
+        .internship,
+        .open-question {
             background-color: var(--l500-cockatoo);
         }
 
@@ -53,11 +54,11 @@ article {
             background-color: var(--l400-lustful-wishes);
         }
 
-        .congress-tag {
+        .congress {
             background-color: var(--d100-bleached-silk);
         }
 
-        .symposium-tag {
+        .symposium {
             background-color: var(--l400-xavier-blue);
         }
     }
@@ -66,10 +67,11 @@ article {
 
 .card-buttons {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     width: 40px;
     justify-content: space-between;
     position: relative;
+    place-self: center;
     anchor-scope: all;
 
     button {
