@@ -13,14 +13,14 @@ header {
         place-self: center;
     }
 
-    button {
+    >button {
         display: flex;
         margin-left: auto;
 
-        svg {
-            path {
-                fill: var(--icon-dark)
-            }
+        &:hover,
+        &:focus-visible {
+            --content: var(--content-color);
+            --background-color-hover: transparent;
         }
     }
 
@@ -28,6 +28,7 @@ header {
         display: flex;
         align-items: center;
         margin-right: auto;
+        background-color: transparent;
     }
 
     &>nav {
@@ -52,79 +53,37 @@ header {
             top: 0;
             background-color: var(--background-medium);
             transition: 0.2s;
-
-            a {
-                color: var(--text-medium);
-            }
         }
 
         >button {
-            svg path {
-                fill: var(--icon-dark);
-                stroke: var(--icon-dark);
-            }
+            display: flex;
+            align-items: center;
+            --background-color: transparent;
         }
-
 
         a {
             display: flex;
             align-items: center;
             border-radius: 8px;
             padding-left: 0.5rem;
-            color: transparent;
             font-size: 1.2em;
             font-weight: 500;
 
+            --background-color: transparent;
+
+
             &:hover,
             &:focus-visible {
-                color: var(--text-darkest);
-            }
-
-            &.opportunities {
-                svg path {
-                    fill: transparent;
-                    stroke: var(--icon-dark);
+                &.opportunities {
+                    --background-color-hover: var(--hover-green);
                 }
 
-                &:hover,
-                &:focus-visible {
-                    background-color: var(--hover-green);
-
-                    svg path {
-                        stroke: var(--icon-dark);
-                    }
-                }
-            }
-
-            &.events-and-conventions {
-                svg path {
-                    fill: var(--icon-dark);
-                    stroke: transparent;
+                &.events-and-conventions {
+                    --background-color-hover: var(--hover-blue);
                 }
 
-                &:hover,
-                &:focus-visible {
-                    background-color: var(--hover-blue);
-
-                    svg path {
-                        fill: var(--icon-dark);
-                    }
-                }
-            }
-
-            &.colleagues {
-                svg path {
-                    fill: var(--icon-dark);
-                    stroke: transparent;
-                }
-
-                &:hover,
-                &:focus-visible {
-                    background-color: var(--hover-pink);
-
-                    svg path {
-                        fill: var(--icon-dark);
-                    }
+                &.colleagues {
+                    --background-color-hover: var(--hover-pink);
                 }
             }
         }

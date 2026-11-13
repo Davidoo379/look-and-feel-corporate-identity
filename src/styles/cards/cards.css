@@ -206,23 +206,3 @@ article {
         }
     }
 }
-
-.meshTerms {
-    display: flex;
-    overflow-x: scroll;
-    gap: 10px;
-    z-index: 1;
-    height: min-content;
-
-    li {
-        width: max-content;
-        color: var(--text-medium);
-        border: 1px solid var(--text-medium);
-        border-radius: 9999px;
-        padding: 10px;
-        font-weight: 400;
-        font-size: 1rem;
-        flex-basis: content;
-        flex-shrink: 0;
-    }
-}

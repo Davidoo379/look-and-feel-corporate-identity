@@ -7,14 +7,19 @@ layout: "base.njk"
   <h2>Welcome back Jane!</h2>
   <nav>
     <ul>
-      <li class="colleagues">
-        <a href="{{'/colleagues' | url}}">Find colleagues</a>
+      <li>
+        <a class="colleagues button-raised" href="{{'/colleagues' | url}}"
+        >Find colleagues</a>
       </li>
-      <li class="opportunities">
-        <a href="{{'/opportunities' | url}}">Browse Opportunities</a>
+      <li>
+        <a class="opportunities button-raised" href="{{'/opportunities' | url}}"
+        >Browse Opportunities</a>
       </li>
-      <li class="events-and-conventions">
-        <a href="{{'/events' | url}}">Events & conventions</a>
+      <li>
+        <a
+          class="events-and-conventions button-raised"
+          href="{{'/events' | url}}"
+        >Events & conventions</a>
       </li>
     </ul>
   </nav>

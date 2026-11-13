@@ -2,27 +2,27 @@
   {% include 'svgs/logo.njk' %}
 </a>
 <h1>{{ title }}</h1>
-<button>
+<button class="button-flat">
   {% include 'svgs/hamburger.njk' %}
 </button>
 <nav>
-  <button>
+  <button class="button-flat">
     {% include 'svgs/x.njk' %}
   </button>
-  <a class="opportunities" href="{{'/opportunities' | url}}">
+  <a class="opportunities button-flat" href="{{'/opportunities' | url}}">
     <span>Opportunities</span>
     {% include 'svgs/airhorn.njk' %}
   </a>
 
   <a
-    class="events-and-conventions"
+    class="events-and-conventions button-flat"
     href="{{'/events' | url}}"
   >
     <span>Events & conventions</span>
     {% include 'svgs/calendar.njk' %}
   </a>
 
-  <a class="colleagues" href="{{'/colleagues' | url}}">
+  <a class="colleagues button-flat" href="{{'/colleagues' | url}}">
     <span>Colleagues</span>
     {% include 'svgs/group.njk' %}
   </a>

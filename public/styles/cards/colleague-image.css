@@ -10,11 +10,8 @@
         grid-row: 1/7;
         grid-column: 1/2;
         width: 74px;
-        height: 158px;
         align-self: start;
         justify-self: center;
-        border-radius: 9999px;
-        object-fit: cover;
     }
 
     .card-buttons {
@@ -62,7 +59,7 @@
         grid-column: 2/-1;
     }
 
-    .meshTerms {
+    .mesh-terms {
         grid-row: 7/-1;
         grid-column: 1/-1;
         align-self: end;

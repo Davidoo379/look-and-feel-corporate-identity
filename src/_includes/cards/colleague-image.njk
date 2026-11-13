@@ -1,6 +1,10 @@
 <article class="colleague-image">
   <a href="{{ card.url | url }}">Open Card</a>
-  <img src="{{ card.data.image | url}}" alt="{{ card.data.name }}">
+  <img
+    class="image-pill-vertical-wide"
+    src="{{ card.data.image | url}}"
+    alt="{{ card.data.name }}"
+  >
   {% include "cards/card-buttons.njk" %}
   <h3>{{ card.data.name }}</h3>
   <p class="role">{{ card.data.role }}</p>
@@ -16,7 +20,7 @@
       <span>{{ card.data.institute }}</span>
     </p>
   </div>
-  <ul class="meshTerms">
+  <ul class="mesh-terms">
     {%- for meshTerm in card.data.meshTerms -%}
       <li>{{ meshTerm }}</li>
     {%- endfor -%}

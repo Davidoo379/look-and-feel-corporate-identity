@@ -64,6 +64,18 @@ section {
                 }
             }
 
+            button {
+                display: flex;
+                margin-left: auto;
+                --background: transparent;
+
+                &:hover,
+                &:focus-visible {
+                    --content: var(--content-color);
+                    --background-color-hover: transparent;
+                }
+            }
+
 
             @media (min-width: 900px) {
                 grid-column: 2/3;

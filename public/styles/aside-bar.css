@@ -55,7 +55,7 @@ aside {
         a {
             padding: 8px;
             border-radius: 5px;
-            background-color: transparent;
+            --background-color: transparent;
             aspect-ratio: 1/1;
             width: 44px;
             display: flex;
@@ -65,38 +65,11 @@ aside {
             @media (min-width: 900px) {
                 gap: 10px;
                 width: 100%;
-
-                @media (prefers-reduced-motion: no-preference) {
-                    transition: 0.1s;
-                }
             }
 
-            svg path {
-                stroke: transparent;
-                fill: var(--icon-dark)
-            }
-
-
-            &:hover {
-                background-color: var(--background-darkest);
-
-                svg path {
-                    stroke: transparent;
-                    fill: var(--icon-light)
-                }
-
-                span {
-                    color: var(--COLOR-BOTTOM-BAR-BUTTON-ICON-HIGHLIGHT);
-                }
-
-                @media (min-width: 900px) {
-                    border-radius: 50%;
-                }
-            }
 
             span {
                 display: none;
-                color: var(--COLOR-BOTTOM-BAR-BUTTON-ICON);
                 font-size: 20px;
 
                 @media (min-width: 900px) {

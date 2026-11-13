@@ -1,17 +1,21 @@
 <nav>
-  <a title="home" href="{{'/' | url}}">
+  <a class="button-flat" title="home" href="{{'/' | url}}">
     {% include "svgs/house.njk" %}
     <span>Home</span>
   </a>
-  <a title="profile" href="/user/profile.html">
+  <a class="button-flat" title="profile" href="/user/profile.html">
     {% include "svgs/person.njk" %}
     <span>Profile</span>
   </a>
-  <a title="create opportunity" href="/user/create-opportunity.html">
+  <a
+    class="button-flat"
+    title="create opportunity"
+    href="/user/create-opportunity.html"
+  >
     {% include "svgs/plus.njk" %}
     <span>Create Opportunity</span>
   </a>
-  <a title="settings" href="/user/settings.html">
+  <a class="button-flat" title="settings" href="/user/settings.html">
     {% include "svgs/kog.njk" %}
     <span>Settings</span>
   </a>
