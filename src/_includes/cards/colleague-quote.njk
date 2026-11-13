@@ -1,0 +1,24 @@
+<article class="colleague-quote">
+  <a href="{{ card.url | url }}">Open Card</a>
+  <blockquote>{{ card.data.quote }}</blockquote>
+  {% include "cards/card-buttons.njk" %}
+  <h3>{{ card.data.name }}</h3>
+  <p class="role">{{ card.data.role }}</p>
+  <div class="horizontal-scroll subSpecialism">
+    <p>
+      {% include "svgs/plus-thick.njk" %}
+      <span>{{ card.data.subSpecialism }}</span>
+    </p>
+  </div>
+  <div class="horizontal-scroll institute">
+    <p>
+      {% include "svgs/hospital.njk" %}
+      <span>{{ card.data.institute }}</span>
+    </p>
+  </div>
+  <ul class="meshTerms">
+    {%- for meshTerm in card.data.meshTerms -%}
+      <li>{{ meshTerm }}</li>
+    {%- endfor -%}
+  </ul>
+</article>
