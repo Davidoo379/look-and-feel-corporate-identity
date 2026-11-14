@@ -28,6 +28,7 @@ section {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            anchor-scope: all;
 
             select {
                 background-color: var(--background-dark);

@@ -41,6 +41,10 @@
     >
     <link
       rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/popups/refresh.css"
+    >
+    <link
+      rel="stylesheet"
       href="https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css"
     >
     <script src="/look-and-feel-corporate-identity/scripts/script.js" defer></script>
@@ -235,10 +239,7 @@
       <option value="open-questions">Open questions</option>
       <option value="events">Events</option>
     </select>
-    <button
-      onclick="alert = 'Implementation missing'"
-      popovertarget="refresh-popover-menu"
-    >
+    <button class="refresh" popovertarget="refresh-popover-menu">
       <svg
   title="refresh"
   width="44"
@@ -255,7 +256,7 @@
 
     </button>
   </div>
-  <div popover id="refresh-popover-menu">
+  <div class="popup" popover id="refresh-popover-menu">
     <a href="#">Refresh the suggestion</a>
     <a href="/user/settings.html/#feed-prefrences">Change your preferences</a>
   </div>
@@ -294,14 +295,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -318,7 +319,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -343,7 +344,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -368,7 +369,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"
@@ -467,14 +468,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -491,7 +492,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -516,7 +517,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -541,7 +542,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"
@@ -606,14 +607,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -630,7 +631,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -655,7 +656,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -680,7 +681,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"
@@ -741,14 +742,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -765,7 +766,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -790,7 +791,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -815,7 +816,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"
@@ -951,14 +952,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -975,7 +976,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -1000,7 +1001,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -1025,7 +1026,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"
@@ -1121,14 +1122,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -1145,7 +1146,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -1170,7 +1171,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -1195,7 +1196,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"
@@ -1295,14 +1296,14 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <circle cx="2.93359" cy="5.125" r="2" fill="#C2C2C2" />
-  <circle cx="2.93359" cy="12.125" r="2" fill="#C2C2C2" />
+  <circle cx="2.93359" cy="5.125" r="2" fill="var(--content)" />
+  <circle cx="2.93359" cy="12.125" r="2" fill="var(--content)" />
   <ellipse cx="2.93359" cy="19" rx="2" ry="1.875" fill="var(--content)" />
 </svg>
 
   </button>
   <div popover id="opportunity-card-options">
-    <a class="suggested" href="./user/settings.html#feed">
+    <a href="./user/settings.html#feed">
   <svg
   width="20"
   height="20"
@@ -1319,7 +1320,7 @@
 
   Why was this suggested?
 </a>
-<button class="thumbs-down" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="24"
   height="24"
@@ -1344,7 +1345,7 @@
 
   Show less content from this user
 </button>
-<button class="thumbs-up" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="21"
   height="20"
@@ -1369,7 +1370,7 @@
 
   Show more content from this user
 </button>
-<button class="report" onclick="alert(`Implementation missing!`)">
+<button onclick="alert(`Implementation missing!`)">
   <svg
   width="17"
   height="17"

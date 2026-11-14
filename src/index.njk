@@ -35,14 +35,11 @@ layout: "base.njk"
       <option value="open-questions">Open questions</option>
       <option value="events">Events</option>
     </select>
-    <button
-      onclick="alert = 'Implementation missing'"
-      popovertarget="refresh-popover-menu"
-    >
+    <button class="refresh" popovertarget="refresh-popover-menu">
       {% include "svgs/arrow-spiral.njk" %}
     </button>
   </div>
-  <div popover id="refresh-popover-menu">
+  <div class="popup" popover id="refresh-popover-menu">
     <a href="#">Refresh the suggestion</a>
     <a href="/user/settings.html/#feed-prefrences">Change your preferences</a>
   </div>

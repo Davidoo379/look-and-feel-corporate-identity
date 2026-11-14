@@ -75,134 +75,43 @@ article {
     place-self: center;
     anchor-scope: all;
 
-    button {
+    >button {
         background-color: transparent;
+        --content-color-hover: var(--content-color);
         width: 40px;
         anchor-name: --button;
-
-        svg {
-
-            path,
-            circle,
-            ellipse {
-                fill: var(--icon-medium);
-            }
-
-        }
     }
 
-    [popover]:popover-open {
-        position: absolute;
-        position-anchor: --button;
-        top: anchor(bottom);
-        right: anchor(right);
+}
 
-        background-color: var(--background-darkest);
+[popover]:popover-open {
+    position: absolute;
+    position-anchor: --button;
+    top: anchor(bottom);
+    right: anchor(right);
+
+    background-color: var(--background-darkest);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-self: end;
+    z-index: 0;
+    overflow: clip;
+
+    a,
+    button {
+        width: 100%;
+        white-space: nowrap;
+        text-align: start;
+        align-self: start;
+        padding: 0.5rem;
         display: flex;
-        flex-direction: column;
-        width: 300px;
-        justify-self: end;
-        z-index: 0;
-        overflow: clip;
+        gap: 8px;
+        font-size: 1em;
 
-        a,
-        button {
-            width: 100%;
-            color: var(--text-lightest);
-            white-space: nowrap;
-            text-align: start;
-            align-self: start;
-            padding: 0.5rem;
-            display: flex;
-            gap: 8px;
-            font-size: 1em;
-
-            svg {
-
-                path,
-                circle,
-                ellipse {
-                    fill: var(--icon-light);
-                }
-            }
-
-            &:hover {
-                color: var(--text-darkest);
-                background-color: var(--background-light);
-            }
-        }
-
-        .suggested {
-            svg {
-
-                path,
-                circle,
-                ellipse {
-                    fill: var(--icon-light);
-                    stroke: transparent;
-                }
-            }
-
-            &:hover {
-                svg {
-
-                    path,
-                    circle,
-                    ellipse {
-                        fill: var(--icon-dark);
-                        stroke: transparent;
-                    }
-                }
-            }
-        }
-
-        .report {
-            svg {
-
-                path,
-                circle,
-                ellipse {
-                    fill: var(--icon-light);
-                    stroke: var(--icon-light);
-                }
-            }
-
-            &:hover {
-                svg {
-
-                    path,
-                    circle,
-                    ellipse {
-                        fill: var(--icon-dark);
-                        stroke: var(--icon-dark);
-                    }
-                }
-            }
-        }
-
-        .thumbs-up,
-        .thumbs-down {
-            svg {
-
-                path,
-                circle,
-                ellipse {
-                    fill: transparent;
-                    stroke: var(--icon-light);
-                }
-            }
-
-            &:hover {
-                svg {
-
-                    path,
-                    circle,
-                    ellipse {
-                        fill: transparent;
-                        stroke: var(--icon-dark);
-                    }
-                }
-            }
-        }
+        --content-color: var(--text-lightest);
+        --content-color-hover: var(--text-darkest);
+        --background-color: var(--background-darkest);
+        --background-color-hover: var(--background-light);
     }
 }
