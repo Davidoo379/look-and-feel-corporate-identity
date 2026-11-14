@@ -1,0 +1,98 @@
+<h2>{{ name }}</h2>
+<button popovertarget="mutual-interests">
+  {% include "svgs/magnet.njk" %}
+</button>
+<div popover id="mutual-interests">
+  <section>
+    <button popovertarget="mutual-interests">
+      <img src="x-icon.svg" alt="x-icon">
+    </button>
+    <img src="magnet-icon.svg" alt="magnet-icon">
+    <h3>Mutual interest</h3>
+    <p>Here's what you have in common</p>
+  </section>
+  <img src="anthony-martina.webp" alt="anthony-martina">
+  <p>you and Elise share a mutual connection: <em>Anthony Martina</em></p>
+  <img src="board-checkmark.svg" alt="board-checkmark">
+  <p>
+    You and Elise both attended the <em>Pediatric Symposium</em> on <time
+      datetime="2025-02-20"
+    >20 February 2025</time>.
+  </p>
+</div>
+<img class="image-block-horizontal" src="{{ image | url}}" alt="{{ name }}">
+<blockquote>
+  {{ quote }}
+</blockquote>
+<section>
+  <h3>Role:</h3>
+  <p>{{ role }}</p>
+  <h3>Specialism (sub-specialism):</h3>
+  <p>{{ sub-specialism }}</p>
+  <h3>Years of experience:</h3>
+  <p>{{ experience }}</p>
+  <h3>Institution:</h3>
+  <p>{{ institute }}</p>
+  <div>
+    <a href="linkedin.com">
+      {% include "svgs/linkedin.njk" %}
+    </a>
+    <button popovertarget="identifiers">
+      {% include "svgs/id-card.njk" %}
+      Identifiers
+    </button>
+    <div popover id="identifiers">
+      <p><em>ORCID:</em> {{ orcid }}</p>
+      <p><em>BIG registration:</em> {{ big-registration }}</p>
+    </div>
+  </div>
+</section>
+<section>
+  <h3>Biography</h3>
+  <p>
+    {{ biography }}
+  </p>
+  <h3>Mesh terms</h3>
+  <ul class="mesh-terms">
+    {%- for meshTerm in meshTerms -%}
+      <li>{{ meshTerm }}</li>
+    {%- endfor -%}
+  </ul>
+  <h3>Intentions</h3>
+  <ul class="mesh-terms">
+    {%- for intention in intentions -%}
+      <li>{{ intention }}</li>
+    {%- endfor -%}
+  </ul>
+</section>
+<section>
+  <h3>Posts</h3>
+  <div>
+    <button class="button-raised active">Research projects</button>
+    <button class="button-raised">Internships</button>
+    <button class="button-raised">Open questions</button>
+  </div>
+  <div>
+    <button popovertarget="bookmark-search-form">
+      {% include "svgs/magnifying-glass.njk" %}
+    </button>
+    <form action="search" popover id="bookmark-search-form">
+      <label for="bookmark-search">Search in bookmarks:
+        <input
+          type="search"
+          id="bookmark-search"
+          placeholder="search in bookmarks"
+        >
+      </label>
+    </form>
+    <button popovertarget="sort-menu">
+      {% include "svgs/arrow-up-and-down.njk" %}
+    </button>
+    <form popover id="sort-menu" action="http://httpbin.org/post">
+      {% include "sorting/sort.njk" %}
+    </form>
+  </div>
+  <div id="list" class="horizontal-carousel">
+    <!-- ! CARDS SPAWN HERE -->
+  </div>
+</section>
