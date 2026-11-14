@@ -9,19 +9,9 @@
     >blockquote {
         grid-row: 3/4;
         grid-column: 1/-1;
-        align-self: start;
-        justify-self: center;
-        border-radius: 8px;
-        padding: 16px;
-        object-fit: cover;
-        background-color: var(--background-green-lighter);
-        color: var(--text-green);
 
         width: 100%;
         height: max-content;
-        line-clamp: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     >img {

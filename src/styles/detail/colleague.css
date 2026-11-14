@@ -20,24 +20,6 @@
 }
 
 
-blockquote {
-    margin: 1rem;
-    align-self: start;
-    justify-self: center;
-    border-radius: 8px;
-    padding: 16px;
-
-    text-align: center;
-    background-color: var(--background-green-lighter);
-    color: var(--text-green);
-
-    height: max-content;
-    line-clamp: 5;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
 .detail-block {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -48,14 +30,15 @@ blockquote {
     img {
         grid-column: 1/2;
         grid-row: 1/2;
-        /* width: 50%; */
-        place-self: center;
-        /* height: 200px; */
+        place-self: center
     }
 
     blockquote {
         grid-column: 2/3;
         place-self: center;
+        margin: 1rem;
+        height: max-content;
+        line-clamp: 5;
     }
 
 }
