@@ -11,7 +11,7 @@
   <div class="horizontal-scroll subSpecialism">
     <p>
       {% include "svgs/plus-thick.njk" %}
-      <span>{{ card.data.subSpecialism }}</span>
+      <span>{{ card.data.sub-specialism }}</span>
     </p>
   </div>
   <div class="horizontal-scroll institute">
@@ -21,8 +21,8 @@
     </p>
   </div>
   <ul class="mesh-terms">
-    {%- for meshTerm in card.data.meshTerms -%}
-      <li>{{ meshTerm }}</li>
+    {%- for intention in card.data.intentions -%}
+      <li>{{ intention }}</li>
     {%- endfor -%}
   </ul>
 </article>

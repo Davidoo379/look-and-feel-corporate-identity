@@ -1,0 +1,154 @@
+.detail-header {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    gap: 1rem;
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.mutual-button {
+    --background-color: var(--background-pink);
+    width: 44px;
+    height: 44px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+
+blockquote {
+    margin: 1rem;
+    align-self: start;
+    justify-self: center;
+    border-radius: 8px;
+    padding: 16px;
+
+    text-align: center;
+    background-color: var(--background-green-lighter);
+    color: var(--text-green);
+
+    height: max-content;
+    line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.detail-block {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: min-content;
+    gap: 20px;
+    padding: 1rem;
+
+    img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        /* width: 50%; */
+        place-self: center;
+        /* height: 200px; */
+    }
+
+    blockquote {
+        grid-column: 2/3;
+        place-self: center;
+    }
+
+}
+
+.info-section {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--background-dark);
+    border-radius: 16px;
+
+    dt {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    dd {
+        color: var(--text-medium);
+        padding-bottom: 1em;
+    }
+}
+
+.colleague-ids {
+    display: flex;
+    /* background-color: red; */
+    gap: .5em;
+
+    >a {
+        --background-color: transparent;
+        --background-color-hover: transparent;
+    }
+
+}
+
+.align-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+}
+
+.biography {
+    padding: 1em;
+
+    h3 {
+        padding-bottom: .5em;
+    }
+
+    p,
+    ul {
+        padding-bottom: 1em;
+    }
+}
+
+.posts {
+    padding: 1em;
+
+
+    .align-horizontal {
+        white-space: nowrap;
+        overflow-x: scroll;
+
+        button {
+            padding: .5em;
+            --content-color: var(--text-green);
+            --content-color-hover: var(--text-green-light);
+            --background-color: var(--background-green-bright);
+            --background-color-hover: var(--background-green-bright);
+
+            &:active {
+                --background-color: var(--background-green)
+            }
+
+            &.active {
+                --background-color-hover: var(--background-green)
+            }
+        }
+    }
+
+    .align-right {
+        button {
+            --background-color: transparent;
+            --background-color-hover: transparent;
+            --content-color-hover: var(--content-color);
+            aspect-ratio: 1/1;
+            width: 44px;
+            height: 44px;
+        }
+    }
+}
+
+.align-right {
+    display: flex;
+    justify-content: end;
+    height: min-content;
+}

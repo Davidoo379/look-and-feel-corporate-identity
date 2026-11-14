@@ -1,43 +1,51 @@
-<h2>{{ name }}</h2>
-<button popovertarget="mutual-interests">
-  {% include "svgs/magnet.njk" %}
-</button>
-<div popover id="mutual-interests">
-  <section>
-    <button popovertarget="mutual-interests">
-      <img src="x-icon.svg" alt="x-icon">
-    </button>
-    <img src="magnet-icon.svg" alt="magnet-icon">
-    <h3>Mutual interest</h3>
-    <p>Here's what you have in common</p>
-  </section>
-  <img src="anthony-martina.webp" alt="anthony-martina">
-  <p>you and Elise share a mutual connection: <em>Anthony Martina</em></p>
-  <img src="board-checkmark.svg" alt="board-checkmark">
-  <p>
-    You and Elise both attended the <em>Pediatric Symposium</em> on <time
-      datetime="2025-02-20"
-    >20 February 2025</time>.
-  </p>
+<div class="detail-header">
+  <h2>{{ salutation }} {{ name }}</h2>
+  <button class="mutual-button button-raised" popovertarget="mutual-interests">
+    {% include "svgs/magnet.njk" %}
+  </button>
+  <div popover id="mutual-interests">
+    <section>
+      <button popovertarget="mutual-interests">
+        {% include "svgs/x.njk" %}
+      </button>
+      {% include "svgs/magnet.njk" %}
+      <h3>Mutual interest</h3>
+      <p>Here's what you have in common</p>
+    </section>
+    <img
+      class="image-circle"
+      src="{{ 'assets/images/anthony-martina.png' | url }}"
+      alt="mutual"
+    >
+    <p>you and Anisha share a mutual connection: <em>Anthony Martina</em></p>
+    {% include "svgs/board-checkmark.njk" %}
+    <p>
+      You and Elise both attended the <em>Pediatric Symposium</em> on <time
+        datetime="2025-02-20"
+      >20 February 2025</time>.
+    </p>
+  </div>
 </div>
-<img class="image-block-horizontal" src="{{ image | url}}" alt="{{ name }}">
-<blockquote>
-  {{ quote }}
-</blockquote>
-<section>
-  <h3>Role:</h3>
-  <p>{{ role }}</p>
-  <h3>Specialism (sub-specialism):</h3>
-  <p>{{ sub-specialism }}</p>
-  <h3>Years of experience:</h3>
-  <p>{{ experience }}</p>
-  <h3>Institution:</h3>
-  <p>{{ institute }}</p>
-  <div>
+<div class="detail-block">
+  <img class="image-pill-vertical-wide" src="{{ image | url}}" alt="{{ name }}">
+  <blockquote>
+    {{ quote }}
+  </blockquote>
+</div>
+<dl class="info-section">
+  <dt>Role:</dt>
+  <dd>{{ role }}</dd>
+  <dt>Specialism (sub-specialism):</dt>
+  <dd>{{ subSpecialism }}</dd>
+  <dt>Years of experience:</dt>
+  <dd>{{ experience }}</dd>
+  <dt>Institution:</dt>
+  <dd>{{ institute }}</dd>
+  <div class="colleague-ids">
     <a href="linkedin.com">
       {% include "svgs/linkedin.njk" %}
     </a>
-    <button popovertarget="identifiers">
+    <button class="align-horizontal button-raised" popovertarget="identifiers">
       {% include "svgs/id-card.njk" %}
       Identifiers
     </button>
@@ -46,8 +54,8 @@
       <p><em>BIG registration:</em> {{ big-registration }}</p>
     </div>
   </div>
-</section>
-<section>
+</dl>
+<section class="biography">
   <h3>Biography</h3>
   <p>
     {{ biography }}
@@ -65,15 +73,15 @@
     {%- endfor -%}
   </ul>
 </section>
-<section>
+<section class="posts">
   <h3>Posts</h3>
-  <div>
+  <div class="align-horizontal">
     <button class="button-raised active">Research projects</button>
     <button class="button-raised">Internships</button>
     <button class="button-raised">Open questions</button>
   </div>
-  <div>
-    <button popovertarget="bookmark-search-form">
+  <div class="align-right">
+    <button class="button-flat" popovertarget="bookmark-search-form">
       {% include "svgs/magnifying-glass.njk" %}
     </button>
     <form action="search" popover id="bookmark-search-form">
@@ -85,7 +93,7 @@
         >
       </label>
     </form>
-    <button popovertarget="sort-menu">
+    <button class="button-flat" popovertarget="sort-menu">
       {% include "svgs/arrow-up-and-down.njk" %}
     </button>
     <form popover id="sort-menu" action="http://httpbin.org/post">
