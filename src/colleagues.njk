@@ -3,3 +3,99 @@ title: Colleagues
 layout: "base.njk"
 
 ---
+<div class="colleague-search-options">
+  <search>
+    <form action="http://httpbin.org/post">
+      <label for="search-in-colleagues">Search in colleagues:</label>
+      <input
+        id="search-in-colleagues"
+        type="search"
+        placeholder="search in events"
+      >
+      <button type="submit">
+        {% include "svgs/magnifying-glass.njk" %}
+      </button>
+    </form>
+  </search>
+  <button class="button-flat" popovertarget="sort-menu">
+    {% include "svgs/arrow-up-and-down.njk" %}
+  </button>
+  <form popover id="sort-menu" action="http://httpbin.org/post">
+    <p>Sort by:</p>
+    <input type="radio" id="relevancy" name="sort-preference">
+    <label for="relevancy">Relevancy</label>
+    <input type="radio" id="recently-added" name="sort-preference">
+    <label for="recently-added">Recently added</label>
+    <input type="radio" id="distance" name="sort-preference">
+    <label for="distance">Distance</label>
+    <input type="radio" id="a-z" name="sort-preference">
+    <label for="a-z">A-Z</label>
+    <input type="radio" id="z-a" name="sort-preference">
+    <label for="z-a">Z-A</label>
+  </form>
+  <button class="button-flat" popovertarget="filter-menu">
+    {% include "svgs/abacus.njk" %}
+  </button>
+  <aside popover id="filter-menu">
+    <div>
+      <button popovertarget="filter-menu">
+        <img src="x-icon.svg" alt="x-icon">
+      </button>
+      <search>
+        <form action="http://httpbin.org/post-opportunitie">
+          <label for="search-in-filters">Search in filters:</label>
+          <input id="search-in-filters" type="search">
+          <button type="submit">
+            <img src="magnifying-glass-icon.svg" alt="magnifying-glass-icon">
+          </button>
+        </form>
+      </search>
+      <button onclick="alert = 'Implementation missing'">
+        <img src="backwards-clock-icon.svg" alt="backwards-clock-icon">
+        History
+      </button>
+    </div>
+    /* TODO this can be done with a loop through all options as collection */
+    {% include "filters/role.njk" %}
+    {% include "filters/research-type.njk" %}
+    {% include "filters/sub-specialism.njk" %}
+    {% include "filters/hospital-or-research-institute.njk" %}
+    {% include "filters/mesh-terms.njk" %}
+    {% include "filters/intentions.njk" %}
+    <button onclick="submitColleaguesFilters()">
+      show results
+    </button>
+  </aside>
+</div>
+<menu class="view-modes">
+  <button class="button-raised active">
+    {% include "svgs/dot-list.njk" %}
+  </button>
+  <button class="button-raised" onclick="alert = 'Implementation missing'">
+    {% include "svgs/cards.njk" %}
+  </button>
+</menu>
+<section class="card-list">
+  <h2>
+    A collection of potential research partners
+  </h2>
+  <p>
+    Browse all active researchers and connect with them. Use filters to refine
+    your search.
+  </p>
+  <h2>367 colleagues</h2>
+  <ul>
+    {%- for card in collections.colleague -%}
+      <li>
+        {% set layout = card.data.layoutCard or "default" %}
+        {% include "cards/" + layout + ".njk" %}
+      </li>
+    {%- endfor -%}
+  </ul>
+  <div class="loading">
+    <p>Loading more colleagues</p>
+    <div class="spinner">
+      {% include "svgs/logo.njk" %}
+    </div>
+  </div>
+</section>

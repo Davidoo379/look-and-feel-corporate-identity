@@ -1,0 +1,104 @@
+.colleague-search-options {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: var(--background-medium);
+    z-index: 2;
+
+    @media (min-width: 900px) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        position: static;
+        height: 5.7rem;
+        margin-top: 150px;
+        background-color: unset;
+        padding-inline: 2rem;
+    }
+
+    >search {
+        background-color: var(--background-dark);
+        border-radius: 9999px;
+        min-width: 50vw;
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                background-color: transparent;
+                padding: 1rem;
+                color: var(--text-light);
+
+                &::placeholder {
+                    color: var(--text-medium);
+                }
+            }
+
+            button {
+                background-color: transparent;
+                padding-right: 1rem;
+            }
+        }
+
+        label {
+            display: none;
+        }
+    }
+
+    >button {
+        aspect-ratio: 1/1;
+        --background-color: transparent;
+    }
+}
+
+.view-modes {
+    display: flex;
+    justify-content: end;
+    padding-inline: 1rem;
+    gap: 1rem;
+    position: fixed;
+    top: 160px;
+    height: 60px;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--background-medium);
+    padding-inline: 3rem;
+
+    button {
+        padding: 0rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+}
+
+.card-list {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >h2,
+    >p {
+        width: 100%;
+    }
+
+    >p {
+        padding-block: 0.5rem;
+    }
+}
+
+.loading {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    div {
+        align-self: center;
+    }
+}

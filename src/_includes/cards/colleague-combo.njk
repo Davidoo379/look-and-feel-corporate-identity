@@ -1,0 +1,29 @@
+<article class="colleague-combo">
+  <a href="{{ card.url | url }}">Open Card</a>
+  <img
+    class="image-pill-horizontal"
+    src="{{ card.data.image | url}}"
+    alt="{{ card.data.name }}"
+  >
+  <blockquote>{{ card.data.quote }}</blockquote>
+  {% include "cards/card-buttons.njk" %}
+  <h3>{{ card.data.name }}</h3>
+  <p class="role">{{ card.data.role }}</p>
+  <div class="horizontal-scroll subSpecialism">
+    <p>
+      {% include "svgs/plus-thick.njk" %}
+      <span>{{ card.data.subSpecialism }}</span>
+    </p>
+  </div>
+  <div class="horizontal-scroll institute">
+    <p>
+      {% include "svgs/hospital.njk" %}
+      <span>{{ card.data.institute }}</span>
+    </p>
+  </div>
+  <ul class="mesh-terms">
+    {%- for meshTerm in card.data.meshTerms -%}
+      <li>{{ meshTerm }}</li>
+    {%- endfor -%}
+  </ul>
+</article>

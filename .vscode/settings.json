@@ -1,0 +1,23 @@
+{
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Nunjucks Dark Modern",
+    "emmet.includeLanguages": {
+        "njk": "html",
+        "nunjucks": "html"
+    },
+    "nifty.buttons.items": [
+        {
+            "text": "$(play) Start",
+            "terminal": "npm start",
+            "terminalName": "dev"
+        },
+        {
+            "text": "$(debug-stop) Stop",
+            "command": "workbench.action.terminal.sendSequence",
+            "args": {
+                "text": "\u0003"
+            }
+        }
+    ]
+}

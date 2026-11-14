@@ -5,3 +5,17 @@
     display: flex;
     overflow-x: scroll;
 }
+
+.spinner {
+    animation: spinner 5s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        rotate: 360deg;
+    }
+}
+
+main {
+    margin-block: 80px;
+}

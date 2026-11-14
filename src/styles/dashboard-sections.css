@@ -2,10 +2,8 @@ section {
 
     &.recommended,
     &.bookmarked {
-        padding: 1rem;
-
         h2 {
-            padding-block: 1rem;
+            padding: 1rem;
 
             @media (min-width: 900px) {
                 padding-bottom: 0rem;
@@ -16,6 +14,7 @@ section {
 
         >p {
             padding-top: 8px;
+            padding-inline: 1rem;
 
             @media (min-width: 900px) {
                 grid-column: 1/2;
@@ -25,6 +24,7 @@ section {
         }
 
         .section-header {
+            padding-inline: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
