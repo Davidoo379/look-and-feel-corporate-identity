@@ -4,6 +4,11 @@
 .horizontal-scroll {
     display: flex;
     overflow-x: scroll;
+    flex-direction: column;
+
+    li {
+        width: min-content;
+    }
 }
 
 .spinner {
