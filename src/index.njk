@@ -66,20 +66,7 @@ layout: "base.njk"
       <option value="open-questions">Open questions</option>
       <option value="events">Events</option>
     </select>
-
-    <search>
-      <button popovertarget="bookmark-search-form">
-        {% include "svgs/magnifying-glass.njk" %}
-      </button>
-      <form action="search" popover id="bookmark-search-form">
-        <label for="bookmark-search">Search in bookmarks:</label>
-        <input
-          type="search"
-          id="bookmark-search"
-          placeholder="search in bookmarks"
-        >
-      </form>
-    </search>
+    {% include "search.njk" %}
   </div>
   <ul class="horizontal-carousel">
     {%- for card in collections.bookmarked -%}

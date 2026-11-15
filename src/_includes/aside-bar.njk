@@ -1,22 +1,26 @@
 <nav>
   <a class="button-flat" title="home" href="{{'/' | url}}">
-    {% include "svgs/house.njk" %}
     <span>Home</span>
+    {% include "svgs/house.njk" %}
   </a>
   <a class="button-flat" title="profile" href="/user/profile.html">
-    {% include "svgs/person.njk" %}
     <span>Profile</span>
+    {% include "svgs/person.njk" %}
   </a>
   <a
     class="button-flat"
     title="create opportunity"
     href="/user/create-opportunity.html"
   >
-    {% include "svgs/plus.njk" %}
     <span>Create Opportunity</span>
+    {% include "svgs/plus.njk" %}
   </a>
   <a class="button-flat" title="settings" href="/user/settings.html">
-    {% include "svgs/kog.njk" %}
     <span>Settings</span>
+    {% include "svgs/kog.njk" %}
   </a>
+  <button class="button-flat" title="expand-sidebar" href="/user/settings.html">
+    <span>Close</span>
+    {% include "svgs/arrow-sidebar.njk" %}
+  </button>
 </nav>

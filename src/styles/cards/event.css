@@ -1,11 +1,6 @@
 .event {
-    display: grid;
     grid-template-columns: 30% 1fr 25%;
     grid-template-rows: min-content 1.5rem 1.5rem 1.5rem max-content 1fr;
-    column-gap: 10px;
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--d700-bleached-silk);
 
     .card-buttons {
         grid-column: -2/-1;
@@ -13,7 +8,9 @@
     }
 
     p {
-        font-size: 1.2em;
+        font-weight: 400;
+        color: var(--text-medium);
+        font-size: 1em;
     }
 
     >time {

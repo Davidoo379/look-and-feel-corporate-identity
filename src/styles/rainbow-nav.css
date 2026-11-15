@@ -62,11 +62,10 @@
 
 
         @media (min-width: 900px) {
-            background-color: var(--l900-night-rider);
+            background-color: var(--background-dark);
             border-radius: 8px;
-            flex-wrap: nowrap;
             padding-inline: 5rem;
-            margin-inline: auto;
+            margin-inline: 5rem;
             margin-block: 1rem;
 
             a {

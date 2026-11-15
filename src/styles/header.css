@@ -30,6 +30,14 @@ header {
         align-items: center;
         margin-right: auto;
         background-color: transparent;
+
+        span {
+            color: var(--base-xavier-blue);
+            font-weight: 900;
+            font-size: 1em;
+            text-transform: uppercase;
+            display: none;
+        }
     }
 
     &>nav {
@@ -72,6 +80,10 @@ header {
 
             --background-color: transparent;
 
+            svg {
+                flex-grow: 1;
+                min-width: max-content;
+            }
 
             &:hover,
             &:focus-visible {

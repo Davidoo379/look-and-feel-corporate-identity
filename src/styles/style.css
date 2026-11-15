@@ -1,5 +1,146 @@
 @import url("https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css");
 
+body {
+    @media (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        grid-template-rows: 50vh 50vh;
+
+        @media (prefers-reduced-motion: no-preference) {
+            transition: grid-template-columns .1s;
+        }
+
+        &.expand {
+            @media (prefers-reduced-motion: no-preference) {
+                transition: grid-template-columns .5s;
+            }
+
+            grid-template-columns: 300px 1fr;
+
+            >header {
+                >nav {
+                    align-items: start;
+                    width: 100%;
+                    overflow-x: hidden;
+
+                    a {
+                        flex-direction: row-reverse;
+
+                        span {
+                            display: block;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            >aside {
+                >nav {
+                    align-items: start;
+                    overflow-x: hidden;
+
+                    a,
+                    button {
+                        span {
+                            display: block;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+
+        >header {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: static;
+            background-color: var(--background-light);
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            transition: 0s;
+
+
+            &>a {
+                margin-right: unset;
+                margin-bottom: auto;
+                flex-direction: column;
+                gap: 1rem;
+
+                svg {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+
+            >button {
+                display: none;
+            }
+
+            h1 {
+                display: none;
+            }
+
+            &>nav {
+                position: static;
+                top: 0;
+                height: 100%;
+                justify-content: end;
+                align-items: center;
+                padding: 0;
+
+                >button {
+                    display: none;
+                }
+
+                a {
+                    padding: 0;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        >main {
+            grid-column: 2/3;
+            grid-row: 1/-1;
+            overflow-y: scroll;
+            margin-block: 0;
+        }
+
+        >aside {
+            grid-column: 1/2;
+            grid-row: 2/-1;
+            position: static;
+            height: 100%;
+            z-index: 3;
+            outline: unset;
+            padding: 20px;
+
+
+            nav {
+                justify-content: start;
+                flex-direction: column;
+            }
+
+            button {
+                margin-top: auto;
+                display: unset;
+            }
+        }
+    }
+}
+
+main {
+    margin-block: 80px;
+}
+
 
 .horizontal-scroll {
     display: flex;
@@ -21,6 +162,41 @@
     }
 }
 
-main {
-    margin-block: 80px;
+search {
+
+    form {
+        display: flex;
+        align-items: center;
+        border-radius: 9999px;
+        padding-inline: .5em;
+        background-color: var(--background-dark);
+        width: 100%;
+
+        button {
+            --background: transparent;
+
+            &:hover,
+            &:focus-visible {
+                --content: var(--content-color);
+                --background-color-hover: transparent;
+            }
+        }
+
+        label {
+            input {
+                padding: 0.8rem;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+        }
+
+        &:has(:focus),
+        &:has(:hover) {
+            background-color: var(--background-light);
+        }
+    }
 }

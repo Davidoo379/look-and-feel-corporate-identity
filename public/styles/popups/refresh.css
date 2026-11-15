@@ -1,3 +1,8 @@
 .refresh {
     anchor-name: --button;
+    --background: transparent;
+
+    &:hover {
+        --content: var(--content-color);
+    }
 }

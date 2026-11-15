@@ -14,3 +14,13 @@ function closeMenu() {
     const navMenu = document.querySelector("header > nav");
     navMenu.classList.remove("open-nav-menu");
 }
+
+// * SIDEBAR EXPAND
+const expandButton = document.querySelector("body>aside>nav>button");
+
+expandButton.addEventListener("click", toggleSidebar);
+
+function toggleSidebar() {
+    const body = document.querySelector("body");
+    body.classList.toggle("expand");
+}
