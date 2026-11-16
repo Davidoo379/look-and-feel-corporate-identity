@@ -7,9 +7,9 @@
     >
       {% include "svgs/magnet.njk" %}
     </button>
-    <div popover id="mutual-interests">
+    <div class="mutual-interests" popover id="mutual-interests">
       <section>
-        <button popovertarget="mutual-interests">
+        <button class="button-plain" popovertarget="mutual-interests">
           {% include "svgs/x.njk" %}
         </button>
         {% include "svgs/magnet.njk" %}
@@ -18,10 +18,10 @@
       </section>
       <img
         class="image-circle"
-        src="{{ 'assets/images/anthony-martina.png' | url }}"
+        src='{{ "/assets/images/anthony-martina.png" | url }}'
         alt="mutual"
       >
-      <p>you and Anisha share a mutual connection: <em>Anthony Martina</em></p>
+      <p>You and Anisha share a mutual connection: <em>Anthony Martina</em></p>
       {% include "svgs/board-checkmark.njk" %}
       <p>
         You and Elise both attended the <em>Pediatric Symposium</em> on <time
@@ -69,10 +69,14 @@
   <div class="colleague-tabs">
     <menu>
       <li>
-        <button class="button-tab" id="about-user">About user</button>
+        <button class="button-tab button-plain" id="about-user">
+          About user
+        </button>
       </li>
       <li>
-        <button class="button-tab active" id="user-posts">User posts</button>
+        <button class="button-tab button-plain active" id="user-posts">
+          User posts
+        </button>
       </li>
     </menu>
   </div>
@@ -102,19 +106,8 @@
       <button class="button-raised">Open questions</button>
     </div>
     <div class="align-right">
-      <button class="button-flat" popovertarget="bookmark-search-form">
-        {% include "svgs/magnifying-glass.njk" %}
-      </button>
-      <form action="search" popover id="bookmark-search-form">
-        <label for="bookmark-search">Search in bookmarks:
-          <input
-            type="search"
-            id="bookmark-search"
-            placeholder="search in bookmarks"
-          >
-        </label>
-      </form>
-      <button class="button-flat" popovertarget="sort-menu">
+      {% include "search.njk" %}
+      <button class="button-plain" popovertarget="sort-menu">
         {% include "svgs/arrow-up-and-down.njk" %}
       </button>
       <form popover id="sort-menu" action="http://httpbin.org/post">

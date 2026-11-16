@@ -45,6 +45,14 @@
     >
     <link
       rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/popups/mutual-interests.css"
+    >
+    <link
+      rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/popups/popover.css"
+    >
+    <link
+      rel="stylesheet"
       href="https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css"
     >
     <script src="/look-and-feel-corporate-identity/scripts/script.js" defer></script>
@@ -292,14 +300,36 @@
         <img src="x-icon.svg" alt="x-icon">
       </button>
       <search>
-        <form action="http://httpbin.org/post-opportunitie">
-          <label for="search-in-filters">Search in filters:</label>
-          <input id="search-in-filters" type="search">
-          <button type="submit">
-            <img src="magnifying-glass-icon.svg" alt="magnifying-glass-icon">
-          </button>
-        </form>
-      </search>
+  <form action="search">
+    <label for="bookmark-search">
+      <input
+        type="search"
+        id="search"
+        placeholder="Search"
+      >
+    </label>
+    <button class="button-plain" type="submit">
+      <svg
+  title="search"
+  width="23"
+  height="23"
+  viewBox="0 0 23 23"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M16.9709 17.0033L20.6667 20.6991M19.4992 10.4996C19.4992 12.8864 18.551 15.1755 16.8633 16.8633C15.1755 18.551 12.8864 19.4992 10.4996 19.4992C8.11276 19.4992 5.82367 18.551 4.13592 16.8633C2.44817 15.1755 1.5 12.8864 1.5 10.4996C1.5 8.11276 2.44817 5.82367 4.13592 4.13592C5.82367 2.44817 8.11276 1.5 10.4996 1.5C12.8864 1.5 15.1755 2.44817 16.8633 4.13592C18.551 5.82367 19.4992 8.11276 19.4992 10.4996Z"
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+    </button>
+  </form>
+</search>
+
       <button onclick="alert = 'Implementation missing'">
         <img src="backwards-clock-icon.svg" alt="backwards-clock-icon">
         History

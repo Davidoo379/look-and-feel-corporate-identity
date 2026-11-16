@@ -19,15 +19,7 @@ layout: "base.njk"
       <button popovertarget="filter-menu">
         <img src="x-icon.svg" alt="x-icon">
       </button>
-      <search>
-        <form action="http://httpbin.org/post-opportunitie">
-          <label for="search-in-filters">Search in filters:</label>
-          <input id="search-in-filters" type="search">
-          <button type="submit">
-            <img src="magnifying-glass-icon.svg" alt="magnifying-glass-icon">
-          </button>
-        </form>
-      </search>
+      {% include "search.njk" %}
       <button onclick="alert = 'Implementation missing'">
         <img src="backwards-clock-icon.svg" alt="backwards-clock-icon">
         History

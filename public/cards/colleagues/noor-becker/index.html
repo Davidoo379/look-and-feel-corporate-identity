@@ -45,6 +45,14 @@
     >
     <link
       rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/popups/mutual-interests.css"
+    >
+    <link
+      rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/popups/popover.css"
+    >
+    <link
+      rel="stylesheet"
       href="https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css"
     >
     <script src="/look-and-feel-corporate-identity/scripts/script.js" defer></script>
@@ -261,9 +269,9 @@
 </svg>
 
     </button>
-    <div popover id="mutual-interests">
+    <div class="mutual-interests" popover id="mutual-interests">
       <section>
-        <button popovertarget="mutual-interests">
+        <button class="button-plain" popovertarget="mutual-interests">
           <svg
   title="close navigation menu"
   width="44"
@@ -333,10 +341,10 @@
       </section>
       <img
         class="image-circle"
-        src="assets/images/anthony-martina.png"
+        src='/look-and-feel-corporate-identity/assets/images/anthony-martina.png'
         alt="mutual"
       >
-      <p>you and Anisha share a mutual connection: <em>Anthony Martina</em></p>
+      <p>You and Anisha share a mutual connection: <em>Anthony Martina</em></p>
       <svg
   width="46"
   height="47"
@@ -443,10 +451,14 @@
   <div class="colleague-tabs">
     <menu>
       <li>
-        <button class="button-tab" id="about-user">About user</button>
+        <button class="button-tab button-plain" id="about-user">
+          About user
+        </button>
       </li>
       <li>
-        <button class="button-tab active" id="user-posts">User posts</button>
+        <button class="button-tab button-plain active" id="user-posts">
+          User posts
+        </button>
       </li>
     </menu>
   </div>
@@ -468,8 +480,17 @@
       <button class="button-raised">Open questions</button>
     </div>
     <div class="align-right">
-      <button class="button-flat" popovertarget="bookmark-search-form">
-        <svg
+      <search>
+  <form action="search">
+    <label for="bookmark-search">
+      <input
+        type="search"
+        id="search"
+        placeholder="Search"
+      >
+    </label>
+    <button class="button-plain" type="submit">
+      <svg
   title="search"
   width="23"
   height="23"
@@ -486,17 +507,11 @@
   />
 </svg>
 
-      </button>
-      <form action="search" popover id="bookmark-search-form">
-        <label for="bookmark-search">Search in bookmarks:
-          <input
-            type="search"
-            id="bookmark-search"
-            placeholder="search in bookmarks"
-          >
-        </label>
-      </form>
-      <button class="button-flat" popovertarget="sort-menu">
+    </button>
+  </form>
+</search>
+
+      <button class="button-plain" popovertarget="sort-menu">
         <svg
   width="21"
   height="24"
