@@ -24,3 +24,25 @@ function toggleSidebar() {
     const body = document.querySelector("body");
     body.classList.toggle("expand");
 }
+
+// * COLLEAGUE DETAIL PAGE TABS
+const aboutUserButton = document.querySelector("#about-user");
+const userPostsButton = document.querySelector("#user-posts");
+const posts = document.querySelector(".posts");
+const about = document.querySelector(".biography");
+
+aboutUserButton.addEventListener("click", openAboutUser);
+userPostsButton.addEventListener("click", openUserPosts);
+
+function openAboutUser() {
+    about.classList.remove("hidden");
+    posts.classList.add("hidden");
+    aboutUserButton.classList.add("active");
+    userPostsButton.classList.remove("active");
+}
+function openUserPosts() {
+    about.classList.add("hidden");
+    posts.classList.remove("hidden");
+    aboutUserButton.classList.remove("active");
+    userPostsButton.classList.add("active");
+}

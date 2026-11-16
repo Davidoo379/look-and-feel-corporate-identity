@@ -14,9 +14,6 @@ aside {
         height: 100%;
         gap: 20px;
 
-        button {
-            display: none;
-        }
 
         a,
         button {
@@ -41,5 +38,12 @@ aside {
             }
         }
 
+        button {
+            display: none;
+
+            @media (min-width: 900px) {
+                display: flex;
+            }
+        }
     }
 }

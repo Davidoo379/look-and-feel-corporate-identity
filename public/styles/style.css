@@ -55,10 +55,11 @@ body {
             grid-row: 1/2;
             position: static;
             background-color: var(--background-light);
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-template-rows: 1fr 1fr;
             height: 100%;
             transition: 0s;
+            padding-bottom: 0;
 
 
             &>a {
@@ -92,6 +93,7 @@ body {
                 justify-content: end;
                 align-items: center;
                 padding: 0;
+                transition: 0s;
 
                 >button {
                     display: none;
@@ -160,6 +162,12 @@ main {
     to {
         rotate: 360deg;
     }
+}
+
+.hidden {
+    position: absolute;
+    overflow: clip;
+    translate: 200000px;
 }
 
 search {

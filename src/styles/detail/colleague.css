@@ -1,3 +1,60 @@
+.colleague {
+    @media (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 10% min-content max-content 1fr;
+        margin-inline: 10vw;
+        padding-bottom: 2rem;
+
+        .detail-header {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+        .detail-block {
+            grid-column: 1/2;
+            grid-row: 2/4;
+        }
+
+        .info-section {
+            grid-column: 1/2;
+            grid-row: 4/5;
+            margin: 0;
+            padding: 3em;
+            border-radius: 16px 0px 0px 16px;
+        }
+
+        .posts,
+        .biography {
+            background-color: var(--background-light);
+            border-radius: 0px 0px 16px 0px;
+            grid-column: 2/-1;
+            grid-row: 3/5;
+        }
+
+        .colleague-tabs {
+            display: unset;
+            background-color: var(--background-light);
+            border-radius: 16px 16px 0px 0px;
+
+            menu {
+                display: flex;
+
+                button {
+                    padding: .5em;
+                    padding-inline: 1em;
+                    --background-color: transparent;
+                }
+            }
+        }
+    }
+
+}
+
+.colleague-tabs {
+    display: none;
+}
+
 .detail-header {
     padding-top: 1rem;
     display: flex;
@@ -8,16 +65,22 @@
 
     h2 {
         font-size: 1.6rem;
+
+        @media (min-width: 900px) {
+            font-size: 1.8rem;
+            letter-spacing: 10%;
+        }
+    }
+
+    .mutual-button {
+        --background-color: var(--background-pink);
+        width: 44px;
+        height: 44px;
+        grid-column: 3/4;
+        grid-row: 1/2;
     }
 }
 
-.mutual-button {
-    --background-color: var(--background-pink);
-    width: 44px;
-    height: 44px;
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
 
 
 .detail-block {
@@ -46,7 +109,7 @@
 .info-section {
     margin: 1rem;
     padding: 1rem;
-    background-color: var(--background-dark);
+    background-color: var(--background-light);
     border-radius: 16px;
 
     dt {
@@ -58,19 +121,23 @@
         color: var(--text-medium);
         padding-bottom: 1em;
     }
-}
 
-.colleague-ids {
-    display: flex;
-    /* background-color: red; */
-    gap: .5em;
+    .colleague-ids {
+        display: flex;
+        background-color: var(--background-medium);
+        border-radius: 8px;
+        padding: .8em;
+        width: min-content;
+        gap: .5em;
 
-    >a {
-        --background-color: transparent;
-        --background-color-hover: transparent;
+        >a {
+            --background-color: transparent;
+            --background-color-hover: transparent;
+        }
+
     }
-
 }
+
 
 .align-horizontal {
     display: flex;

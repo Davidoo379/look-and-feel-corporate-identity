@@ -19,37 +19,6 @@
         padding-inline: 2rem;
     }
 
-    >search {
-        background-color: var(--background-dark);
-        border-radius: 9999px;
-        min-width: 50vw;
-
-        form {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            input {
-                background-color: transparent;
-                padding: 1rem;
-                color: var(--text-light);
-
-                &::placeholder {
-                    color: var(--text-medium);
-                }
-            }
-
-            button {
-                background-color: transparent;
-                padding-right: 1rem;
-            }
-        }
-
-        label {
-            display: none;
-        }
-    }
-
     >button {
         aspect-ratio: 1/1;
         --background-color: transparent;

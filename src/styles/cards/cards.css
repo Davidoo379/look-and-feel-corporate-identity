@@ -93,12 +93,7 @@ article {
             overflow-x: clip;
 
             svg {
-                flex-grow: 1;
-                max-width: max-content;
-
-                path {
-                    fill: var(--icon-dark)
-                }
+                min-width: max-content;
             }
         }
     }

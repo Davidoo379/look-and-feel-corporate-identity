@@ -1,106 +1,128 @@
-<div class="detail-header">
-  <h2>{{ salutation }} {{ name }}</h2>
-  <button class="mutual-button button-raised" popovertarget="mutual-interests">
-    {% include "svgs/magnet.njk" %}
-  </button>
-  <div popover id="mutual-interests">
-    <section>
-      <button popovertarget="mutual-interests">
-        {% include "svgs/x.njk" %}
-      </button>
-      {% include "svgs/magnet.njk" %}
-      <h3>Mutual interest</h3>
-      <p>Here's what you have in common</p>
-    </section>
-    <img
-      class="image-circle"
-      src="{{ 'assets/images/anthony-martina.png' | url }}"
-      alt="mutual"
+<main class="colleague">
+  <div class="detail-header">
+    <h2>{{ salutation }} {{ name }}</h2>
+    <button
+      class="mutual-button button-raised"
+      popovertarget="mutual-interests"
     >
-    <p>you and Anisha share a mutual connection: <em>Anthony Martina</em></p>
-    {% include "svgs/board-checkmark.njk" %}
-    <p>
-      You and Elise both attended the <em>Pediatric Symposium</em> on <time
-        datetime="2025-02-20"
-      >20 February 2025</time>.
-    </p>
-  </div>
-</div>
-<div class="detail-block">
-  <img class="image-pill-vertical-wide" src="{{ image | url}}" alt="{{ name }}">
-  <blockquote>
-    {{ quote }}
-  </blockquote>
-</div>
-<dl class="info-section">
-  <dt>Role:</dt>
-  <dd>{{ role }}</dd>
-  <dt>Specialism (sub-specialism):</dt>
-  <dd>{{ subSpecialism }}</dd>
-  <dt>Years of experience:</dt>
-  <dd>{{ experience }}</dd>
-  <dt>Institution:</dt>
-  <dd>{{ institute }}</dd>
-  <div class="colleague-ids">
-    <a href="linkedin.com">
-      {% include "svgs/linkedin.njk" %}
-    </a>
-    <button class="align-horizontal button-raised" popovertarget="identifiers">
-      {% include "svgs/id-card.njk" %}
-      Identifiers
+      {% include "svgs/magnet.njk" %}
     </button>
-    <div popover id="identifiers">
-      <p><em>ORCID:</em> {{ orcid }}</p>
-      <p><em>BIG registration:</em> {{ big-registration }}</p>
+    <div popover id="mutual-interests">
+      <section>
+        <button popovertarget="mutual-interests">
+          {% include "svgs/x.njk" %}
+        </button>
+        {% include "svgs/magnet.njk" %}
+        <h3>Mutual interest</h3>
+        <p>Here's what you have in common</p>
+      </section>
+      <img
+        class="image-circle"
+        src="{{ 'assets/images/anthony-martina.png' | url }}"
+        alt="mutual"
+      >
+      <p>you and Anisha share a mutual connection: <em>Anthony Martina</em></p>
+      {% include "svgs/board-checkmark.njk" %}
+      <p>
+        You and Elise both attended the <em>Pediatric Symposium</em> on <time
+          datetime="2025-02-20"
+        >20 February 2025</time>.
+      </p>
     </div>
   </div>
-</dl>
-<section class="biography">
-  <h3>Biography</h3>
-  <p>
-    {{ biography }}
-  </p>
-  <h3>Mesh terms</h3>
-  <ul class="mesh-terms">
-    {%- for meshTerm in meshTerms -%}
-      <li>{{ meshTerm }}</li>
-    {%- endfor -%}
-  </ul>
-  <h3>Intentions</h3>
-  <ul class="mesh-terms">
-    {%- for intention in intentions -%}
-      <li>{{ intention }}</li>
-    {%- endfor -%}
-  </ul>
-</section>
-<section class="posts">
-  <h3>Posts</h3>
-  <div class="align-horizontal">
-    <button class="button-raised active">Research projects</button>
-    <button class="button-raised">Internships</button>
-    <button class="button-raised">Open questions</button>
+  <div class="detail-block">
+    <img
+      class="image-pill-vertical-wide"
+      src="{{ image | url}}"
+      alt="{{ name }}"
+    >
+    <blockquote>
+      {{ quote }}
+    </blockquote>
   </div>
-  <div class="align-right">
-    <button class="button-flat" popovertarget="bookmark-search-form">
-      {% include "svgs/magnifying-glass.njk" %}
-    </button>
-    <form action="search" popover id="bookmark-search-form">
-      <label for="bookmark-search">Search in bookmarks:
-        <input
-          type="search"
-          id="bookmark-search"
-          placeholder="search in bookmarks"
-        >
-      </label>
-    </form>
-    <button class="button-flat" popovertarget="sort-menu">
-      {% include "svgs/arrow-up-and-down.njk" %}
-    </button>
-    <form popover id="sort-menu" action="http://httpbin.org/post">
-      {% include "sorting/sort.njk" %}
-    </form>
+  <dl class="info-section">
+    <dt>Role:</dt>
+    <dd>{{ role }}</dd>
+    <dt>Specialism (sub-specialism):</dt>
+    <dd>{{ subSpecialism }}</dd>
+    <dt>Years of experience:</dt>
+    <dd>{{ experience }}</dd>
+    <dt>Institution:</dt>
+    <dd>{{ institute }}</dd>
+    <div class="colleague-ids">
+      <a href="linkedin.com">
+        {% include "svgs/linkedin.njk" %}
+      </a>
+      <button
+        class="align-horizontal button-raised"
+        popovertarget="identifiers"
+      >
+        {% include "svgs/id-card.njk" %}
+        Identifiers
+      </button>
+      <div popover id="identifiers">
+        <p><em>ORCID:</em> {{ orcid }}</p>
+        <p><em>BIG registration:</em> {{ big-registration }}</p>
+      </div>
+    </div>
+  </dl>
+  <div class="colleague-tabs">
+    <menu>
+      <li>
+        <button class="button-tab" id="about-user">About user</button>
+      </li>
+      <li>
+        <button class="button-tab active" id="user-posts">User posts</button>
+      </li>
+    </menu>
   </div>
-  <div id="list" class="horizontal-carousel">
-    <!-- ! CARDS SPAWN HERE -->
-  </div>
-</section>
+  <section class="biography">
+    <h3>Biography</h3>
+    <p>
+      {{ biography }}
+    </p>
+    <h3>Mesh terms</h3>
+    <ul class="mesh-terms">
+      {%- for meshTerm in meshTerms -%}
+        <li>{{ meshTerm }}</li>
+      {%- endfor -%}
+    </ul>
+    <h3>Intentions</h3>
+    <ul class="mesh-terms">
+      {%- for intention in intentions -%}
+        <li>{{ intention }}</li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  <section class="posts">
+    <h3>Posts</h3>
+    <div class="align-horizontal">
+      <button class="button-raised active">Research projects</button>
+      <button class="button-raised">Internships</button>
+      <button class="button-raised">Open questions</button>
+    </div>
+    <div class="align-right">
+      <button class="button-flat" popovertarget="bookmark-search-form">
+        {% include "svgs/magnifying-glass.njk" %}
+      </button>
+      <form action="search" popover id="bookmark-search-form">
+        <label for="bookmark-search">Search in bookmarks:
+          <input
+            type="search"
+            id="bookmark-search"
+            placeholder="search in bookmarks"
+          >
+        </label>
+      </form>
+      <button class="button-flat" popovertarget="sort-menu">
+        {% include "svgs/arrow-up-and-down.njk" %}
+      </button>
+      <form popover id="sort-menu" action="http://httpbin.org/post">
+        {% include "sorting/sort.njk" %}
+      </form>
+    </div>
+    <div id="list" class="horizontal-carousel">
+      <!-- ! CARDS SPAWN HERE -->
+    </div>
+  </section>
+</main>
