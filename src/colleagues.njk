@@ -4,19 +4,7 @@ layout: "base.njk"
 
 ---
 <div class="colleague-search-options">
-  <search>
-    <form action="http://httpbin.org/post">
-      <label for="search-in-colleagues">Search in colleagues:</label>
-      <input
-        id="search-in-colleagues"
-        type="search"
-        placeholder="search in events"
-      >
-      <button type="submit">
-        {% include "svgs/magnifying-glass.njk" %}
-      </button>
-    </form>
-  </search>
+  {% include "search.njk" %}
   <button class="button-flat" popovertarget="sort-menu">
     {% include "svgs/arrow-up-and-down.njk" %}
   </button>

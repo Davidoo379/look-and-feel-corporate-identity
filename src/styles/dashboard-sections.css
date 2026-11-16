@@ -18,6 +18,10 @@ section {
             justify-content: space-between;
             align-items: center;
 
+            search {
+                max-width: 250px;
+            }
+
             @media (min-width: 900px) {
                 justify-content: end;
                 gap: 1em;

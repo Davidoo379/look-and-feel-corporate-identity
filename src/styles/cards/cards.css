@@ -65,7 +65,7 @@ article {
 
         .internship,
         .open-question {
-            background-color: var(--background-green-bright);
+            background-color: var(--background-green-light);
         }
 
         .webinar {
@@ -90,7 +90,7 @@ article {
             scrollbar-width: none;
             z-index: 2;
             gap: 0.5em;
-            overflow-x: clip;
+            overflow-x: scroll;
 
             svg {
                 min-width: max-content;
@@ -110,8 +110,6 @@ article {
     anchor-scope: all;
 
     >button {
-        background-color: transparent;
-        --content-color-hover: var(--content-color);
         min-width: 30px;
         anchor-name: --button;
     }
@@ -142,6 +140,7 @@ article {
         display: flex;
         gap: 8px;
         font-size: 1em;
+        border-radius: 0;
 
         --content-color: var(--text-lightest);
         --content-color-hover: var(--text-darkest);

@@ -3,27 +3,27 @@
   <span>PediaConnect</span>
 </a>
 <h1>{{ title }}</h1>
-<button class="button-flat">
+<button class="button-plain">
   {% include 'svgs/hamburger.njk' %}
 </button>
 <nav>
-  <button class="button-flat">
+  <button class="button-plain">
     {% include 'svgs/x.njk' %}
   </button>
-  <a class="opportunities button-flat" href="{{'/opportunities' | url}}">
+  <a class="opportunities button-plain" href="{{'/opportunities' | url}}">
     <span>Opportunities</span>
     {% include 'svgs/airhorn.njk' %}
   </a>
 
   <a
-    class="events-and-conventions button-flat"
+    class="events-and-conventions button-plain"
     href="{{'/events' | url}}"
   >
     <span>Events & conventions</span>
     {% include 'svgs/calendar.njk' %}
   </a>
 
-  <a class="colleagues button-flat" href="{{'/colleagues' | url}}">
+  <a class="colleagues button-plain" href="{{'/colleagues' | url}}">
     <span>Colleagues</span>
     {% include 'svgs/group.njk' %}
   </a>
