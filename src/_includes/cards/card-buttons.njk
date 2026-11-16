@@ -2,10 +2,13 @@
   <button class="button-plain" onclick="alert(`Implementation missing!`)">
     {% include "svgs/bookmark.njk" %}
   </button>
-  <button class="button-plain" popovertarget="opportunity-card-options">
+  <button
+    class="button-plain"
+    popovertarget="card-options-{{ listName }}-{{ loop.index }}"
+  >
     {% include "svgs/vertical-dots.njk" %}
   </button>
-  <div popover id="opportunity-card-options">
+  <div popover id="card-options-{{ listName }}-{{ loop.index }}">
     {% include "cards/card-options.njk" %}
   </div>
 </div>

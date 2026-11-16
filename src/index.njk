@@ -47,6 +47,7 @@ layout: "base.njk"
       <a href="/user/settings.html/#feed-prefrences">Change your preferences</a>
     </div>
     <ul class="horizontal-carousel">
+      {% set listName = "recommended" %}
       {%- for card in collections.recommended -%}
         <li>
           {% set layout = card.data.layoutCard or "default" %}
@@ -72,6 +73,7 @@ layout: "base.njk"
       {% include "search.njk" %}
     </div>
     <ul class="horizontal-carousel">
+      {% set listName = "bookmarked" %}
       {%- for card in collections.bookmarked -%}
         <li>
           {% set layout = card.data.layoutCard or "default" %}
