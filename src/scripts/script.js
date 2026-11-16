@@ -14,6 +14,21 @@ function closeMenu() {
     const navMenu = document.querySelector("header > nav");
     navMenu.classList.remove("open-nav-menu");
 }
+// * FILTER MENU
+const filterButton = document.querySelector("#filter-menu-open");
+const filterCloseButton = document.querySelector("#filter-menu-close");
+const filter = document.querySelector("#filter-menu");
+
+filterButton.addEventListener("click", openFilter);
+filterCloseButton.addEventListener("click", closeFilter);
+
+function openFilter() {
+    filter.classList.remove("filter-closed");
+}
+
+function closeFilter() {
+    filter.classList.add("filter-closed");
+}
 
 // * SIDEBAR EXPAND
 const expandButton = document.querySelector("body>aside>nav>button");

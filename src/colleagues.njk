@@ -5,38 +5,34 @@ layout: "base.njk"
 ---
 <div class="colleague-search-options">
   {% include "search.njk" %}
-  <button class="button-flat" popovertarget="sort-menu">
+  <button class="button-plain" popovertarget="sort-menu">
     {% include "svgs/arrow-up-and-down.njk" %}
   </button>
   <form popover id="sort-menu" action="http://httpbin.org/post">
     {% include "sorting/sort.njk" %}
   </form>
-  <button class="button-flat" popovertarget="filter-menu">
+  <button class="button-plain" id="filter-menu-open">
     {% include "svgs/abacus.njk" %}
   </button>
-  <aside popover id="filter-menu">
-    <div>
-      <button popovertarget="filter-menu">
-        <img src="x-icon.svg" alt="x-icon">
-      </button>
-      {% include "search.njk" %}
-      <button onclick="alert = 'Implementation missing'">
-        <img src="backwards-clock-icon.svg" alt="backwards-clock-icon">
-        History
-      </button>
-    </div>
-    /* TODO this can be done with a loop through all options as collection */
-    {% include "filters/role.njk" %}
-    {% include "filters/research-type.njk" %}
-    {% include "filters/sub-specialism.njk" %}
-    {% include "filters/hospital-or-research-institute.njk" %}
-    {% include "filters/mesh-terms.njk" %}
-    {% include "filters/intentions.njk" %}
-    <button onclick="submitColleaguesFilters()">
-      show results
-    </button>
-  </aside>
 </div>
+<aside class="filters filter-closed" id="filter-menu">
+  <div class="align-horizontal">
+    <button class="button-plain" id="filter-menu-close">
+      {% include "svgs/x.njk" %}
+    </button>
+    {% include "search.njk" %}
+    <button class="button-raised" onclick="alert = 'Implementation missing'">
+      {% include "svgs/backwards-clock.njk" %}
+      History
+    </button>
+  </div>
+  {%- for filter in collections.colleagues -%}
+    {{ filter.templateContent | safe }}
+  {%- endfor -%}
+  <button class="button-raised result" onclick="submitColleaguesFilters()">
+    show results
+  </button>
+</aside>
 <menu class="view-modes">
   <button class="button-raised active">
     {% include "svgs/dot-list.njk" %}

@@ -1,0 +1,24 @@
+<form id="{{ name }}" action="http://httpbin.org/post">
+  <details open>
+    <summary>{{ title }}</summary>
+    <div>
+      {%- for option in options -%}
+        <label for="{{ option }}">
+          <input
+            type="checkbox"
+            name="{{ name }}"
+            id="{{ option }}"
+          >
+          {{ option }}
+        </label>
+      {%- endfor -%}
+    </div>
+    <button class="button-plain" type="reset">
+      Clear filters
+    </button>
+    <button class="button-raised" onclick="alert = 'Implementation missing'">
+      {% include "svgs/plus.njk" %}
+      see all options
+    </button>
+  </details>
+</form>

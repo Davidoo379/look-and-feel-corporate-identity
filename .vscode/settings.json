@@ -1,7 +1,7 @@
 {
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Nunjucks Dark Modern",
+    "workbench.colorTheme": "Fluent OLED",
     "emmet.includeLanguages": {
         "njk": "html",
         "nunjucks": "html"
