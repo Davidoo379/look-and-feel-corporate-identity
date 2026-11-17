@@ -114,8 +114,16 @@
         {% include "sorting/sort.njk" %}
       </form>
     </div>
-    <div id="list" class="horizontal-carousel">
-      <!-- ! CARDS SPAWN HERE -->
-    </div>
+    <ul class="horizontal-carousel">
+      {% set listName = "user-posts" %}
+      {%- for card in collections.opportunity -%}
+        {% if name == card.data.name %}
+          <li>
+            {% set layout = card.data.layoutCard or "default" %}
+            {% include "cards/" + layout + ".njk" %}
+          </li>
+        {% endif %}
+      {%- endfor -%}
+    </ul>
   </section>
 </main>
