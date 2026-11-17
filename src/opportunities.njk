@@ -3,4 +3,29 @@ title: Opportunities
 layout: "base.njk"
 
 ---
-<main></main>
+<main>
+  <section class="card-list">
+    <h2>
+      A collection of potential research partners
+    </h2>
+    <p>
+      Browse all active research projects, open questions, internships and
+      collaboration opportunities. Use filters to refine your search.
+    </p>
+    <h2>367 opportunities</h2>
+    <ul>
+      {%- for card in collections.opportunity -%}
+        <li>
+          {% set layout = card.data.layoutCard or "default" %}
+          {% include "cards/" + layout + ".njk" %}
+        </li>
+      {%- endfor -%}
+    </ul>
+    <div class="loading">
+      <p>Loading more opportunities</p>
+      <div class="spinner">
+        {% include "svgs/logo.njk" %}
+      </div>
+    </div>
+  </section>
+</main>
