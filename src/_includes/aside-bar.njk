@@ -3,23 +3,23 @@
     <span>Home</span>
     {% include "svgs/house.njk" %}
   </a>
-  <a class="button-flat" title="profile" href="/user/profile.html">
+  <a class="button-flat" title="profile" href="{{'/user/profile' | url}}">
     <span>Profile</span>
     {% include "svgs/person.njk" %}
   </a>
   <a
     class="button-flat"
     title="create opportunity"
-    href="/user/create-opportunity.html"
+    href="{{'/user/create-opportunity' | url}}"
   >
     <span>Create Opportunity</span>
     {% include "svgs/plus.njk" %}
   </a>
-  <a class="button-flat" title="settings" href="/user/settings.html">
+  <a class="button-flat" title="settings" href="{{'/user/settings' | url}}">
     <span>Settings</span>
     {% include "svgs/kog.njk" %}
   </a>
-  <button class="button-flat" title="expand-sidebar" href="/user/settings.html">
+  <button class="button-flat" title="expand-sidebar">
     <span>Close</span>
     {% include "svgs/arrow-sidebar.njk" %}
   </button>

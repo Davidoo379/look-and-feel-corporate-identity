@@ -115,36 +115,3 @@ article {
     }
 
 }
-
-[popover]:popover-open {
-    position: absolute;
-    position-anchor: --button;
-    top: anchor(bottom);
-    right: anchor(right);
-
-    background-color: var(--background-darkest);
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    justify-self: end;
-    z-index: 0;
-    overflow: clip;
-
-    a,
-    button {
-        width: 100%;
-        white-space: nowrap;
-        text-align: start;
-        align-self: start;
-        padding: 0.5rem;
-        display: flex;
-        gap: 8px;
-        font-size: 1em;
-        border-radius: 0;
-
-        --content-color: var(--text-lightest);
-        --content-color-hover: var(--text-darkest);
-        --background-color: var(--background-darkest);
-        --background-color-hover: var(--background-light);
-    }
-}
