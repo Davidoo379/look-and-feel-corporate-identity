@@ -69,18 +69,18 @@
   <div class="colleague-tabs">
     <menu>
       <li>
-        <button class="button-tab button-plain" id="about-user">
+        <a href="#biography" class="button-tab button-plain" id="about-user">
           About user
-        </button>
+        </a>
       </li>
       <li>
-        <button class="button-tab button-plain active" id="user-posts">
+        <a href="#posts" class="button-tab button-plain" id="user-posts">
           User posts
-        </button>
+        </a>
       </li>
     </menu>
   </div>
-  <section class="biography">
+  <section id="biography" class="biography tab-section">
     <h3>Biography</h3>
     <p>
       {{ biography }}
@@ -98,7 +98,7 @@
       {%- endfor -%}
     </ul>
   </section>
-  <section class="posts">
+  <section id="posts" class="posts tab-section">
     <h3>Posts</h3>
     <div class="align-horizontal">
       <button class="button-raised active">Research projects</button>

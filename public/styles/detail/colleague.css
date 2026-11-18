@@ -5,6 +5,7 @@
         grid-template-rows: 10% min-content max-content 1fr;
         margin-inline: 10vw;
         padding-bottom: 2rem;
+        height: min-content;
 
         .detail-header {
             grid-column: 1/-1;
@@ -32,11 +33,25 @@
             grid-row: 3/5;
         }
 
+        /* MAKE SURE BIO IS VISIBLE WHEN THERE IS NO TARGET  */
+        &:not(:has(.tab-section:target)) .biography {
+            display: block;
+        }
+
         .colleague-tabs {
             display: unset;
         }
     }
 
+}
+
+
+.tab-section {
+    display: none;
+
+    &:target {
+        display: block;
+    }
 }
 
 .colleague-tabs {

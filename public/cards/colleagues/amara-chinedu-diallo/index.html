@@ -57,6 +57,10 @@
     >
     <link
       rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/user/settings.css"
+    >
+    <link
+      rel="stylesheet"
       href="https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css"
     >
     <script src="/look-and-feel-corporate-identity/scripts/script.js" defer></script>
@@ -451,18 +455,18 @@
   <div class="colleague-tabs">
     <menu>
       <li>
-        <button class="button-tab button-plain" id="about-user">
+        <a href="#biography" class="button-tab button-plain" id="about-user">
           About user
-        </button>
+        </a>
       </li>
       <li>
-        <button class="button-tab button-plain active" id="user-posts">
+        <a href="#posts" class="button-tab button-plain" id="user-posts">
           User posts
-        </button>
+        </a>
       </li>
     </menu>
   </div>
-  <section class="biography">
+  <section id="biography" class="biography tab-section">
     <h3>Biography</h3>
     <p>
       
@@ -472,7 +476,7 @@
     <h3>Intentions</h3>
     <ul class="mesh-terms"><li>Open to mentoring</li></ul>
   </section>
-  <section class="posts">
+  <section id="posts" class="posts tab-section">
     <h3>Posts</h3>
     <div class="align-horizontal">
       <button class="button-raised active">Research projects</button>
@@ -587,7 +591,7 @@
 
   </button>
   <div popover id="card-options-user-posts-5">
-    <a href="./user/settings.html#feed">
+    <a href="/look-and-feel-corporate-identity/user/settings#preferences">
   <svg
   width="20"
   height="20"

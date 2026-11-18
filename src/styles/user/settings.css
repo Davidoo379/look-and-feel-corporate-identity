@@ -1,0 +1,22 @@
+.settings {
+    padding: 3em;
+
+    form {
+        display: grid;
+
+        >fieldset {
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+        }
+
+        &:not(:has(.tab-section:target)) .account-settings {
+            display: block;
+        }
+    }
+
+    nav {
+        menu {
+            display: flex;
+        }
+    }
+}

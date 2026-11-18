@@ -8,22 +8,22 @@ layout: "base.njk"
   <nav>
     <menu>
       <li>
-        <button id="account-settings" class="button-plain button-tab active">
+        <a href="#account-settings" class="button-plain button-tab">
           Account settings
-        </button>
+        </a>
       </li>
       <li>
-        <button id="privacy" class="button-plain button-tab">Privacy</button>
+        <a href="#privacy" class="button-plain button-tab">Privacy</a>
       </li>
       <li>
-        <button id="preferences" class="button-plain button-tab">
+        <a href="#preferences" class="button-plain button-tab">
           Preferences
-        </button>
+        </a>
       </li>
     </menu>
   </nav>
   <form action="http://httpbin.org/post">
-    <fieldset class="account-settings">
+    <fieldset id="account-settings" class="account-settings tab-section">
       <legend>Account settings</legend>
       <label>
         Location sharing
@@ -62,7 +62,7 @@ layout: "base.njk"
         <span>You stay in control of what others can see.</span>
       </p>
     </fieldset>
-    <fieldset class="privacy hidden">
+    <fieldset id="privacy" class="privacy tab-section">
       <legend>Privacy</legend>
       <fieldset class="divider">
         <legend>Change email address</legend>
@@ -160,7 +160,7 @@ layout: "base.njk"
         </label>
       </fieldset>
     </fieldset>
-    <fieldset class="preferences hidden">
+    <fieldset id="preferences" class="preferences tab-section">
       <fieldset>
         <legend>Interests & preferences</legend>
         <p>
