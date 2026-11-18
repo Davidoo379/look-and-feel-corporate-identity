@@ -217,6 +217,355 @@
 
     </header>
     
+<main class="settings">
+  <nav>
+    <menu>
+      <li>
+        <button id="account-settings" class="button-plain button-tab active">
+          Account settings
+        </button>
+      </li>
+      <li>
+        <button id="privacy" class="button-plain button-tab">Privacy</button>
+      </li>
+      <li>
+        <button id="preferences" class="button-plain button-tab">
+          Preferences
+        </button>
+      </li>
+    </menu>
+  </nav>
+  <form action="">
+    <fieldset class="account-settings">
+      <legend>Account settings</legend>
+      <label>
+        Location sharing
+        <input type="checkbox" switch class="toggle-pill">
+      </label>
+      <p>
+        Allow location access to show nearby events, announce attandece during
+        event and relevant connections.
+      </p>
+      <p class="warning">
+        <svg
+  width="17"
+  height="17"
+  viewBox="0 0 17 17"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M1.75 5.70312V11.2969L5.70312 15.25H11.2969L15.25 11.2969V5.70312L11.2969 1.75H5.70312L1.75 5.70312ZM8.49902 11.4424C8.73684 11.4415 8.94805 11.5244 9.11523 11.6924C9.28175 11.8598 9.36515 12.0706 9.36523 12.3076C9.36523 12.5442 9.28232 12.7547 9.11621 12.9219V12.9229C8.94894 13.0901 8.73752 13.1729 8.5 13.1729H8.49805C8.26256 13.171 8.05343 13.0885 7.88672 12.9238C7.71831 12.7573 7.63477 12.5455 7.63477 12.3076C7.63485 12.0699 7.7179 11.8583 7.88574 11.6914C8.05263 11.5255 8.26272 11.4433 8.49902 11.4424ZM9 3.63379C9.138 3.63379 9.24989 3.74581 9.25 3.88379V9.96191C9.25 10.1 9.13807 10.2119 9 10.2119H8C7.86193 10.2119 7.75 10.1 7.75 9.96191V3.88379C7.75011 3.74581 7.862 3.63379 8 3.63379H9ZM16.75 11.8271C16.75 11.8933 16.7235 11.9571 16.6768 12.0039L12.0127 16.6768C11.9658 16.7236 11.9022 16.75 11.8359 16.75H5.17285C5.10668 16.75 5.04293 16.7235 4.99609 16.6768L0.323242 12.0127C0.27638 11.9658 0.25 11.9022 0.25 11.8359V5.17285C0.250039 5.10668 0.276497 5.04293 0.323242 4.99609L4.9873 0.323242L5.02539 0.291992C5.06615 0.264835 5.11436 0.25 5.16406 0.25H11.8271L11.876 0.254883C11.924 0.264471 11.9688 0.288168 12.0039 0.323242L16.6768 4.9873C16.7236 5.03418 16.75 5.09777 16.75 5.16406V11.8271Z"
+    fill="currentColor"
+    stroke="currentColor"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+</svg>
+
+        <span>Location is only used while the app is active.</span>
+      </p>
+      <label>
+        Personalised suggestions
+        <input type="checkbox" switch class="toggle-pill">
+      </label>
+      <p>
+        AAllow us to use activity (such as searches, saved items and
+        interactions) to suggest relevant people and content.
+      </p>
+      <p class="warning">
+        <svg
+  width="17"
+  height="17"
+  viewBox="0 0 17 17"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M1.75 5.70312V11.2969L5.70312 15.25H11.2969L15.25 11.2969V5.70312L11.2969 1.75H5.70312L1.75 5.70312ZM8.49902 11.4424C8.73684 11.4415 8.94805 11.5244 9.11523 11.6924C9.28175 11.8598 9.36515 12.0706 9.36523 12.3076C9.36523 12.5442 9.28232 12.7547 9.11621 12.9219V12.9229C8.94894 13.0901 8.73752 13.1729 8.5 13.1729H8.49805C8.26256 13.171 8.05343 13.0885 7.88672 12.9238C7.71831 12.7573 7.63477 12.5455 7.63477 12.3076C7.63485 12.0699 7.7179 11.8583 7.88574 11.6914C8.05263 11.5255 8.26272 11.4433 8.49902 11.4424ZM9 3.63379C9.138 3.63379 9.24989 3.74581 9.25 3.88379V9.96191C9.25 10.1 9.13807 10.2119 9 10.2119H8C7.86193 10.2119 7.75 10.1 7.75 9.96191V3.88379C7.75011 3.74581 7.862 3.63379 8 3.63379H9ZM16.75 11.8271C16.75 11.8933 16.7235 11.9571 16.6768 12.0039L12.0127 16.6768C11.9658 16.7236 11.9022 16.75 11.8359 16.75H5.17285C5.10668 16.75 5.04293 16.7235 4.99609 16.6768L0.323242 12.0127C0.27638 11.9658 0.25 11.9022 0.25 11.8359V5.17285C0.250039 5.10668 0.276497 5.04293 0.323242 4.99609L4.9873 0.323242L5.02539 0.291992C5.06615 0.264835 5.11436 0.25 5.16406 0.25H11.8271L11.876 0.254883C11.924 0.264471 11.9688 0.288168 12.0039 0.323242L16.6768 4.9873C16.7236 5.03418 16.75 5.09777 16.75 5.16406V11.8271Z"
+    fill="currentColor"
+    stroke="currentColor"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+</svg>
+
+        <span>Individual activity is always private</span>
+      </p>
+      <label>
+        Activity visibility
+        <input type="checkbox" switch class="toggle-pill">
+      </label>
+      <p>
+        Allow other to see when you engage with content on the platform, such as
+        attending events or interaction with projects.
+      </p>
+      <p class="warning">
+        <svg
+  width="17"
+  height="17"
+  viewBox="0 0 17 17"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M1.75 5.70312V11.2969L5.70312 15.25H11.2969L15.25 11.2969V5.70312L11.2969 1.75H5.70312L1.75 5.70312ZM8.49902 11.4424C8.73684 11.4415 8.94805 11.5244 9.11523 11.6924C9.28175 11.8598 9.36515 12.0706 9.36523 12.3076C9.36523 12.5442 9.28232 12.7547 9.11621 12.9219V12.9229C8.94894 13.0901 8.73752 13.1729 8.5 13.1729H8.49805C8.26256 13.171 8.05343 13.0885 7.88672 12.9238C7.71831 12.7573 7.63477 12.5455 7.63477 12.3076C7.63485 12.0699 7.7179 11.8583 7.88574 11.6914C8.05263 11.5255 8.26272 11.4433 8.49902 11.4424ZM9 3.63379C9.138 3.63379 9.24989 3.74581 9.25 3.88379V9.96191C9.25 10.1 9.13807 10.2119 9 10.2119H8C7.86193 10.2119 7.75 10.1 7.75 9.96191V3.88379C7.75011 3.74581 7.862 3.63379 8 3.63379H9ZM16.75 11.8271C16.75 11.8933 16.7235 11.9571 16.6768 12.0039L12.0127 16.6768C11.9658 16.7236 11.9022 16.75 11.8359 16.75H5.17285C5.10668 16.75 5.04293 16.7235 4.99609 16.6768L0.323242 12.0127C0.27638 11.9658 0.25 11.9022 0.25 11.8359V5.17285C0.250039 5.10668 0.276497 5.04293 0.323242 4.99609L4.9873 0.323242L5.02539 0.291992C5.06615 0.264835 5.11436 0.25 5.16406 0.25H11.8271L11.876 0.254883C11.924 0.264471 11.9688 0.288168 12.0039 0.323242L16.6768 4.9873C16.7236 5.03418 16.75 5.09777 16.75 5.16406V11.8271Z"
+    fill="currentColor"
+    stroke="currentColor"
+    stroke-width="0.5"
+    stroke-linejoin="round"
+  />
+</svg>
+
+        <span>You stay in control of what others can see.</span>
+      </p>
+    </fieldset>
+    <fieldset class="privacy hidden">
+      <legend>Privacy</legend>
+      <fieldset class="divider">
+        <legend>Change email address</legend>
+        <p>
+          Your email address is used to keep your account accesible over time.
+          if your institutional email expires, your personal email ensures
+          continued acces to your data and connections.
+        </p>
+        <p>Current email addresses:</p>
+        <p>
+          <a href="emailto:janedoe@email.com">janedoe@email.com</a> & <a
+            href="emailto:janedoe@work-email.com"
+          >janedoe@work-email.com</a>
+        </p>
+        <label>
+          New personal email:
+          <input
+            type="email"
+            name="personal-email"
+            placeholder="Type new personal email"
+          >
+        </label>
+        <label>
+          New institunional email:
+          <input
+            type="email"
+            name="personal-email"
+            placeholder="Type new institutional email"
+          >
+        </label>
+      </fieldset>
+      <fieldset class="divider">
+        <legend>Change password</legend>
+        <label>
+          Current password:
+          <input
+            type="password"
+            name="current-password"
+            placeholder="Enter current password"
+          >
+          <button class="button-plain">
+            <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 13C6.6 5 17.4 5 21 13"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#494949"
+  />
+  <path
+    d="M12 17C11.606 17 11.2159 16.9224 10.8519 16.7716C10.488 16.6209 10.1573 16.3999 9.87868 16.1213C9.6001 15.8427 9.37913 15.512 9.22836 15.1481C9.0776 14.7841 9 14.394 9 14C9 13.606 9.0776 13.2159 9.22836 12.8519C9.37913 12.488 9.6001 12.1573 9.87868 11.8787C10.1573 11.6001 10.488 11.3791 10.8519 11.2284C11.2159 11.0776 11.606 11 12 11C12.7956 11 13.5587 11.3161 14.1213 11.8787C14.6839 12.4413 15 13.2044 15 14C15 14.7956 14.6839 15.5587 14.1213 16.1213C13.5587 16.6839 12.7956 17 12 17Z"
+    fill="#494949"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#494949"
+  />
+</svg>
+
+          </button>
+        </label>
+        <label>
+          New password:
+          <input
+            type="password"
+            name="new-password"
+            placeholder="Enter new password"
+          >
+          <button class="button-plain">
+            <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 13C6.6 5 17.4 5 21 13"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#494949"
+  />
+  <path
+    d="M12 17C11.606 17 11.2159 16.9224 10.8519 16.7716C10.488 16.6209 10.1573 16.3999 9.87868 16.1213C9.6001 15.8427 9.37913 15.512 9.22836 15.1481C9.0776 14.7841 9 14.394 9 14C9 13.606 9.0776 13.2159 9.22836 12.8519C9.37913 12.488 9.6001 12.1573 9.87868 11.8787C10.1573 11.6001 10.488 11.3791 10.8519 11.2284C11.2159 11.0776 11.606 11 12 11C12.7956 11 13.5587 11.3161 14.1213 11.8787C14.6839 12.4413 15 13.2044 15 14C15 14.7956 14.6839 15.5587 14.1213 16.1213C13.5587 16.6839 12.7956 17 12 17Z"
+    fill="#494949"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#494949"
+  />
+</svg>
+
+          </button>
+        </label>
+        <label>
+          Repeat new password:
+          <input
+            type="password"
+            name="repeat-new-password"
+            placeholder="Enter new password"
+          >
+          <button class="button-plain">
+            <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 13C6.6 5 17.4 5 21 13"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#494949"
+  />
+  <path
+    d="M12 17C11.606 17 11.2159 16.9224 10.8519 16.7716C10.488 16.6209 10.1573 16.3999 9.87868 16.1213C9.6001 15.8427 9.37913 15.512 9.22836 15.1481C9.0776 14.7841 9 14.394 9 14C9 13.606 9.0776 13.2159 9.22836 12.8519C9.37913 12.488 9.6001 12.1573 9.87868 11.8787C10.1573 11.6001 10.488 11.3791 10.8519 11.2284C11.2159 11.0776 11.606 11 12 11C12.7956 11 13.5587 11.3161 14.1213 11.8787C14.6839 12.4413 15 13.2044 15 14C15 14.7956 14.6839 15.5587 14.1213 16.1213C13.5587 16.6839 12.7956 17 12 17Z"
+    fill="#494949"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#494949"
+  />
+</svg>
+
+          </button>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Deactivate account</legend>
+        <label>
+          <input type="checkbox" name="account-disable">
+          Temporarily disable your account. Your profile will be hidden and you
+          can reactivate it at any time.
+          <p>
+            This it recomender if you are switching roles, institutions or
+            taking a break.
+          </p>
+        </label>
+        <label>
+          <input type="checkbox" name="delete-account">
+          Delete account permanently
+          <p>
+            Permanently delete your account and all associate data. This action
+            cannot be undone.
+          </p>
+        </label>
+      </fieldset>
+    </fieldset>
+    <fieldset class="preferences hidden">
+      <fieldset>
+        <legend>Interests & preferences</legend>
+        <p>
+          Update the topics, roles and research interests you selected during
+          onboarding.
+        </p>
+        <label class="divider">
+          Which situation best describes you right now?
+          <p>This helps expectations</p>
+          <select name="self-description">
+            <option value="im-new-to-research">I'm new to research</option>
+            <option value="im-working-on-an-ongoing-project">
+              I'm working on an ongoing project
+            </option>
+            <option value="im-still-exploring-possibilities">
+              I'm still exploring possibilities
+            </option>
+            <option value="i-have-experience-and-want-to-share-knowledge">
+              I have experience and want to share knowledge
+            </option>
+          </select>
+        </label>
+        <label class="divider">
+          Who do you want to find?
+          <p>Select what feels most relevant to you at this moment.</p>
+          <select name="find-preference">
+            <option value="ongoing-or-upcoming-research-projects">
+              Ongoing or upcoming research projects
+            </option>
+            <option value="mentors-or-senior-researchers">
+              Mentor or senior researchers
+            </option>
+            <option value="students=or=early-career-researchers">
+              Students or early-carear researchers
+            </option>
+            <option value="im-not-sure-yet">I'm not sure yet</option>
+          </select>
+        </label>
+        <label>
+          How would you like to explore?
+          <p>This influences the recommendations on your dashboard.</p>
+          <select name="explore-preference">
+            <option value="explore-broadly">Explore broadly</option>
+            <option value="tailored">Tailored</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Other</legend>
+        <label>
+          <input type="checkbox" switch class="toggle-pill">
+          Appearance
+          <p>Light / Dark mode</p>
+        </label>
+        <label>
+          Language
+          <p>
+            This will change what in what language your interface will be shown
+            as.
+          </p>
+          <select name="language">
+            <option value="english">
+              English
+            </option>
+            <option value="dutch">
+              Dutch
+            </option>
+            <option value="spanish">
+              Spanish
+            </option>
+            <option value="german">
+              German
+            </option>
+            <option value="french">
+              French
+            </option>
+            <option value="im-not-sure-yet">I'm not sure yet</option>
+          </select>
+        </label>
+      </fieldset>
+    </fieldset>
+    <button type="submit" class="button-raised">
+      Save changes
+    </button>
+  </form>
+</main>
+
     <aside>
       <nav>
   <a class="button-flat" title="home" href="/look-and-feel-corporate-identity/">

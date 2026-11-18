@@ -3,3 +3,238 @@ title: Settings
 layout: "base.njk"
 
 ---
+
+<main class="settings">
+  <nav>
+    <menu>
+      <li>
+        <button id="account-settings" class="button-plain button-tab active">
+          Account settings
+        </button>
+      </li>
+      <li>
+        <button id="privacy" class="button-plain button-tab">Privacy</button>
+      </li>
+      <li>
+        <button id="preferences" class="button-plain button-tab">
+          Preferences
+        </button>
+      </li>
+    </menu>
+  </nav>
+  <form action="">
+    <fieldset class="account-settings">
+      <legend>Account settings</legend>
+      <label>
+        Location sharing
+        <input type="checkbox" switch class="toggle-pill">
+      </label>
+      <p>
+        Allow location access to show nearby events, announce attandece during
+        event and relevant connections.
+      </p>
+      <p class="warning">
+        {% include "svgs/exclamation-mark.njk" %}
+        <span>Location is only used while the app is active.</span>
+      </p>
+      <label>
+        Personalised suggestions
+        <input type="checkbox" switch class="toggle-pill">
+      </label>
+      <p>
+        AAllow us to use activity (such as searches, saved items and
+        interactions) to suggest relevant people and content.
+      </p>
+      <p class="warning">
+        {% include "svgs/exclamation-mark.njk" %}
+        <span>Individual activity is always private</span>
+      </p>
+      <label>
+        Activity visibility
+        <input type="checkbox" switch class="toggle-pill">
+      </label>
+      <p>
+        Allow other to see when you engage with content on the platform, such as
+        attending events or interaction with projects.
+      </p>
+      <p class="warning">
+        {% include "svgs/exclamation-mark.njk" %}
+        <span>You stay in control of what others can see.</span>
+      </p>
+    </fieldset>
+    <fieldset class="privacy hidden">
+      <legend>Privacy</legend>
+      <fieldset class="divider">
+        <legend>Change email address</legend>
+        <p>
+          Your email address is used to keep your account accesible over time.
+          if your institutional email expires, your personal email ensures
+          continued acces to your data and connections.
+        </p>
+        <p>Current email addresses:</p>
+        <p>
+          <a href="emailto:janedoe@email.com">janedoe@email.com</a> & <a
+            href="emailto:janedoe@work-email.com"
+          >janedoe@work-email.com</a>
+        </p>
+        <label>
+          New personal email:
+          <input
+            type="email"
+            name="personal-email"
+            placeholder="Type new personal email"
+          >
+        </label>
+        <label>
+          New institunional email:
+          <input
+            type="email"
+            name="personal-email"
+            placeholder="Type new institutional email"
+          >
+        </label>
+      </fieldset>
+      <fieldset class="divider">
+        <legend>Change password</legend>
+        <label>
+          Current password:
+          <input
+            type="password"
+            name="current-password"
+            placeholder="Enter current password"
+          >
+          <button class="button-plain">
+            {% include "svgs/eye-open.njk" %}
+          </button>
+        </label>
+        <label>
+          New password:
+          <input
+            type="password"
+            name="new-password"
+            placeholder="Enter new password"
+          >
+          <button class="button-plain">
+            {% include "svgs/eye-open.njk" %}
+          </button>
+        </label>
+        <label>
+          Repeat new password:
+          <input
+            type="password"
+            name="repeat-new-password"
+            placeholder="Enter new password"
+          >
+          <button class="button-plain">
+            {% include "svgs/eye-open.njk" %}
+          </button>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Deactivate account</legend>
+        <label>
+          <input type="checkbox" name="account-disable">
+          Temporarily disable your account. Your profile will be hidden and you
+          can reactivate it at any time.
+          <p>
+            This it recomender if you are switching roles, institutions or
+            taking a break.
+          </p>
+        </label>
+        <label>
+          <input type="checkbox" name="delete-account">
+          Delete account permanently
+          <p>
+            Permanently delete your account and all associate data. This action
+            cannot be undone.
+          </p>
+        </label>
+      </fieldset>
+    </fieldset>
+    <fieldset class="preferences hidden">
+      <fieldset>
+        <legend>Interests & preferences</legend>
+        <p>
+          Update the topics, roles and research interests you selected during
+          onboarding.
+        </p>
+        <label class="divider">
+          Which situation best describes you right now?
+          <p>This helps expectations</p>
+          <select name="self-description">
+            <option value="im-new-to-research">I'm new to research</option>
+            <option value="im-working-on-an-ongoing-project">
+              I'm working on an ongoing project
+            </option>
+            <option value="im-still-exploring-possibilities">
+              I'm still exploring possibilities
+            </option>
+            <option value="i-have-experience-and-want-to-share-knowledge">
+              I have experience and want to share knowledge
+            </option>
+          </select>
+        </label>
+        <label class="divider">
+          Who do you want to find?
+          <p>Select what feels most relevant to you at this moment.</p>
+          <select name="find-preference">
+            <option value="ongoing-or-upcoming-research-projects">
+              Ongoing or upcoming research projects
+            </option>
+            <option value="mentors-or-senior-researchers">
+              Mentor or senior researchers
+            </option>
+            <option value="students=or=early-career-researchers">
+              Students or early-carear researchers
+            </option>
+            <option value="im-not-sure-yet">I'm not sure yet</option>
+          </select>
+        </label>
+        <label>
+          How would you like to explore?
+          <p>This influences the recommendations on your dashboard.</p>
+          <select name="explore-preference">
+            <option value="explore-broadly">Explore broadly</option>
+            <option value="tailored">Tailored</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Other</legend>
+        <label>
+          <input type="checkbox" switch class="toggle-pill">
+          Appearance
+          <p>Light / Dark mode</p>
+        </label>
+        <label>
+          Language
+          <p>
+            This will change what in what language your interface will be shown
+            as.
+          </p>
+          <select name="language">
+            <option value="english">
+              English
+            </option>
+            <option value="dutch">
+              Dutch
+            </option>
+            <option value="spanish">
+              Spanish
+            </option>
+            <option value="german">
+              German
+            </option>
+            <option value="french">
+              French
+            </option>
+            <option value="im-not-sure-yet">I'm not sure yet</option>
+          </select>
+        </label>
+      </fieldset>
+    </fieldset>
+    <button type="submit" class="button-raised">
+      Save changes
+    </button>
+  </form>
+</main>

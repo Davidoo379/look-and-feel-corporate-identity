@@ -42,42 +42,4 @@ section {
         }
     }
 
-
-    &::after {
-        display: block;
-        --i: calc(100% / 14);
-        height: 2px;
-        content: "";
-        margin-inline: 3rem;
-        background-image:
-            linear-gradient(to right, var(--background-medium) calc(var(--i) / 2),
-                transparent calc(var(--i) / 2) calc(var(--i) * 1.5),
-                var(--background-medium) calc(var(--i) * 1.5) calc(var(--i) * 2.5),
-                transparent calc(var(--i) * 2.5) calc(var(--i) * 3.5),
-                var(--background-medium) calc(var(--i) * 3.5) calc(var(--i) * 4.5),
-                transparent calc(var(--i) * 4.5) calc(var(--i) * 5.5),
-                var(--background-medium) calc(var(--i) * 5.5) calc(var(--i) * 6.5),
-                transparent calc(var(--i) * 6.5) calc(var(--i) * 7.5),
-                var(--background-medium) calc(var(--i) * 7.5) calc(var(--i) * 8.5),
-                transparent calc(var(--i) * 8.5) calc(var(--i) * 9.5),
-                var(--background-medium) calc(var(--i) * 9.5) calc(var(--i) * 10.5),
-                transparent calc(var(--i) * 10.5) calc(var(--i) * 11.5),
-                var(--background-medium) calc(var(--i) * 11.5) calc(var(--i) * 12.5),
-                transparent calc(var(--i) * 12.5) calc(var(--i) * 13.5),
-                var(--background-medium) calc(var(--i) * 13.5));
-
-        @media (min-width: 900px) {
-            content: "";
-            background-image: none;
-        }
-    }
-
-    &:last-child::after {
-        content: "";
-        background-image: none;
-    }
-
-    &:first-child::after {
-        margin-inline: 4rem;
-    }
 }
