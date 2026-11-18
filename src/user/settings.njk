@@ -97,40 +97,43 @@ layout: "base.njk"
       <fieldset class="divider">
         <legend>Change password</legend>
         <div class="password-field">
-          <label>
+          <label for="current-password">
             Current password:
-            <input
-              type="password"
-              name="current-password"
-              placeholder="Enter current password"
-            >
           </label>
+          <input
+            id="current-password"
+            type="password"
+            name="current-password"
+            placeholder="Enter current password"
+          >
           <button class="button-plain">
             {% include "svgs/eye-open.njk" %}
           </button>
         </div>
         <div class="password-field">
-          <label>
+          <label for="new-password">
             New password:
-            <input
-              type="password"
-              name="new-password"
-              placeholder="Enter new password"
-            >
           </label>
+          <input
+            id="new-password"
+            type="password"
+            name="new-password"
+            placeholder="Enter new password"
+          >
           <button class="button-plain">
             {% include "svgs/eye-open.njk" %}
           </button>
         </div>
         <div class="password-field">
-          <label>
+          <label for="repeat-new-password">
             Repeat new password:
-            <input
-              type="password"
-              name="repeat-new-password"
-              placeholder="Enter new password"
-            >
           </label>
+          <input
+            id="repeat-new-password"
+            type="password"
+            name="repeat-new-password"
+            placeholder="Enter new password"
+          >
           <button class="button-plain">
             {% include "svgs/eye-open.njk" %}
           </button>
