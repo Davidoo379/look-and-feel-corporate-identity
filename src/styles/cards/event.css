@@ -13,7 +13,7 @@
         font-size: 1em;
     }
 
-    >time {
+    >.date {
         background-color: var(--background-medium);
         grid-column: 1/2;
         grid-row: 2/6;
@@ -28,12 +28,12 @@
         font-weight: 700;
 
 
-        span {
+        time {
             padding: 0.4rem 0.7rem 0.4rem 0.7rem;
             display: block;
         }
 
-        span:last-of-type {
+        time:last-of-type {
             padding-top: 0.1rem;
             background-color: var(--background-green-light);
             border-radius: 0px 0px 8px 8px;

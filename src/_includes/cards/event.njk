@@ -2,10 +2,10 @@
   <a href="./details/event-details.html">Open Card</a>
   {% include "cards/card-buttons.njk" %}
 
-  <time class="date">
-    <span class="dateShort">{{ card.data.time.dateShort }}</span>
-    <span class="weekday">{{ card.data.time.weekday }}</span>
-  </time>
+  <p class="date">
+    <time class="dateShort">{{ card.data.time.dateShort }}</time>
+    <time class="weekday">{{ card.data.time.weekday }}</time>
+  </p>
 
   <p class="location">Location: {{ card.data.location }}</p>
 
