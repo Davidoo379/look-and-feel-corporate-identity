@@ -3,16 +3,23 @@
   {% include "cards/card-buttons.njk" %}
 
   <p class="date">
-    <time class="dateShort">{{ card.data.time.dateShort }}</time>
-    <time class="weekday">{{ card.data.time.weekday }}</time>
+    <time datetime="{{ card.data.time.date }}" class="dateShort">{{
+      card.data.time.dateShort
+    }}</time>
+    <time datetime="{{ card.data.time.date }}" class="weekday">{{
+      card.data.time.weekday
+    }}</time>
   </p>
 
   <p class="location">Location: {{ card.data.location }}</p>
 
   <p class="time">
-    Time: <time class="startTime">{{ card.data.time.start }} </time> - <time
-      class="endTime"
-    >{{ card.data.time.end }}</time>
+    Time: <time datetime="{{ card.data.time.start }}" class="startTime">{{
+        card.data.time.start
+      }}
+    </time> - <time datetime="{{ card.data.time.end }}">{{
+      card.data.time.end
+    }}</time>
   </p>
   <p class="organizer">Organizer: {{ card.data.organizer }}</p>
   <h3 class="title">{{ card.data.cardTabs }}: {{ card.data.title }}</h3>
