@@ -79,6 +79,10 @@ article {
         .symposium {
             background-color: var(--background-blue);
         }
+
+        .colleague {
+            background-color: var(--background-pink);
+        }
     }
 
     .institute,

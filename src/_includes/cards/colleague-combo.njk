@@ -26,4 +26,11 @@
       <li>{{ intention }}</li>
     {%- endfor -%}
   </ul>
+  <footer class="cardTags">
+    <ul class="cardTags">
+      {%- for cardTab in card.data.cardTabs -%}
+        <li class="{{ cardTab | kabab}}">{{ cardTab }}</li>
+      {%- endfor -%}
+    </ul>
+  </footer>
 </article>
