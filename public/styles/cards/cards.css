@@ -90,14 +90,16 @@ article {
         p {
             display: flex;
             align-items: center;
-            text-wrap: nowrap;
-            scrollbar-width: none;
-            z-index: 2;
             gap: 0.5em;
-            overflow-x: scroll;
+
+            span {
+                line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
 
             svg {
-                min-width: max-content;
+                min-width: 24px;
             }
         }
     }
