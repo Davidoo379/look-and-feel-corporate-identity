@@ -12,7 +12,7 @@
     title="create opportunity"
     href="{{'/user/create-opportunity' | url}}"
   >
-    <span>Create Opportunity</span>
+    <span>Create</span>
     {% include "svgs/plus.njk" %}
   </a>
   <a class="button-flat" title="settings" href="{{'/user/settings' | url}}">
@@ -20,7 +20,8 @@
     {% include "svgs/kog.njk" %}
   </a>
   <button class="button-flat" title="expand-sidebar">
-    <span>Close</span>
+    <span class="close-text">Close</span>
+    <span class="open-text">Open</span>
     {% include "svgs/arrow-sidebar.njk" %}
   </button>
 </nav>

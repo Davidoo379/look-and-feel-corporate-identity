@@ -220,105 +220,8 @@
 </nav>
 
     </header>
-    <div class="colleague-search-options">
-  <search>
-  <form action="search">
-    <label>
-      <input
-        type="search"
-        name="search"
-        placeholder="Search"
-      >
-    </label>
-    <button class="button-plain" type="submit">
-      <svg
-  width="23"
-  height="23"
-  viewBox="0 0 23 23"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M16.9709 17.0033L20.6667 20.6991M19.4992 10.4996C19.4992 12.8864 18.551 15.1755 16.8633 16.8633C15.1755 18.551 12.8864 19.4992 10.4996 19.4992C8.11276 19.4992 5.82367 18.551 4.13592 16.8633C2.44817 15.1755 1.5 12.8864 1.5 10.4996C1.5 8.11276 2.44817 5.82367 4.13592 4.13592C5.82367 2.44817 8.11276 1.5 10.4996 1.5C12.8864 1.5 15.1755 2.44817 16.8633 4.13592C18.551 5.82367 19.4992 8.11276 19.4992 10.4996Z"
-    stroke="currentColor"
-    stroke-width="3"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-    </button>
-  </form>
-</search>
-
-  <button class="button-plain" popovertarget="sort-menu">
-    <svg
-  width="21"
-  height="24"
-  viewBox="0 0 21 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M5.00006 22.3337V9.00012M9.00012 18.3336L5.00006 22.3337L1 18.3336M15.6669 1V14.3335M11.6668 5.00006L15.6669 1L19.667 5.00006"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-  </button>
-  <form popover id="sort-menu" action="http://httpbin.org/post">
-    <p>Sort by:</p>
-<input type="radio" id="relevancy" name="sort-preference">
-<label for="relevancy">Relevancy</label>
-<input type="radio" id="recently-added" name="sort-preference">
-<label for="recently-added">Recently added</label>
-<input type="radio" id="distance" name="sort-preference">
-<label for="distance">Distance</label>
-<input type="radio" id="a-z" name="sort-preference">
-<label for="a-z">A-Z</label>
-<input type="radio" id="z-a" name="sort-preference">
-<label for="z-a">Z-A</label>
-
-  </form>
-  <button class="button-plain" id="filter-menu-open">
-    <svg
-  width="25"
-  height="24"
-  viewBox="0 0 25 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M25.0077 20.17C25.0077 20.4188 24.9089 20.6573 24.7331 20.8332C24.5572 21.009 24.3187 21.1078 24.0699 21.1078H17.693C17.4841 21.8867 17.0241 22.5748 16.3843 23.0657C15.7446 23.5565 14.9607 23.8225 14.1544 23.8225C13.348 23.8225 12.5642 23.5565 11.9244 23.0657C11.2846 22.5748 10.8246 21.8867 10.6158 21.1078H0.93779C0.689072 21.1078 0.450542 21.009 0.274672 20.8332C0.0988024 20.6573 0 20.4188 0 20.17C0 19.9213 0.0988024 19.6828 0.274672 19.5069C0.450542 19.3311 0.689072 19.2323 0.93779 19.2323H10.6158C10.8246 18.4534 11.2846 17.7653 11.9244 17.2744C12.5642 16.7836 13.348 16.5176 14.1544 16.5176C14.9607 16.5176 15.7446 16.7836 16.3843 17.2744C17.0241 17.7653 17.4841 18.4534 17.693 19.2323H24.0699C24.3187 19.2323 24.5572 19.3311 24.7331 19.5069C24.9089 19.6828 25.0077 19.9213 25.0077 20.17ZM25.0077 3.65245C25.0077 3.90116 24.9089 4.13969 24.7331 4.31556C24.5572 4.49143 24.3187 4.59023 24.0699 4.59023H21.0065C20.7976 5.36907 20.3376 6.05724 19.6979 6.54805C19.0581 7.03886 18.2743 7.30489 17.4679 7.30489C16.6615 7.30489 15.8777 7.03886 15.2379 6.54805C14.5982 6.05724 14.1382 5.36907 13.9293 4.59023H0.93779C0.814637 4.59023 0.692691 4.56598 0.578913 4.51885C0.465135 4.47172 0.361754 4.40264 0.274672 4.31556C0.18759 4.22848 0.118513 4.1251 0.0713849 4.01132C0.0242566 3.89754 0 3.7756 0 3.65245C0 3.52929 0.0242566 3.40735 0.0713849 3.29357C0.118513 3.17979 0.18759 3.07641 0.274672 2.98933C0.361754 2.90225 0.465135 2.83317 0.578913 2.78604C0.692691 2.73891 0.814637 2.71466 0.93779 2.71466H13.9293C14.1382 1.93582 14.5982 1.24765 15.2379 0.756838C15.8777 0.266028 16.6615 0 17.4679 0C18.2743 0 19.0581 0.266028 19.6979 0.756838C20.3376 1.24765 20.7976 1.93582 21.0065 2.71466H24.0699C24.1936 2.71297 24.3163 2.73608 24.4308 2.78261C24.5453 2.82915 24.6494 2.89816 24.7368 2.98558C24.8242 3.073 24.8932 3.17705 24.9398 3.29159C24.9863 3.40613 25.0094 3.52883 25.0077 3.65245ZM25.0077 11.905C25.0094 12.0286 24.9863 12.1513 24.9398 12.2659C24.8932 12.3804 24.8242 12.4844 24.7368 12.5719C24.6494 12.6593 24.5453 12.7283 24.4308 12.7748C24.3163 12.8214 24.1936 12.8445 24.0699 12.8428H9.44042C9.23155 13.6216 8.77157 14.3098 8.13179 14.8006C7.49201 15.2914 6.70818 15.5574 5.90182 15.5574C5.09547 15.5574 4.31164 15.2914 3.67186 14.8006C3.03208 14.3098 2.5721 13.6216 2.36323 12.8428H0.93779C0.689072 12.8428 0.450542 12.744 0.274672 12.5681C0.0988024 12.3922 0 12.1537 0 11.905C0 11.6563 0.0988024 11.4177 0.274672 11.2419C0.450542 11.066 0.689072 10.9672 0.93779 10.9672H2.36323C2.5721 10.1884 3.03208 9.5002 3.67186 9.00939C4.31164 8.51858 5.09547 8.25255 5.90182 8.25255C6.70818 8.25255 7.49201 8.51858 8.13179 9.00939C8.77157 9.5002 9.23155 10.1884 9.44042 10.9672H24.0699C24.3187 10.9672 24.5572 11.066 24.7331 11.2419C24.9089 11.4177 25.0077 11.6563 25.0077 11.905Z"
-    fill="currentColor"
-  />
-</svg>
-
-  </button>
-</div>
-<aside class="filters filter-closed" id="filter-menu">
-  <div class="align-horizontal">
-    <button class="button-plain" id="filter-menu-close">
-      <svg
-  width="44"
-  height="44"
-  viewBox="0 0 44 44"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M29.5 14.5L14.5 29.5M14.5 14.5L29.5 29.5"
-    stroke="currentColor"
-    stroke-width="4.125"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-    </button>
+    <main>
+  <div class="colleague-search-options">
     <search>
   <form action="search">
     <label>
@@ -349,8 +252,106 @@
   </form>
 </search>
 
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
+    <button class="button-plain" popovertarget="sort-menu">
       <svg
+  width="21"
+  height="24"
+  viewBox="0 0 21 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M5.00006 22.3337V9.00012M9.00012 18.3336L5.00006 22.3337L1 18.3336M15.6669 1V14.3335M11.6668 5.00006L15.6669 1L19.667 5.00006"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+    </button>
+    <form popover id="sort-menu" action="http://httpbin.org/post">
+      <p>Sort by:</p>
+<input type="radio" id="relevancy" name="sort-preference">
+<label for="relevancy">Relevancy</label>
+<input type="radio" id="recently-added" name="sort-preference">
+<label for="recently-added">Recently added</label>
+<input type="radio" id="distance" name="sort-preference">
+<label for="distance">Distance</label>
+<input type="radio" id="a-z" name="sort-preference">
+<label for="a-z">A-Z</label>
+<input type="radio" id="z-a" name="sort-preference">
+<label for="z-a">Z-A</label>
+
+    </form>
+    <button class="button-plain" id="filter-menu-open">
+      <svg
+  width="25"
+  height="24"
+  viewBox="0 0 25 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M25.0077 20.17C25.0077 20.4188 24.9089 20.6573 24.7331 20.8332C24.5572 21.009 24.3187 21.1078 24.0699 21.1078H17.693C17.4841 21.8867 17.0241 22.5748 16.3843 23.0657C15.7446 23.5565 14.9607 23.8225 14.1544 23.8225C13.348 23.8225 12.5642 23.5565 11.9244 23.0657C11.2846 22.5748 10.8246 21.8867 10.6158 21.1078H0.93779C0.689072 21.1078 0.450542 21.009 0.274672 20.8332C0.0988024 20.6573 0 20.4188 0 20.17C0 19.9213 0.0988024 19.6828 0.274672 19.5069C0.450542 19.3311 0.689072 19.2323 0.93779 19.2323H10.6158C10.8246 18.4534 11.2846 17.7653 11.9244 17.2744C12.5642 16.7836 13.348 16.5176 14.1544 16.5176C14.9607 16.5176 15.7446 16.7836 16.3843 17.2744C17.0241 17.7653 17.4841 18.4534 17.693 19.2323H24.0699C24.3187 19.2323 24.5572 19.3311 24.7331 19.5069C24.9089 19.6828 25.0077 19.9213 25.0077 20.17ZM25.0077 3.65245C25.0077 3.90116 24.9089 4.13969 24.7331 4.31556C24.5572 4.49143 24.3187 4.59023 24.0699 4.59023H21.0065C20.7976 5.36907 20.3376 6.05724 19.6979 6.54805C19.0581 7.03886 18.2743 7.30489 17.4679 7.30489C16.6615 7.30489 15.8777 7.03886 15.2379 6.54805C14.5982 6.05724 14.1382 5.36907 13.9293 4.59023H0.93779C0.814637 4.59023 0.692691 4.56598 0.578913 4.51885C0.465135 4.47172 0.361754 4.40264 0.274672 4.31556C0.18759 4.22848 0.118513 4.1251 0.0713849 4.01132C0.0242566 3.89754 0 3.7756 0 3.65245C0 3.52929 0.0242566 3.40735 0.0713849 3.29357C0.118513 3.17979 0.18759 3.07641 0.274672 2.98933C0.361754 2.90225 0.465135 2.83317 0.578913 2.78604C0.692691 2.73891 0.814637 2.71466 0.93779 2.71466H13.9293C14.1382 1.93582 14.5982 1.24765 15.2379 0.756838C15.8777 0.266028 16.6615 0 17.4679 0C18.2743 0 19.0581 0.266028 19.6979 0.756838C20.3376 1.24765 20.7976 1.93582 21.0065 2.71466H24.0699C24.1936 2.71297 24.3163 2.73608 24.4308 2.78261C24.5453 2.82915 24.6494 2.89816 24.7368 2.98558C24.8242 3.073 24.8932 3.17705 24.9398 3.29159C24.9863 3.40613 25.0094 3.52883 25.0077 3.65245ZM25.0077 11.905C25.0094 12.0286 24.9863 12.1513 24.9398 12.2659C24.8932 12.3804 24.8242 12.4844 24.7368 12.5719C24.6494 12.6593 24.5453 12.7283 24.4308 12.7748C24.3163 12.8214 24.1936 12.8445 24.0699 12.8428H9.44042C9.23155 13.6216 8.77157 14.3098 8.13179 14.8006C7.49201 15.2914 6.70818 15.5574 5.90182 15.5574C5.09547 15.5574 4.31164 15.2914 3.67186 14.8006C3.03208 14.3098 2.5721 13.6216 2.36323 12.8428H0.93779C0.689072 12.8428 0.450542 12.744 0.274672 12.5681C0.0988024 12.3922 0 12.1537 0 11.905C0 11.6563 0.0988024 11.4177 0.274672 11.2419C0.450542 11.066 0.689072 10.9672 0.93779 10.9672H2.36323C2.5721 10.1884 3.03208 9.5002 3.67186 9.00939C4.31164 8.51858 5.09547 8.25255 5.90182 8.25255C6.70818 8.25255 7.49201 8.51858 8.13179 9.00939C8.77157 9.5002 9.23155 10.1884 9.44042 10.9672H24.0699C24.3187 10.9672 24.5572 11.066 24.7331 11.2419C24.9089 11.4177 25.0077 11.6563 25.0077 11.905Z"
+    fill="currentColor"
+  />
+</svg>
+
+    </button>
+  </div>
+  <aside class="filters filter-closed" id="filter-menu">
+    <div class="align-horizontal">
+      <button class="button-plain" id="filter-menu-close">
+        <svg
+  width="44"
+  height="44"
+  viewBox="0 0 44 44"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M29.5 14.5L14.5 29.5M14.5 14.5L29.5 29.5"
+    stroke="currentColor"
+    stroke-width="4.125"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+      </button>
+      <search>
+  <form action="search">
+    <label>
+      <input
+        type="search"
+        name="search"
+        placeholder="Search"
+      >
+    </label>
+    <button class="button-plain" type="submit">
+      <svg
+  width="23"
+  height="23"
+  viewBox="0 0 23 23"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M16.9709 17.0033L20.6667 20.6991M19.4992 10.4996C19.4992 12.8864 18.551 15.1755 16.8633 16.8633C15.1755 18.551 12.8864 19.4992 10.4996 19.4992C8.11276 19.4992 5.82367 18.551 4.13592 16.8633C2.44817 15.1755 1.5 12.8864 1.5 10.4996C1.5 8.11276 2.44817 5.82367 4.13592 4.13592C5.82367 2.44817 8.11276 1.5 10.4996 1.5C12.8864 1.5 15.1755 2.44817 16.8633 4.13592C18.551 5.82367 19.4992 8.11276 19.4992 10.4996Z"
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+    </button>
+  </form>
+</search>
+
+      <button class="button-raised" onclick="alert = 'Implementation missing'">
+        <svg
   width="24"
   height="24"
   viewBox="0 0 24 24"
@@ -363,10 +364,10 @@
   />
 </svg>
 
-      History
-    </button>
-  </div>
-  <form id="" action="http://httpbin.org/post"><fieldset class="filter-fieldset" id="role">
+        History
+      </button>
+    </div>
+    <form id="" action="http://httpbin.org/post"><fieldset class="filter-fieldset" id="role">
   <legend class="hidden">Role (33)</legend>
   <details open>
     <summary>Role (33)</summary>
@@ -673,22 +674,22 @@
 </fieldset>
 
 </form>
-  <button class="button-raised result" onclick="submitColleaguesFilters()">
-    show results
-  </button>
-</aside>
-<section class="card-list">
-  <div class="list-header">
-    <h2>
-      A collection of potential research partners
-    </h2>
-    <p>
-      Browse all active researchers and connect with them. Use filters to refine
-      your search.
-    </p>
-    <menu class="view-modes">
-      <button class="button-raised active">
-        <svg
+    <button class="button-raised result" onclick="submitColleaguesFilters()">
+      show results
+    </button>
+  </aside>
+  <section class="card-list">
+    <div class="list-header">
+      <h2>
+        A collection of potential research partners
+      </h2>
+      <p>
+        Browse all active researchers and connect with them. Use filters to
+        refine your search.
+      </p>
+      <menu class="view-modes">
+        <button class="button-raised active">
+          <svg
   width="27"
   height="15"
   viewBox="0 0 27 15"
@@ -703,9 +704,12 @@
   />
 </svg>
 
-      </button>
-      <button class="button-raised" onclick="alert = 'Implementation missing'">
-        <svg
+        </button>
+        <button
+          class="button-raised"
+          onclick="alert = 'Implementation missing'"
+        >
+          <svg
   width="20"
   height="20"
   viewBox="0 0 20 20"
@@ -728,13 +732,13 @@
   />
 </svg>
 
-      </button>
-    </menu>
-  </div>
-  <h2>367 colleagues</h2>
-  <ul><li>
-        
-        <article class="colleague-combo">
+        </button>
+      </menu>
+    </div>
+    <h2>367 colleagues</h2>
+    <ul><li>
+          
+          <article class="colleague-combo">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/ahmed-abdirahman-ali/">Open Card</a>
   <img
     class="image-pill-horizontal"
@@ -911,9 +915,9 @@
   </footer>
 </article>
 
-      </li><li>
-        
-        <article class="colleague-quote">
+        </li><li>
+          
+          <article class="colleague-quote">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/amara-chinedu-diallo/">Open Card</a>
   <blockquote>Better healthcare happens when we work together</blockquote>
   <div class="card-buttons">
@@ -1085,9 +1089,9 @@
   </footer>
 </article>
 
-      </li><li>
-        
-        <article class="colleague-quote">
+        </li><li>
+          
+          <article class="colleague-quote">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/daniel-kim/">Open Card</a>
   <blockquote>Well-interpreted data strengthens clinical decisions.</blockquote>
   <div class="card-buttons">
@@ -1259,9 +1263,9 @@
   </footer>
 </article>
 
-      </li><li>
-        
-        <article class="colleague-image">
+        </li><li>
+          
+          <article class="colleague-image">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/elise-thompson/">Open Card</a>
   <img
     class="image-pill-vertical-wide"
@@ -1437,9 +1441,9 @@
   </footer>
 </article>
 
-      </li><li>
-        
-        <article class="colleague-image">
+        </li><li>
+          
+          <article class="colleague-image">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/tami-nikolaus/">Open Card</a>
   <img
     class="image-pill-vertical-wide"
@@ -1615,9 +1619,9 @@
   </footer>
 </article>
 
-      </li><li>
-        
-        <article class="colleague-image">
+        </li><li>
+          
+          <article class="colleague-image">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/noor-becker/">Open Card</a>
   <img
     class="image-pill-vertical-wide"
@@ -1793,9 +1797,9 @@
   </footer>
 </article>
 
-      </li><li>
-        
-        <article class="colleague-combo">
+        </li><li>
+          
+          <article class="colleague-combo">
   <a href="/look-and-feel-corporate-identity/cards/colleagues/anaya-rao/">Open Card</a>
   <img
     class="image-pill-horizontal"
@@ -1972,11 +1976,11 @@
   </footer>
 </article>
 
-      </li></ul>
-  <div class="loading">
-    <p>Loading more colleagues</p>
-    <div class="spinner">
-      <svg
+        </li></ul>
+    <div class="loading">
+      <p>Loading more colleagues</p>
+      <div class="spinner">
+        <svg
   width="42"
   height="44"
   viewBox="0 0 42 44"
@@ -2007,9 +2011,10 @@
   </defs>
 </svg>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
     <aside>
       <nav>
@@ -2054,7 +2059,7 @@
     title="create opportunity"
     href="/look-and-feel-corporate-identity/user/create-opportunity"
   >
-    <span>Create Opportunity</span>
+    <span>Create</span>
     <svg
   width="16"
   height="16"
@@ -2086,7 +2091,8 @@
 
   </a>
   <button class="button-flat" title="expand-sidebar">
-    <span>Close</span>
+    <span class="close-text">Close</span>
+    <span class="open-text">Open</span>
     <svg
   width="24px"
   height="24px"

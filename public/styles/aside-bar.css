@@ -12,13 +12,13 @@ aside {
         justify-content: center;
         align-items: center;
         height: 100%;
-        gap: 20px;
+        gap: 0px;
 
 
         a,
         button {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: column-reverse;
             padding: 8px;
             border-radius: 5px;
             --background-color: transparent;
@@ -30,10 +30,11 @@ aside {
             svg {
                 flex-grow: 1;
                 min-width: max-content;
+                height: 24px;
             }
 
             span {
-                display: none;
+                /* display: none; */
                 font-size: 20px;
             }
         }
@@ -44,6 +45,8 @@ aside {
             @media (min-width: 900px) {
                 display: flex;
             }
+
+
         }
     }
 }

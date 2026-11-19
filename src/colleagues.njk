@@ -3,69 +3,74 @@ title: Colleagues
 layout: "base.njk"
 
 ---
-<div class="colleague-search-options">
-  {% include "search.njk" %}
-  <button class="button-plain" popovertarget="sort-menu">
-    {% include "svgs/arrow-up-and-down.njk" %}
-  </button>
-  <form popover id="sort-menu" action="http://httpbin.org/post">
-    {% include "sorting/sort.njk" %}
-  </form>
-  <button class="button-plain" id="filter-menu-open">
-    {% include "svgs/abacus.njk" %}
-  </button>
-</div>
-<aside class="filters filter-closed" id="filter-menu">
-  <div class="align-horizontal">
-    <button class="button-plain" id="filter-menu-close">
-      {% include "svgs/x.njk" %}
-    </button>
+<main>
+  <div class="colleague-search-options">
     {% include "search.njk" %}
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
-      {% include "svgs/backwards-clock.njk" %}
-      History
+    <button class="button-plain" popovertarget="sort-menu">
+      {% include "svgs/arrow-up-and-down.njk" %}
+    </button>
+    <form popover id="sort-menu" action="http://httpbin.org/post">
+      {% include "sorting/sort.njk" %}
+    </form>
+    <button class="button-plain" id="filter-menu-open">
+      {% include "svgs/abacus.njk" %}
     </button>
   </div>
-  <form id="{{ name }}" action="http://httpbin.org/post">
-    {%- for filter in collections.colleagues -%}
-      {{ filter.templateContent | safe }}
-    {%- endfor -%}
-  </form>
-  <button class="button-raised result" onclick="submitColleaguesFilters()">
-    show results
-  </button>
-</aside>
-<section class="card-list">
-  <div class="list-header">
-    <h2>
-      A collection of potential research partners
-    </h2>
-    <p>
-      Browse all active researchers and connect with them. Use filters to refine
-      your search.
-    </p>
-    <menu class="view-modes">
-      <button class="button-raised active">
-        {% include "svgs/dot-list.njk" %}
+  <aside class="filters filter-closed" id="filter-menu">
+    <div class="align-horizontal">
+      <button class="button-plain" id="filter-menu-close">
+        {% include "svgs/x.njk" %}
       </button>
+      {% include "search.njk" %}
       <button class="button-raised" onclick="alert = 'Implementation missing'">
-        {% include "svgs/cards.njk" %}
+        {% include "svgs/backwards-clock.njk" %}
+        History
       </button>
-    </menu>
-  </div>
-  <h2>367 colleagues</h2>
-  <ul>
-    {%- for card in collections.colleague -%}
-      <li>
-        {% set layout = card.data.layoutCard or "default" %}
-        {% include "cards/" + layout + ".njk" %}
-      </li>
-    {%- endfor -%}
-  </ul>
-  <div class="loading">
-    <p>Loading more colleagues</p>
-    <div class="spinner">
-      {% include "svgs/logo.njk" %}
     </div>
-  </div>
-</section>
+    <form id="{{ name }}" action="http://httpbin.org/post">
+      {%- for filter in collections.colleagues -%}
+        {{ filter.templateContent | safe }}
+      {%- endfor -%}
+    </form>
+    <button class="button-raised result" onclick="submitColleaguesFilters()">
+      show results
+    </button>
+  </aside>
+  <section class="card-list">
+    <div class="list-header">
+      <h2>
+        A collection of potential research partners
+      </h2>
+      <p>
+        Browse all active researchers and connect with them. Use filters to
+        refine your search.
+      </p>
+      <menu class="view-modes">
+        <button class="button-raised active">
+          {% include "svgs/dot-list.njk" %}
+        </button>
+        <button
+          class="button-raised"
+          onclick="alert = 'Implementation missing'"
+        >
+          {% include "svgs/cards.njk" %}
+        </button>
+      </menu>
+    </div>
+    <h2>367 colleagues</h2>
+    <ul>
+      {%- for card in collections.colleague -%}
+        <li>
+          {% set layout = card.data.layoutCard or "default" %}
+          {% include "cards/" + layout + ".njk" %}
+        </li>
+      {%- endfor -%}
+    </ul>
+    <div class="loading">
+      <p>Loading more colleagues</p>
+      <div class="spinner">
+        {% include "svgs/logo.njk" %}
+      </div>
+    </div>
+  </section>
+</main>
