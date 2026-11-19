@@ -109,11 +109,18 @@ article {
 .card-buttons {
     display: flex;
     gap: 10px;
-    width: 40px;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    align-items: start;
     position: relative;
     place-self: center;
     anchor-scope: all;
+
+    button:nth-of-type(1) {
+        padding-top: .1em;
+    }
+
 
     >button {
         min-width: 30px;
