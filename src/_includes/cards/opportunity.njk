@@ -6,6 +6,7 @@
   </cite>
   {% include "cards/card-buttons.njk" %}
   <h3>{{ card.data.title }}</h3>
+  <p>Publish date: {{ card.data.publishDate | dayDate }}</p>
   <ul class="mesh-terms">
     {%- for meshTerm in card.data.meshTerms -%}
       <li>{{ meshTerm }}</li>
