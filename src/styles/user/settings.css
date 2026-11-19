@@ -19,4 +19,16 @@
             display: flex;
         }
     }
+
+    /* SHOW ACTIVE TAB BUTTON */
+    &:has(#account-settings:target) a[href="#account-settings"],
+    &:has(#privacy:target) a[href="#privacy"],
+    &:has(#preferences:target) a[href="#preferences"] {
+        &::before {
+            height: 6px;
+            background: var(--text-dark);
+        }
+    }
+
+
 }
