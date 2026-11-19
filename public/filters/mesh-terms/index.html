@@ -1,39 +1,42 @@
-<form id="mesh-terms" action="http://httpbin.org/post">
+<fieldset class="filter-fieldset" id="mesh-terms">
+  <legend class="hidden">Mesh-terms</legend>
   <details open>
     <summary>Mesh-terms</summary>
-    <div><label for="Anatomy">
+    <div><label>
           <input
             type="checkbox"
             name="mesh-terms"
-            id="Anatomy"
           >
           Anatomy
-        </label><label for="Analytical">
+        </label><label>
           <input
             type="checkbox"
             name="mesh-terms"
-            id="Analytical"
           >
           Analytical
-        </label><label for="Diagnostic and Therapeutic Techniques and Equipment">
+        </label><label>
           <input
             type="checkbox"
             name="mesh-terms"
-            id="Diagnostic and Therapeutic Techniques and Equipment"
           >
           Diagnostic and Therapeutic Techniques and Equipment
-        </label><label for="Anthropology, Education, Sociology and Social Phenomena">
+        </label><label>
           <input
             type="checkbox"
             name="mesh-terms"
-            id="Anthropology, Education, Sociology and Social Phenomena"
           >
           Anthropology, Education, Sociology and Social Phenomena
         </label></div>
-    <button class="button-plain" type="reset">
+    <button
+      id="clear-fieldset-button"
+      type="button"
+      class="button-plain"
+      commandfor="mesh-terms"
+      command="--clear-fieldset"
+    >
       Clear filters
     </button>
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
+    <button type="button" class="button-raised">
       <svg
   width="16"
   height="16"
@@ -50,5 +53,5 @@
       see all options
     </button>
   </details>
-</form>
+</fieldset>
 
