@@ -67,7 +67,7 @@
   </head>
   <body>
     <header>
-      <a href="/look-and-feel-corporate-identity/">
+      <a title="Logo home page" href="/look-and-feel-corporate-identity/">
   <svg
   width="42"
   height="44"
@@ -250,14 +250,18 @@
     <h2>Recommend for you</h2>
     <p>Projects, questions and colleagues selected based on your preferences</p>
     <div class="section-header">
-      <select name="recommended-filter" id="recommended-filter">
-        <option value="show-all-content">Show all content</option>
-        <option value="colleagues">Colleagues</option>
-        <option value="opportunities">Opportunities</option>
-        <option value="open-questions">Open questions</option>
-        <option value="events">Events</option>
-      </select>
+      <form action="/">
+        <label class="hidden" for="recommended-filter">Recommend filter</label>
+        <select name="recommended-filter" id="recommended-filter">
+          <option default value="show-all-content">Show all content</option>
+          <option value="colleagues">Colleagues</option>
+          <option value="opportunities">Opportunities</option>
+          <option value="open-questions">Open questions</option>
+          <option value="events">Events</option>
+        </select>
+      </form>
       <button class="refresh button-plain" popovertarget="refresh-popover-menu">
+        <span>Refresh</span>
         <svg
   width="44"
   height="44"
@@ -288,7 +292,11 @@
     alt="Elise Thompson"
   >
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"
@@ -305,6 +313,7 @@
   </button>
   
     <button
+      title="card options button"
       class="button-plain"
       popovertarget="card-options-recommended-1"
     >
@@ -466,7 +475,11 @@
           <article class="event">
   <a href="/look-and-feel-corporate-identity/cards/events/webinar-1/">Open Card</a>
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"
@@ -483,6 +496,7 @@
   </button>
   
     <button
+      title="card options button"
       class="button-plain"
       popovertarget="card-options-recommended-2"
     >
@@ -622,7 +636,11 @@
     <span class="role">Medival researcher</span>
   </cite>
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"
@@ -639,6 +657,7 @@
   </button>
   
     <button
+      title="card options button"
       class="button-plain"
       popovertarget="card-options-recommended-3"
     >
@@ -770,7 +789,11 @@
     <span class="role">Medival researcher</span>
   </cite>
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"
@@ -787,6 +810,7 @@
   </button>
   
     <button
+      title="card options button"
       class="button-plain"
       popovertarget="card-options-recommended-4"
     >
@@ -930,13 +954,16 @@
   <section class="bookmarked">
     <h2>Your booked marked content</h2>
     <div class="section-header">
-      <select name="bookmark-filter" id="bookmark-filter">
-        <option value="show-all-content">Show all content</option>
-        <option value="colleagues">Colleagues</option>
-        <option value="opportunities">Opportunities</option>
-        <option value="open-questions">Open questions</option>
-        <option value="events">Events</option>
-      </select>
+      <form action="/">
+        <label class="hidden" for="bookmark-filter">Bookmark filter</label>
+        <select name="bookmark-filter" id="bookmark-filter">
+          <option default value="show-all-content">Show all content</option>
+          <option value="colleagues">Colleagues</option>
+          <option value="opportunities">Opportunities</option>
+          <option value="open-questions">Open questions</option>
+          <option value="events">Events</option>
+        </select>
+      </form>
       <search>
   <form action="search">
     <label>
@@ -946,7 +973,7 @@
         placeholder="Search"
       >
     </label>
-    <button class="button-plain" type="submit">
+    <button title="search" class="button-plain" type="submit">
       <svg
   width="23"
   height="23"
@@ -977,7 +1004,11 @@
     Better healthcare happens when we work together
   </blockquote>
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"
@@ -1050,7 +1081,11 @@
     Well-interpreted data strengthens clinical decisions.
   </blockquote>
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"
@@ -1125,7 +1160,11 @@
     alt="Tami Nikolaus"
   >
   <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     <svg
   width="17"
   height="20"

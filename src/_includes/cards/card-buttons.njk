@@ -1,9 +1,14 @@
 <div class="card-buttons">
-  <button class="button-plain" onclick="alert(`Implementation missing!`)">
+  <button
+    title="bookmark button"
+    class="button-plain"
+    onclick="alert(`Implementation missing!`)"
+  >
     {% include "svgs/bookmark.njk" %}
   </button>
   {% if listName == "recommended" %}
     <button
+      title="card options button"
       class="button-plain"
       popovertarget="card-options-{{ listName }}-{{ loop.index }}"
     >

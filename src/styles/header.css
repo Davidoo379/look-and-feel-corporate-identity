@@ -45,18 +45,17 @@ header {
         align-items: end;
         overflow-y: clip;
         padding: 1rem;
-        top: -100%;
+        top: -500%;
         left: 0;
         gap: 1rem;
         width: 100%;
-        height: 80px;
+        height: 270px;
         border-radius: 0px 0px 1rem 1rem;
         background-color: transparent;
         transition: 0.2s;
 
         &.open-nav-menu {
             display: flex;
-            height: 270px;
             top: 0;
             background-color: var(--background-medium);
             transition: 0.2s;

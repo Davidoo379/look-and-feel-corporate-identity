@@ -5,4 +5,7 @@
     &:hover {
         --content: var(--content-color);
     }
+
+    display: flex;
+    align-items: center;
 }

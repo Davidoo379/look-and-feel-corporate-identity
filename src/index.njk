@@ -31,14 +31,18 @@ layout: "base.njk"
     <h2>Recommend for you</h2>
     <p>Projects, questions and colleagues selected based on your preferences</p>
     <div class="section-header">
-      <select name="recommended-filter" id="recommended-filter">
-        <option value="show-all-content">Show all content</option>
-        <option value="colleagues">Colleagues</option>
-        <option value="opportunities">Opportunities</option>
-        <option value="open-questions">Open questions</option>
-        <option value="events">Events</option>
-      </select>
+      <form action="/">
+        <label class="hidden" for="recommended-filter">Recommend filter</label>
+        <select name="recommended-filter" id="recommended-filter">
+          <option default value="show-all-content">Show all content</option>
+          <option value="colleagues">Colleagues</option>
+          <option value="opportunities">Opportunities</option>
+          <option value="open-questions">Open questions</option>
+          <option value="events">Events</option>
+        </select>
+      </form>
       <button class="refresh button-plain" popovertarget="refresh-popover-menu">
+        <span>Refresh</span>
         {% include "svgs/arrow-spiral.njk" %}
       </button>
     </div>
@@ -63,13 +67,16 @@ layout: "base.njk"
   <section class="bookmarked">
     <h2>Your booked marked content</h2>
     <div class="section-header">
-      <select name="bookmark-filter" id="bookmark-filter">
-        <option value="show-all-content">Show all content</option>
-        <option value="colleagues">Colleagues</option>
-        <option value="opportunities">Opportunities</option>
-        <option value="open-questions">Open questions</option>
-        <option value="events">Events</option>
-      </select>
+      <form action="/">
+        <label class="hidden" for="bookmark-filter">Bookmark filter</label>
+        <select name="bookmark-filter" id="bookmark-filter">
+          <option default value="show-all-content">Show all content</option>
+          <option value="colleagues">Colleagues</option>
+          <option value="opportunities">Opportunities</option>
+          <option value="open-questions">Open questions</option>
+          <option value="events">Events</option>
+        </select>
+      </form>
       {% include "search.njk" %}
     </div>
     <ul class="horizontal-carousel">

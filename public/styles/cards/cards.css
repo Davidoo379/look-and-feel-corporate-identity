@@ -60,6 +60,7 @@ article {
         }
 
         .project {
+            color: var(--text-lightest);
             background-color: var(--background-green);
         }
 
@@ -69,6 +70,7 @@ article {
         }
 
         .webinar {
+            color: var(--text-lightest);
             background-color: var(--background-pink);
         }
 
@@ -81,6 +83,7 @@ article {
         }
 
         .colleague {
+            color: var(--text-lightest);
             background-color: var(--background-pink);
         }
     }

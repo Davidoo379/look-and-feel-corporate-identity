@@ -192,17 +192,13 @@ search {
         align-items: center;
         border-radius: 9999px;
         padding-inline: .5em;
-        background-color: var(--background-dark);
+        /* background-color: var(--background-dark); */
         width: 100%;
 
         button {
-            --background: transparent;
-
-            &:hover,
-            &:focus-visible {
-                --content: var(--content-color);
-                --background-color-hover: transparent;
-            }
+            flex-grow: 1;
+            width: 44px;
+            height: 44px;
         }
 
         label {
@@ -218,11 +214,6 @@ search {
                 }
             }
 
-        }
-
-        &:has(:focus),
-        &:has(:hover) {
-            background-color: var(--background-light);
         }
     }
 }
