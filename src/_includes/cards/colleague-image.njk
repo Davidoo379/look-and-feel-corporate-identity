@@ -21,9 +21,10 @@
     </p>
   </div>
   <ul class="mesh-terms">
-    {%- for intention in card.data.intentions -%}
-      <li>{{ intention }}</li>
-    {%- endfor -%}
+    <li>{{ card.data.intentions[0] }}</li>
+    {% if card.data.intention | length > 1 %}
+      <li>+{{ card.data.intentions | length -1 }}</li>
+    {% endif %}
   </ul>
   <footer class="cardTags">
     <ul class="cardTags">
