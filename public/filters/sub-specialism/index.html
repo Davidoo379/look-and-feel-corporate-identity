@@ -1,32 +1,36 @@
-<form id="sub-specialism" action="http://httpbin.org/post">
+<fieldset class="filter-fieldset" id="sub-specialism">
+  <legend class="hidden">Sub(specialism) (39)</legend>
   <details open>
     <summary>Sub(specialism) (39)</summary>
-    <div><label for="Adolescent medicine">
+    <div><label>
           <input
             type="checkbox"
             name="sub-specialism"
-            id="Adolescent medicine"
           >
           Adolescent medicine
-        </label><label for="Anesthesiology">
+        </label><label>
           <input
             type="checkbox"
             name="sub-specialism"
-            id="Anesthesiology"
           >
           Anesthesiology
-        </label><label for="Bioinformatics">
+        </label><label>
           <input
             type="checkbox"
             name="sub-specialism"
-            id="Bioinformatics"
           >
           Bioinformatics
         </label></div>
-    <button class="button-plain" type="reset">
+    <button
+      id="clear-fieldset-button"
+      type="button"
+      class="button-plain"
+      commandfor="sub-specialism"
+      command="--clear-fieldset"
+    >
       Clear filters
     </button>
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
+    <button type="button" class="button-raised">
       <svg
   width="16"
   height="16"
@@ -43,5 +47,5 @@
       see all options
     </button>
   </details>
-</form>
+</fieldset>
 

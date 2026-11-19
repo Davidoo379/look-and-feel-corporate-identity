@@ -1,32 +1,36 @@
-<form id="research-type" action="http://httpbin.org/post">
+<fieldset class="filter-fieldset" id="research-type">
+  <legend class="hidden">Research type</legend>
   <details open>
     <summary>Research type</summary>
-    <div><label for="Clinical">
+    <div><label>
           <input
             type="checkbox"
             name="research-type"
-            id="Clinical"
           >
           Clinical
-        </label><label for="Fundamental">
+        </label><label>
           <input
             type="checkbox"
             name="research-type"
-            id="Fundamental"
           >
           Fundamental
-        </label><label for="Medical">
+        </label><label>
           <input
             type="checkbox"
             name="research-type"
-            id="Medical"
           >
           Medical
         </label></div>
-    <button class="button-plain" type="reset">
+    <button
+      id="clear-fieldset-button"
+      type="button"
+      class="button-plain"
+      commandfor="research-type"
+      command="--clear-fieldset"
+    >
       Clear filters
     </button>
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
+    <button type="button" class="button-raised">
       <svg
   width="16"
   height="16"
@@ -43,5 +47,5 @@
       see all options
     </button>
   </details>
-</form>
+</fieldset>
 

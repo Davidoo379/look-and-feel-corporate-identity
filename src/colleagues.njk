@@ -26,9 +26,11 @@ layout: "base.njk"
       History
     </button>
   </div>
-  {%- for filter in collections.colleagues -%}
-    {{ filter.templateContent | safe }}
-  {%- endfor -%}
+  <form id="{{ name }}" action="http://httpbin.org/post">
+    {%- for filter in collections.colleagues -%}
+      {{ filter.templateContent | safe }}
+    {%- endfor -%}
+  </form>
   <button class="button-raised result" onclick="submitColleaguesFilters()">
     show results
   </button>

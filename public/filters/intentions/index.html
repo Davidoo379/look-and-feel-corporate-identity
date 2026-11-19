@@ -1,25 +1,30 @@
-<form id="intentions" action="http://httpbin.org/post">
+<fieldset class="filter-fieldset" id="intentions">
+  <legend class="hidden">Intentions (9)</legend>
   <details open>
     <summary>Intentions (9)</summary>
-    <div><label for="Actively seeking collaborators for a specific project">
+    <div><label>
           <input
             type="checkbox"
             name="intentions"
-            id="Actively seeking collaborators for a specific project"
           >
           Actively seeking collaborators for a specific project
-        </label><label for="Looking for a research intern">
+        </label><label>
           <input
             type="checkbox"
             name="intentions"
-            id="Looking for a research intern"
           >
           Looking for a research intern
         </label></div>
-    <button class="button-plain" type="reset">
+    <button
+      id="clear-fieldset-button"
+      type="button"
+      class="button-plain"
+      commandfor="intentions"
+      command="--clear-fieldset"
+    >
       Clear filters
     </button>
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
+    <button type="button" class="button-raised">
       <svg
   width="16"
   height="16"
@@ -36,5 +41,5 @@
       see all options
     </button>
   </details>
-</form>
+</fieldset>
 

@@ -46,3 +46,18 @@ function toggleSidebar() {
     body.classList.toggle("expand");
 }
 
+// * MARK: CLEAR FIELDSET EVENTS
+const filterFieldset = document.querySelectorAll(".filter-fieldset");
+
+if (filterFieldset !== null) {
+    filterFieldset.forEach((item) => {
+        item.addEventListener("command", (event) => {
+            if (event.command === "--clear-fieldset") {
+                const inputs = event.target.querySelectorAll("input");
+                inputs.forEach((item) => {
+                    item.checked = false;
+                });
+            }
+        })
+    });
+}

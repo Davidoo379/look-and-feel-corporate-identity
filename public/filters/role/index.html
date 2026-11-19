@@ -1,32 +1,36 @@
-<form id="role" action="http://httpbin.org/post">
+<fieldset class="filter-fieldset" id="role">
+  <legend class="hidden">Role (33)</legend>
   <details open>
     <summary>Role (33)</summary>
-    <div><label for="Health Professional">
+    <div><label>
           <input
             type="checkbox"
             name="role"
-            id="Health Professional"
           >
           Health Professional
-        </label><label for="Public Health &amp; Policy">
+        </label><label>
           <input
             type="checkbox"
             name="role"
-            id="Public Health &amp; Policy"
           >
           Public Health &amp; Policy
-        </label><label for="Research Roles">
+        </label><label>
           <input
             type="checkbox"
             name="role"
-            id="Research Roles"
           >
           Research Roles
         </label></div>
-    <button class="button-plain" type="reset">
+    <button
+      id="clear-fieldset-button"
+      type="button"
+      class="button-plain"
+      commandfor="role"
+      command="--clear-fieldset"
+    >
       Clear filters
     </button>
-    <button class="button-raised" onclick="alert = 'Implementation missing'">
+    <button type="button" class="button-raised">
       <svg
   width="16"
   height="16"
@@ -43,5 +47,5 @@
       see all options
     </button>
   </details>
-</form>
+</fieldset>
 
