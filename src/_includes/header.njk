@@ -4,10 +4,12 @@
 </a>
 <h1>{{ title }}</h1>
 <button class="button-plain">
+  <span>menu</span>
   {% include 'svgs/hamburger.njk' %}
 </button>
 <nav>
   <button class="button-plain">
+    <span>Close</span>
     {% include 'svgs/x.njk' %}
   </button>
   <a class="opportunities button-plain" href="{{'/opportunities' | url}}">

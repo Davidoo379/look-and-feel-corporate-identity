@@ -17,12 +17,10 @@ header {
     >button {
         display: flex;
         margin-left: auto;
-
-        &:hover,
-        &:focus-visible {
-            --content: var(--content-color);
-            --background-color-hover: transparent;
-        }
+        align-items: center;
+        gap: .25em;
+        font-weight: 600;
+        text-transform: capitalize;
     }
 
     &>a {
