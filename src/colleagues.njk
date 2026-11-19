@@ -35,22 +35,24 @@ layout: "base.njk"
     show results
   </button>
 </aside>
-<menu class="view-modes">
-  <button class="button-raised active">
-    {% include "svgs/dot-list.njk" %}
-  </button>
-  <button class="button-raised" onclick="alert = 'Implementation missing'">
-    {% include "svgs/cards.njk" %}
-  </button>
-</menu>
 <section class="card-list">
-  <h2>
-    A collection of potential research partners
-  </h2>
-  <p>
-    Browse all active researchers and connect with them. Use filters to refine
-    your search.
-  </p>
+  <div class="list-header">
+    <h2>
+      A collection of potential research partners
+    </h2>
+    <p>
+      Browse all active researchers and connect with them. Use filters to refine
+      your search.
+    </p>
+    <menu class="view-modes">
+      <button class="button-raised active">
+        {% include "svgs/dot-list.njk" %}
+      </button>
+      <button class="button-raised" onclick="alert = 'Implementation missing'">
+        {% include "svgs/cards.njk" %}
+      </button>
+    </menu>
+  </div>
   <h2>367 colleagues</h2>
   <ul>
     {%- for card in collections.colleague -%}
