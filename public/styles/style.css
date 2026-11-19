@@ -226,3 +226,20 @@ search {
         }
     }
 }
+
+blockquote {
+    &.green {
+        color: var(--text-green);
+        background-color: var(--background-green-light);
+    }
+
+    &.blue {
+        color: var(--text-blue);
+        background-color: var(--background-blue-light);
+    }
+
+    &.pink {
+        color: var(--text-pink);
+        background-color: var(--background-pink-light);
+    }
+}

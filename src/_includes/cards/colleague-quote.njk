@@ -1,6 +1,8 @@
 <article class="colleague-quote">
   <a href="{{ card.url | url }}">Open Card</a>
-  <blockquote>{{ card.data.quote }}</blockquote>
+  <blockquote class="{{ card.data.colorPreference }}">
+    {{ card.data.quote }}
+  </blockquote>
   {% include "cards/card-buttons.njk" %}
   <h3>{{ card.data.name }}</h3>
   <p class="role">{{ card.data.role }}</p>

@@ -5,7 +5,9 @@
     src="{{ card.data.image | url}}"
     alt="{{ card.data.name }}"
   >
-  <blockquote>{{ card.data.quote }}</blockquote>
+  <blockquote class="{{ card.data.colorPreference }}">
+    {{ card.data.quote }}
+  </blockquote>
   {% include "cards/card-buttons.njk" %}
   <h3>{{ card.data.name }}</h3>
   <p class="role">{{ card.data.role }}</p>

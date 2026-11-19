@@ -1,6 +1,7 @@
 .colleague-quote {
     gap: 5px;
     column-gap: 10px;
+    grid-template-columns: unset;
 
     blockquote {
         grid-row: 3/4;
