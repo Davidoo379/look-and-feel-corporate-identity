@@ -41,6 +41,16 @@
         .colleague-tabs {
             display: unset;
         }
+
+
+        &:has(#biography:target) a[href="#biography"],
+        &:has(#posts:target) a[href="#posts"] {
+            &::before {
+                height: 6px;
+                background: var(--text-dark);
+            }
+        }
+
     }
 
 }
