@@ -2,6 +2,8 @@ section {
 
     &.recommended,
     &.bookmarked {
+        padding-top: 2.5em;
+
         h2 {
             padding-inline: 1rem;
             padding-bottom: .3rem;
@@ -33,7 +35,9 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
+        padding: 1em;
+        padding-bottom: 2em;
+        padding-top: 0em;
         gap: 0.5rem;
         color: var(--text-light);
 
