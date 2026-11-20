@@ -1,5 +1,11 @@
 .settings {
     padding: 3em;
+    background-color: var(--background-light);
+    border-radius: 2em 2em 0em 0em;
+    padding-block: 0;
+    overflow: visible;
+    margin-top: 90px;
+    height: 83vh;
 
     form {
         display: grid;
@@ -7,6 +13,29 @@
         >fieldset {
             grid-column: 1/-1;
             grid-row: 1/-1;
+
+            label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: .5em;
+                margin-top: 1em;
+            }
+
+            .warning {
+                background-color: var(--background-green-lightest);
+                border-radius: 8px;
+                padding: .25em;
+                display: flex;
+                align-items: center;
+                gap: .5em;
+            }
+        }
+
+        >button {
+            margin-top: 1em;
+            padding: 1em;
+            --background-color: var(--background-blue);
         }
 
         &:not(:has(.tab-section:target)) .account-settings {
@@ -15,8 +44,15 @@
     }
 
     nav {
+        padding-bottom: 1em;
+        padding-top: 1em;
+
         menu {
             display: flex;
+
+            a {
+                padding: 1em;
+            }
         }
     }
 
