@@ -48,7 +48,8 @@ layout: "base.njk"
     </div>
     <div class="popup" popover id="refresh-popover-menu">
       <a href="#">Refresh the suggestion</a>
-      <a href="/user/settings.html/#feed-prefrences">Change your preferences</a>
+      <a href="{{ '/user/settings/#preferences' | url }}"
+      >Change your preferences</a>
     </div>
     <ul class="horizontal-carousel">
       {% set listName = "recommended" %}
