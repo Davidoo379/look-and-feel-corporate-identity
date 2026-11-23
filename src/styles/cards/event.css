@@ -43,6 +43,14 @@
         }
     }
 
+    .location,
+    .time,
+    .organizer {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-clamp: 1;
+    }
+
     .location {
         grid-column: 2/-1;
         grid-row: 2/3;

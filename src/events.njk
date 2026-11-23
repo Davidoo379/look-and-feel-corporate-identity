@@ -3,4 +3,68 @@ title: Events
 layout: "base.njk"
 
 ---
-<main></main>
+<main>
+  {% include "content-search-options.njk" %}
+  <aside class="filters filter-closed" id="filter-menu">
+    <div class="align-horizontal">
+      <button class="button-plain" id="filter-menu-close">
+        {% include "svgs/x.njk" %}
+      </button>
+      {% include "search.njk" %}
+      <button class="button-raised" onclick="alert = 'Implementation missing'">
+        {% include "svgs/backwards-clock.njk" %}
+        History
+      </button>
+    </div>
+    <form id="{{ name }}" action="http://httpbin.org/post">
+      {%- for filter in collections.colleagues -%}
+        {{ filter.templateContent | safe }}
+      {%- endfor -%}
+    </form>
+    <button class="button-raised result" onclick="submitColleaguesFilters()">
+      show results
+    </button>
+  </aside>
+  <section class="card-list">
+    <div class="list-header">
+      <h2>
+        A collection of events you potentinaly want to attend
+      </h2>
+      <p>
+        Browse all upcoming events and conventions. Webinars, Congressies and
+        Symposioms.
+      </p>
+      <menu class="view-modes">
+        <button
+          class="button-raised"
+          onclick="alert = 'Implementation missing'"
+        >
+          {% include "svgs/map-pin.njk" %}
+        </button>
+        <button class="button-raised active">
+          {% include "svgs/dot-list.njk" %}
+        </button>
+      </menu>
+    </div>
+    <ul>
+      {% for time in times %}
+        <li>
+          <p class="date-header">{{ time }}</p>
+          {%- for card in collections.event -%}
+            {% if time == card.data.time.date %}
+              {% set layout = card.data.layoutCard or "default" %}
+              {% include "cards/" + layout + ".njk" %}
+            {% endif %}
+          {%- endfor -%}
+        </li>
+      {% endfor %}
+      {{ timeData | dump }}
+    </ul>
+    <div class="loading">
+      <p>Loading more events</p>
+      <div class="spinner">
+        {% include "svgs/logo.njk" %}
+      </div>
+    </div>
+  </section>
+</main>

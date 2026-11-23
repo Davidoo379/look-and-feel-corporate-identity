@@ -29,7 +29,7 @@
     >
     <link
       rel="stylesheet"
-      href="/look-and-feel-corporate-identity/styles/content/colleagues.css"
+      href="/look-and-feel-corporate-identity/styles/content.css"
     >
     <link
       rel="stylesheet"
@@ -223,8 +223,8 @@
 
     </header>
     <main>
-  <div class="colleague-search-options">
-    <search>
+  <div class="search-options">
+  <search>
   <form action="search">
     <label>
       <input
@@ -254,8 +254,8 @@
   </form>
 </search>
 
-    <button class="button-plain" popovertarget="sort-menu">
-      <svg
+  <button class="button-plain" popovertarget="sort-menu">
+    <svg
   width="21"
   height="24"
   viewBox="0 0 21 24"
@@ -271,9 +271,9 @@
   />
 </svg>
 
-    </button>
-    <form popover id="sort-menu" action="http://httpbin.org/post">
-      <p>Sort by:</p>
+  </button>
+  <form popover id="sort-menu" action="http://httpbin.org/post">
+    <p>Sort by:</p>
 <input type="radio" id="relevancy" name="sort-preference">
 <label for="relevancy">Relevancy</label>
 <input type="radio" id="recently-added" name="sort-preference">
@@ -285,9 +285,9 @@
 <input type="radio" id="z-a" name="sort-preference">
 <label for="z-a">Z-A</label>
 
-    </form>
-    <button class="button-plain" id="filter-menu-open">
-      <svg
+  </form>
+  <button class="button-plain" id="filter-menu-open">
+    <svg
   width="25"
   height="24"
   viewBox="0 0 25 24"
@@ -300,8 +300,9 @@
   />
 </svg>
 
-    </button>
-  </div>
+  </button>
+</div>
+
   <aside class="filters filter-closed" id="filter-menu">
     <div class="align-horizontal">
       <button class="button-plain" id="filter-menu-close">

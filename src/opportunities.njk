@@ -4,18 +4,7 @@ layout: "base.njk"
 
 ---
 <main>
-  <div class="colleague-search-options">
-    {% include "search.njk" %}
-    <button class="button-plain" popovertarget="sort-menu">
-      {% include "svgs/arrow-up-and-down.njk" %}
-    </button>
-    <form popover id="sort-menu" action="http://httpbin.org/post">
-      {% include "sorting/sort.njk" %}
-    </form>
-    <button class="button-plain" id="filter-menu-open">
-      {% include "svgs/abacus.njk" %}
-    </button>
-  </div>
+  {% include "content-search-options.njk" %}
   <aside class="filters filter-closed" id="filter-menu">
     <div class="align-horizontal">
       <button class="button-plain" id="filter-menu-close">

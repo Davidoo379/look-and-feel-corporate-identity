@@ -1,4 +1,4 @@
-.colleague-search-options {
+.search-options {
     position: fixed;
     top: 80px;
     width: 100%;
@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 160px;
     margin-bottom: 100px;
     padding: 1em;
@@ -93,4 +94,10 @@
     div {
         align-self: center;
     }
+}
+
+.date-header {
+    font-size: 1.5em;
+    color: var(--text-medium);
+    padding: .5em
 }
