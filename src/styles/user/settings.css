@@ -6,6 +6,9 @@
     overflow: visible;
     margin-top: 90px;
     height: 83vh;
+    min-height: max-content;
+    margin-bottom: 5.5em;
+
 
     form {
         display: grid;
@@ -13,6 +16,23 @@
         >fieldset {
             grid-column: 1/-1;
             grid-row: 1/-1;
+
+            >fieldset {
+                div {
+                    padding-bottom: 1em;
+                }
+
+
+            }
+
+            &.tab-section {
+                display: none;
+
+                &:target {
+                    display: block;
+                }
+
+            }
 
             label {
                 display: flex;
@@ -30,6 +50,113 @@
                 align-items: center;
                 gap: .5em;
             }
+
+            legend {
+                display: none;
+            }
+
+
+            select {
+                width: 100%;
+            }
+
+            &.preferences {
+                label {
+                    flex-direction: column;
+                    justify-content: start;
+                    justify-self: start;
+                    align-items: start;
+                    width: 100%;
+
+                    span {
+                        color: var(--text-dark)
+                    }
+
+                    &.darkmode-layout {
+                        display: grid;
+                        grid-template-columns: 1fr min-content;
+                        grid-template-rows: 1fr 1fr;
+
+                        span {
+                            grid-column: 1/2;
+                            grid-row: 2/-1;
+                        }
+
+                        input {
+                            grid-column: 2/-1;
+                            grid-row: 1/-1;
+                        }
+                    }
+                }
+            }
+
+            &.privacy {
+                label {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: .5em;
+                }
+
+                input:not([type="checkbox"]) {
+                    width: 100%;
+                    padding-block: 1em;
+                }
+
+                .password-field {
+                    width: 100%;
+                    grid-template-columns: 1fr min-content;
+                }
+
+                a {
+                    padding: 0;
+                    font-weight: 800;
+                    color: var(--text-green);
+                }
+
+                fieldset {
+                    margin-block: 2em;
+                }
+
+                .toggle-field {
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+                    grid-template-rows: min-content 1fr;
+
+                    label {
+                        grid-column: 2/-1;
+                        grid-row: 1/2;
+                        margin: 0;
+                    }
+
+                    p {
+                        grid-column: 2/-1;
+                        grid-row: 2/-1;
+                    }
+
+                    input {
+                        grid-column: 1/2;
+                        grid-row: 1/-1;
+                        appearance: none;
+                        cursor: pointer;
+                        margin-bottom: auto;
+
+                        aspect-ratio: 1/1;
+                        width: 2.5em;
+                        place-self: center;
+                        border: 4px solid var(--background-darker);
+                        border-radius: 4px;
+
+                        &:checked {
+                            border-radius: 4px;
+                            background-image: linear-gradient(var(--background-darker));
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 70% 70%;
+                        }
+
+                    }
+                }
+            }
         }
 
         >button {
@@ -41,9 +168,11 @@
         &:not(:has(.tab-section:target)) .account-settings {
             display: block;
         }
+
     }
 
     nav {
+        margin: 0;
         padding-bottom: 1em;
         padding-top: 1em;
 

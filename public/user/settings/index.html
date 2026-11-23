@@ -337,8 +337,10 @@
         </p>
         <p>Current email addresses:</p>
         <p>
-          <a href="emailto:janedoe@email.com">janedoe@email.com</a> & <a
+          <a href="emailto:janedoe@email.com" class="button-plain"
+          >janedoe@email.com</a> & <a
             href="emailto:janedoe@work-email.com"
+            class="button-plain"
           >janedoe@work-email.com</a>
         </p>
         <label>
@@ -474,23 +476,28 @@
       </fieldset>
       <fieldset>
         <legend>Deactivate account</legend>
-        <label>
-          <input type="checkbox" name="account-disable">
-          Temporarily disable your account. Your profile will be hidden and you
-          can reactivate it at any time.
-          <span>
+        <div class="toggle-field">
+          <label for="disable">
+            Temporarily disable your account. Your profile will be hidden and
+            you can reactivate it at any time.
+          </label>
+          <input id="disable" type="checkbox" name="account-disable">
+          <p>
             This it recomender if you are switching roles, institutions or
             taking a break.
-          </span>
-        </label>
-        <label>
-          <input type="checkbox" name="delete-account">
-          Delete account permanently
-          <span>
+          </p>
+        </div>
+
+        <div class="toggle-field">
+          <label for="delete">
+            Delete account permanently
+          </label>
+          <input id="delete" type="checkbox" name="delete-account">
+          <p>
             Permanently delete your account and all associate data. This action
             cannot be undone.
-          </span>
-        </label>
+          </p>
+        </div>
       </fieldset>
     </fieldset>
     <fieldset id="preferences" class="preferences tab-section">
@@ -543,7 +550,7 @@
       </fieldset>
       <fieldset>
         <legend>Other</legend>
-        <label>
+        <label class="darkmode-layout">
           <input type="checkbox" switch class="toggle-pill">
           Appearance
           <span>Light / Dark mode</span>
