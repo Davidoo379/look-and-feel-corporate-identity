@@ -3,10 +3,10 @@
     flex-wrap: nowrap;
     flex-direction: row;
     overflow-x: scroll;
-    gap: 2rem;
+    gap: 2em;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    padding: 1rem;
+    padding: 1em;
 
     >li {
         scroll-snap-align: center;
@@ -15,9 +15,9 @@
         flex-grow: 0;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 55em) {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
-        max-height: 800px;
+        grid-template-columns: repeat(auto-fit, minmax(21.75em, 1fr));
+        max-height: 50em;
     }
 }

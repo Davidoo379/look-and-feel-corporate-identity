@@ -1,9 +1,9 @@
 @import url("https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css");
 
 body {
-    @media (min-width: 900px) {
+    @media (min-width: 55em) {
         display: grid;
-        grid-template-columns: 170px 1fr;
+        grid-template-columns: 10.5em 1fr;
         grid-template-rows: 50vh 50vh;
 
         @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +15,7 @@ body {
                 transition: grid-template-columns .5s;
             }
 
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 18.75em 1fr;
 
             >header {
                 >nav {
@@ -75,11 +75,11 @@ body {
                 margin-right: unset;
                 margin-bottom: auto;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1em;
 
                 svg {
-                    width: 70px;
-                    height: 70px;
+                    width: 4.4em;
+                    height: 4.4em;
                 }
 
                 span {
@@ -130,7 +130,7 @@ body {
             height: 100%;
             z-index: 3;
             outline: unset;
-            padding: 20px;
+            padding: 1.25em;
 
 
             nav {
@@ -154,7 +154,7 @@ body {
 }
 
 main {
-    margin-block: 80px;
+    margin-block: 5em;
 }
 
 
@@ -197,8 +197,8 @@ search {
 
         button {
             flex-grow: 1;
-            width: 44px;
-            height: 44px;
+            width: 2.75em;
+            height: 2.75em;
         }
 
         label {
@@ -206,7 +206,7 @@ search {
 
             input {
                 width: 100%;
-                padding: 0.8rem;
+                padding: 0.8em;
                 background-color: transparent;
 
                 &:focus {
