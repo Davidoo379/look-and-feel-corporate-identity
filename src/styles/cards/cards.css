@@ -24,6 +24,7 @@ article {
         overflow: hidden;
         text-overflow: ellipsis;
         line-clamp: 3;
+        margin: 0;
     }
 
     >a {
@@ -46,9 +47,11 @@ article {
         display: flex;
         gap: 5px;
         bottom: 100%;
-        padding-left: 1.5rem;
+        width: 100%;
+        padding-inline: 1.5rem;
         left: 0;
         color: var(--text-darkest);
+        margin: 0;
 
         li {
             border-radius: 8px 8px 0px 0px;
@@ -72,14 +75,17 @@ article {
         .webinar {
             color: var(--text-lightest);
             background-color: var(--background-pink);
+            margin-left: auto;
         }
 
         .congress {
             background-color: var(--background-dark);
+            margin-left: auto;
         }
 
         .symposium {
             background-color: var(--background-blue);
+            margin-left: auto;
         }
 
         .colleague {
@@ -126,6 +132,7 @@ article {
 
 
     >button {
+        padding: 0em;
         min-width: 30px;
         anchor-name: --button;
     }
