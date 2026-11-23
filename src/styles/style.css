@@ -184,6 +184,10 @@ main {
     pointer-events: none;
 }
 
+section {
+    margin: 0;
+}
+
 search {
     width: 100%;
 

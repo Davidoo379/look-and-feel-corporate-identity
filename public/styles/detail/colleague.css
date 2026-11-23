@@ -57,11 +57,16 @@
 
 
 .tab-section {
-    display: none;
+    display: block;
 
     &:target {
         display: block;
     }
+
+    @media (min-width: 55em) {
+        display: none;
+    }
+
 }
 
 .colleague-tabs {
