@@ -4,14 +4,49 @@ layout: "base.njk"
 
 ---
 <main>
+  <div class="colleague-search-options">
+    {% include "search.njk" %}
+    <button class="button-plain" popovertarget="sort-menu">
+      {% include "svgs/arrow-up-and-down.njk" %}
+    </button>
+    <form popover id="sort-menu" action="http://httpbin.org/post">
+      {% include "sorting/sort.njk" %}
+    </form>
+    <button class="button-plain" id="filter-menu-open">
+      {% include "svgs/abacus.njk" %}
+    </button>
+  </div>
+  <aside class="filters filter-closed" id="filter-menu">
+    <div class="align-horizontal">
+      <button class="button-plain" id="filter-menu-close">
+        {% include "svgs/x.njk" %}
+      </button>
+      {% include "search.njk" %}
+      <button class="button-raised" onclick="alert = 'Implementation missing'">
+        {% include "svgs/backwards-clock.njk" %}
+        History
+      </button>
+    </div>
+    <form id="{{ name }}" action="http://httpbin.org/post">
+      {%- for filter in collections.colleagues -%}
+        {{ filter.templateContent | safe }}
+      {%- endfor -%}
+    </form>
+    <button class="button-raised result" onclick="submitColleaguesFilters()">
+      show results
+    </button>
+  </aside>
   <section class="card-list">
-    <h2>
-      A collection of potential research partners
-    </h2>
-    <p>
-      Browse all active research projects, open questions, internships and
-      collaboration opportunities. Use filters to refine your search.
-    </p>
+    <div class="list-header">
+      <h2>
+        A collection of potential research partners
+      </h2>
+      <p>
+        Browse all active research projects, open questions, internships and
+        collaboration opportunities. Use filters to refine your search.
+      </p>
+    </div>
+
     <h2>367 opportunities</h2>
     <ul>
       {%- for card in collections.opportunity -%}

@@ -63,7 +63,7 @@ article {
         }
 
         .project {
-            color: var(--text-lightest);
+            color: var(--white);
             background-color: var(--background-green);
         }
 
