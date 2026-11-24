@@ -150,6 +150,27 @@
 
 }
 
+.detail-block-image {
+    img {
+        aspect-ratio: 2/1;
+        object-position: 100% 10%;
+        padding: 1em;
+
+    }
+
+    blockquote {
+        display: none;
+    }
+}
+
+.detail-block-quote {
+    img {
+        display: none;
+    }
+
+    blockquote {}
+}
+
 .info-section {
     margin: 1rem;
     padding: 1rem;
@@ -245,4 +266,9 @@
     display: flex;
     justify-content: end;
     height: min-content;
+}
+
+.search-options {
+    position: relative;
+    top: 0;
 }

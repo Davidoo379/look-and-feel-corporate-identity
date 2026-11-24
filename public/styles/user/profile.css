@@ -52,3 +52,38 @@
 
     background-color: var(--background-light);
 }
+
+.network-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    margin-inline: 1em;
+    gap: 1em;
+
+    li a {
+        border-radius: 0;
+        padding: 0;
+    }
+
+    figcaption {
+        display: hidden;
+        line-clamp: 1;
+    }
+}
+
+.my-network {
+    margin-inline: 1em;
+
+    menu {
+        button {
+            height: 3em;
+            display: flex;
+            align-items: center;
+            gap: .5em;
+
+            --background-color: var(--background-pink-light);
+            --background-color-hover: var(--background-pink);
+            --content-color: var(--text-pink);
+            --content-color-hover: var(--text-darkest);
+        }
+    }
+}
