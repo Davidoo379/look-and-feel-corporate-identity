@@ -12,7 +12,9 @@
             grid-row: 1/2;
         }
 
-        .detail-block {
+        .detail-block-image,
+        .detail-block-quote,
+        .detail-block-combo {
             grid-column: 1/2;
             grid-row: 2/4;
         }
@@ -113,27 +115,37 @@
     }
 }
 
-
-
-.detail-block {
+.detail-block-image,
+.detail-block-quote,
+.detail-block-combo {
     display: grid;
-    grid-template-columns: 30% 70%;
     height: min-content;
+
+    img {
+        place-self: center
+    }
+
+    blockquote {
+        place-self: center;
+        margin: 1rem;
+        height: max-content;
+        line-clamp: 5;
+    }
+}
+
+.detail-block-combo {
+    grid-template-columns: 30% 70%;
     gap: 20px;
     padding: 1rem;
 
     img {
         grid-column: 1/2;
         grid-row: 1/2;
-        place-self: center
     }
 
     blockquote {
         grid-column: 2/3;
-        place-self: center;
-        margin: 1rem;
-        height: max-content;
-        line-clamp: 5;
+        grid-row: 1/2;
     }
 
 }

@@ -1,0 +1,9 @@
+<div class="search-options">
+  {% include "search.njk" %}
+  <button class="button-plain" popovertarget="sort-menu">
+    {% include "svgs/arrow-up-and-down.njk" %}
+  </button>
+  <form popover id="sort-menu" action="http://httpbin.org/post">
+    {% include "sorting/sort.njk" %}
+  </form>
+</div>

@@ -66,6 +66,10 @@
     >
     <link
       rel="stylesheet"
+      href="/look-and-feel-corporate-identity/styles/user/profile.css"
+    >
+    <link
+      rel="stylesheet"
       href="https://davidoo379.github.io/look-and-feel-styleguide/styleguide.css"
     >
     <script src="/look-and-feel-corporate-identity/scripts/script.js" defer></script>
@@ -399,7 +403,7 @@
       </p>
     </div>
   </div>
-  <div class="detail-block">
+  <div class="detail-block-combo">
     <img
       class="image-pill-vertical-wide"
       src="/look-and-feel-corporate-identity/assets/images/noor-becker.png"
@@ -490,8 +494,8 @@
       <button class="button-raised">Internships</button>
       <button class="button-raised">Open questions</button>
     </div>
-    <div class="align-right">
-      <search>
+    <div class="search-options">
+  <search>
   <form action="search">
     <label>
       <input
@@ -521,8 +525,8 @@
   </form>
 </search>
 
-      <button class="button-plain" popovertarget="sort-menu">
-        <svg
+  <button class="button-plain" popovertarget="sort-menu">
+    <svg
   width="21"
   height="24"
   viewBox="0 0 21 24"
@@ -538,9 +542,9 @@
   />
 </svg>
 
-      </button>
-      <form popover id="sort-menu" action="http://httpbin.org/post">
-        <p>Sort by:</p>
+  </button>
+  <form popover id="sort-menu" action="http://httpbin.org/post">
+    <p>Sort by:</p>
 <input type="radio" id="relevancy" name="sort-preference">
 <label for="relevancy">Relevancy</label>
 <input type="radio" id="recently-added" name="sort-preference">
@@ -552,8 +556,9 @@
 <input type="radio" id="z-a" name="sort-preference">
 <label for="z-a">Z-A</label>
 
-      </form>
-    </div>
+  </form>
+</div>
+
     <ul class="horizontal-carousel">
       
           <li>

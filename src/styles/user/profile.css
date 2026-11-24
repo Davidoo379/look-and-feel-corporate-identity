@@ -1,0 +1,54 @@
+.profile {
+    margin-top: 6em;
+
+    .sticky-top {
+        position: fixed;
+        top: 5em;
+        padding: 1em;
+        background-color: var(--background-transparent);
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .about-user {
+        margin-top: 9em;
+    }
+
+    .search-options {
+        position: unset;
+    }
+
+    .tab-section {
+        display: none;
+
+        &:target {
+            display: block;
+        }
+    }
+
+    /* MAKE SURE BIO IS VISIBLE WHEN THERE IS NO TARGET  */
+    &:not(:has(.tab-section:target)) .about-user {
+        display: block;
+    }
+}
+
+.profile-tabs {
+    position: fixed;
+    bottom: 5.3em;
+    width: 100%;
+    margin: 0;
+
+    menu {
+        margin-block: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+            padding: 1em;
+        }
+    }
+
+    background-color: var(--background-light);
+}
