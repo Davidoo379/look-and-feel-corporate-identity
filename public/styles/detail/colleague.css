@@ -55,6 +55,11 @@
 
     }
 
+    .search-options {
+        position: relative;
+        top: 0;
+    }
+
 }
 
 
@@ -266,9 +271,4 @@
     display: flex;
     justify-content: end;
     height: min-content;
-}
-
-.search-options {
-    position: relative;
-    top: 0;
 }

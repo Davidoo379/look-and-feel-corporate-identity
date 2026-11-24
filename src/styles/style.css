@@ -189,36 +189,10 @@ section {
 }
 
 search {
-    width: 100%;
 
-    form {
-        display: flex;
-        align-items: center;
-        border-radius: 9999px;
-        padding-inline: .5em;
-        /* background-color: var(--background-dark); */
+    form,
+    label {
         width: 100%;
-
-        button {
-            flex-grow: 1;
-            width: 2.75em;
-            height: 2.75em;
-        }
-
-        label {
-            width: 100%;
-
-            input {
-                width: 100%;
-                padding: 0.8em;
-                background-color: transparent;
-
-                &:focus {
-                    outline: none;
-                }
-            }
-
-        }
     }
 }
 
