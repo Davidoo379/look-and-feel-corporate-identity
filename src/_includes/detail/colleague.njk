@@ -30,7 +30,7 @@
       </p>
     </div>
   </div>
-  <div class="detail-block">
+  <div class="detail-block-combo">
     <img
       class="image-pill-vertical-wide"
       src="{{ image | url}}"
@@ -105,15 +105,7 @@
       <button class="button-raised">Internships</button>
       <button class="button-raised">Open questions</button>
     </div>
-    <div class="align-right">
-      {% include "search.njk" %}
-      <button class="button-plain" popovertarget="sort-menu">
-        {% include "svgs/arrow-up-and-down.njk" %}
-      </button>
-      <form popover id="sort-menu" action="http://httpbin.org/post">
-        {% include "sorting/sort.njk" %}
-      </form>
-    </div>
+    {% include "network-search-options.njk" %}
     <ul class="horizontal-carousel">
       {% set listName = "user-posts" %}
       {%- for card in collections.opportunity -%}
