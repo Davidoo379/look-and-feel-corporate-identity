@@ -361,7 +361,7 @@ colorPreference: "pink"
       {%- endfor -%}
     </ul>
   </section>
-  <section id="my-network" class="tab-section">
+  <section id="my-network" class="my-network tab-section">
     <h3>My network</h3>
     <menu class="align-horizontal">
       <li>
@@ -377,17 +377,19 @@ colorPreference: "pink"
     {% include "network-search-options.njk" %}
     <section>
       <h4>Pending Matches (3)</h4>
-      <ul>
-        {%- for card in collections.opportunity -%}
+      <ul class="network-grid">
+        {%- for card in collections.colleague -%}
           <li>
-            <figure>
-              <img
-                class="image-circle"
-                src="{{ card.data.img | url}}"
-                alt="{{ card.data.name }}"
-              >
-              <figcaption>{{ card.data.name }}</figcaption>
-            </figure>
+            <a class="button-plain" href="{{ card.url | url }}">
+              <figure>
+                <img
+                  class="image-circle"
+                  src="{{ card.data.image | url }}"
+                  alt="{{ card.data.name }}"
+                >
+                <figcaption>{{ card.data.name }}</figcaption>
+              </figure>
+            </a>
           </li>
         {%- endfor -%}
       </ul>
