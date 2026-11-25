@@ -1,12 +1,14 @@
-<article class="opportunity">
-  <a href="{{ card.url | url }}">Open Card</a>
+<article class="card-layout-opportunity">
+  <a class="card-link" href="{{ card.url | url }}">Open Card</a>
   <cite>
     <span>{{ card.data.name }}</span>
     <span class="role">{{ card.data.role }}</span>
   </cite>
   {% include "cards/card-buttons.njk" %}
   <h3>{{ card.data.title }}</h3>
-  <p>Publish date: {{ card.data.publishDate | dayDate }}</p>
+  <p class="publish-date">
+    Publish date: {{ card.data.publishDate | dayDate }}
+  </p>
   <ul class="mesh-terms">
     <li>{{ card.data.meshTerms[0] }}</li>
     {% if card.data.meshTerms | length > 1 %}
