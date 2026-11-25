@@ -176,37 +176,21 @@
     blockquote {}
 }
 
-.info-section {
-    margin: 1rem;
-    padding: 1rem;
-    background-color: var(--background-light);
-    border-radius: 16px;
+.colleague-ids {
+    display: flex;
+    background-color: var(--background-medium);
+    border-radius: 8px;
+    padding: .8em;
+    width: min-content;
+    gap: .5em;
 
-    dt {
-        font-size: 1.2em;
-        font-weight: 600;
+    >a {
+        --background-color: transparent;
+        --background-color-hover: transparent;
     }
 
-    dd {
-        color: var(--text-medium);
-        padding-bottom: 1em;
-    }
-
-    .colleague-ids {
-        display: flex;
-        background-color: var(--background-medium);
-        border-radius: 8px;
-        padding: .8em;
-        width: min-content;
-        gap: .5em;
-
-        >a {
-            --background-color: transparent;
-            --background-color-hover: transparent;
-        }
-
-    }
 }
+
 
 
 .align-horizontal {

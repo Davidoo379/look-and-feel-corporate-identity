@@ -236,16 +236,17 @@
   <form action="http://httpbin.org/post">
     <fieldset id="account-settings" class="account-settings tab-section">
       <legend>Account settings</legend>
-      <label>
-        Location sharing
-        <input type="checkbox" switch class="toggle-pill">
-      </label>
-      <p>
-        Allow location access to show nearby events, announce attandece during
-        event and relevant connections.
-      </p>
-      <p class="warning">
-        <svg
+      <div class="toggle-layout">
+        <label>
+          Location sharing
+          <input type="checkbox" switch class="toggle-pill">
+        </label>
+        <p>
+          Allow location access to show nearby events, announce attandece during
+          event and relevant connections.
+        </p>
+        <p class="warning">
+          <svg
   width="17"
   height="17"
   viewBox="0 0 17 17"
@@ -261,18 +262,20 @@
   />
 </svg>
 
-        <span>Location is only used while the app is active.</span>
-      </p>
-      <label>
-        Personalised suggestions
-        <input type="checkbox" switch class="toggle-pill">
-      </label>
-      <p>
-        AAllow us to use activity (such as searches, saved items and
-        interactions) to suggest relevant people and content.
-      </p>
-      <p class="warning">
-        <svg
+          <span>Location is only used while the app is active.</span>
+        </p>
+      </div>
+      <div class="toggle-layout">
+        <label>
+          Personalised suggestions
+          <input type="checkbox" switch class="toggle-pill">
+        </label>
+        <p>
+          AAllow us to use activity (such as searches, saved items and
+          interactions) to suggest relevant people and content.
+        </p>
+        <p class="warning">
+          <svg
   width="17"
   height="17"
   viewBox="0 0 17 17"
@@ -288,18 +291,20 @@
   />
 </svg>
 
-        <span>Individual activity is always private</span>
-      </p>
-      <label>
-        Activity visibility
-        <input type="checkbox" switch class="toggle-pill">
-      </label>
-      <p>
-        Allow other to see when you engage with content on the platform, such as
-        attending events or interaction with projects.
-      </p>
-      <p class="warning">
-        <svg
+          <span>Individual activity is always private</span>
+        </p>
+      </div>
+      <div class="toggle-layout">
+        <label>
+          Activity visibility
+          <input type="checkbox" switch class="toggle-pill">
+        </label>
+        <p>
+          Allow other to see when you engage with content on the platform, such
+          as attending events or interaction with projects.
+        </p>
+        <p class="warning">
+          <svg
   width="17"
   height="17"
   viewBox="0 0 17 17"
@@ -315,8 +320,9 @@
   />
 </svg>
 
-        <span>You stay in control of what others can see.</span>
-      </p>
+          <span>You stay in control of what others can see.</span>
+        </p>
+      </div>
     </fieldset>
     <fieldset id="privacy" class="privacy tab-section">
       <legend>Privacy</legend>
@@ -552,7 +558,7 @@
       </fieldset>
       <fieldset>
         <legend>Other</legend>
-        <label class="darkmode-layout">
+        <label class="toggle-layout-compact">
           <input type="checkbox" switch class="toggle-pill">
           Appearance
           <span>Light / Dark mode</span>
