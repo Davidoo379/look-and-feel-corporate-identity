@@ -21,7 +21,7 @@ section {
             align-items: center;
 
             search {
-                max-width: 250px;
+                max-width: 20em;
             }
 
             @media (min-width: 900px) {
