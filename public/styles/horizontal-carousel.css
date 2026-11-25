@@ -3,6 +3,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     overflow-x: scroll;
+    overflow-y: hidden;
     gap: 2em;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -10,14 +11,21 @@
 
     >li {
         scroll-snap-align: center;
-        flex-basis: 100%;
-        flex-shrink: 1;
-        flex-grow: 0;
+        flex-shrink: 0;
+        min-width: 23em;
+        margin-bottom: 2em;
+
+
+        article {
+            height: 21em;
+        }
     }
 
     @media (min-width: 55em) {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(21.75em, 1fr));
-        max-height: 50em;
+        grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+        grid-template-rows: min-content;
+        row-gap: 1rem;
+        margin-bottom: 2rem;
     }
 }
