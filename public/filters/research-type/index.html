@@ -1,28 +1,37 @@
 <fieldset class="filter-fieldset" id="research-type">
   <legend class="hidden">Research type</legend>
   <details open>
-    <summary>Research type</summary><label>
+    <summary>Research type</summary><div class="horizontal-checkbox-layout">
+        <label for="clinical">
+          Clinical
+        </label>
         <input
           type="checkbox"
           name="research-type"
+          id="clinical"
           class="rounded-checkbox"
         >
-        Clinical
-      </label><label>
+      </div><div class="horizontal-checkbox-layout">
+        <label for="fundamental">
+          Fundamental
+        </label>
         <input
           type="checkbox"
           name="research-type"
+          id="fundamental"
           class="rounded-checkbox"
         >
-        Fundamental
-      </label><label>
+      </div><div class="horizontal-checkbox-layout">
+        <label for="medical">
+          Medical
+        </label>
         <input
           type="checkbox"
           name="research-type"
+          id="medical"
           class="rounded-checkbox"
         >
-        Medical
-      </label><button
+      </div><button
       id="clear-fieldset-button"
       type="button"
       class="button-underline"

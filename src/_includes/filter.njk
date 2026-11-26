@@ -4,14 +4,17 @@
     <summary>{{ title }}</summary>
 
     {%- for option in options -%}
-      <label>
+      <div class="horizontal-checkbox-layout">
+        <label for="{{ option | kabab}}">
+          {{ option }}
+        </label>
         <input
           type="checkbox"
           name="{{ name }}"
+          id="{{ option | kabab}}"
           class="rounded-checkbox"
         >
-        {{ option }}
-      </label>
+      </div>
     {%- endfor -%}
 
     <button
