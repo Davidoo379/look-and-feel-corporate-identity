@@ -1,8 +1,8 @@
 aside {
     background-color: var(--background-light);
     position: fixed;
-    bottom: 0px;
-    height: 86px;
+    bottom: 0em;
+    height: 5em;
     width: 100%;
     z-index: 2;
     overscroll-behavior: contain;
@@ -12,15 +12,15 @@ aside {
         justify-content: center;
         align-items: center;
         height: 100%;
-        gap: 0px;
+        gap: 0em;
 
 
         a,
         button {
             display: flex;
             flex-direction: column-reverse;
-            padding: 8px;
-            border-radius: 5px;
+            padding: .5em;
+            border-radius: .3em;
             --background-color: transparent;
             display: flex;
             align-items: center;
@@ -30,19 +30,19 @@ aside {
             svg {
                 flex-grow: 1;
                 min-width: max-content;
-                height: 24px;
+                height: 1.5em;
             }
 
             span {
                 /* display: none; */
-                font-size: 20px;
+                font-size: 1.3em;
             }
         }
 
         button {
             display: none;
 
-            @media (min-width: 900px) {
+            @media (min-width: 55em) {
                 display: flex;
             }
 

@@ -17,7 +17,7 @@ article {
             }
 
             svg {
-                min-width: 24px;
+                min-width: 1.5em;
             }
         }
     }

@@ -24,7 +24,7 @@ section {
                 max-width: 20em;
             }
 
-            @media (min-width: 900px) {
+            @media (min-width: 55em) {
                 justify-content: end;
                 gap: 1em;
             }
@@ -41,7 +41,7 @@ section {
         gap: 0.5rem;
         color: var(--text-light);
 
-        @media (min-width: 900px) {
+        @media (min-width: 55em) {
             display: none;
         }
     }

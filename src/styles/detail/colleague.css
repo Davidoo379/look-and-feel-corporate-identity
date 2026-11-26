@@ -1,5 +1,5 @@
 .colleague-detail {
-    @media (min-width: 900px) {
+    @media (min-width: 55em) {
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 10% min-content max-content 1fr;
@@ -24,13 +24,13 @@
             grid-row: 4/5;
             margin: 0;
             padding: 3em;
-            border-radius: 16px 0px 0px 16px;
+            border-radius: 1em 0em 0em 1em;
         }
 
         .posts,
         .biography {
             background-color: var(--background-light);
-            border-radius: 0px 0px 16px 0px;
+            border-radius: 0em 0em 1em 0em;
             grid-column: 2/-1;
             grid-row: 3/5;
         }
@@ -48,7 +48,7 @@
         &:has(#biography:target) a[href="#biography"],
         &:has(#posts:target) a[href="#posts"] {
             &::before {
-                height: 6px;
+                height: .3em;
                 background: var(--text-dark);
             }
         }
@@ -79,7 +79,7 @@
 .colleague-tabs {
     display: none;
     background-color: var(--background-light);
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 1em 1em 0em 0em;
     padding-inline: 3em;
 
     menu {
@@ -104,7 +104,7 @@
     h2 {
         font-size: 1.6rem;
 
-        @media (min-width: 900px) {
+        @media (min-width: 55em) {
             font-size: 1.8rem;
             letter-spacing: 10%;
         }
@@ -113,8 +113,8 @@
     .mutual-button {
         color: var(--text-lightest);
         --background-color: var(--background-pink);
-        width: 44px;
-        height: 44px;
+        width: 3em;
+        height: 3em;
         grid-column: 3/4;
         grid-row: 1/2;
     }
@@ -140,7 +140,7 @@
 
 .detail-block-combo {
     grid-template-columns: 30% 70%;
-    gap: 20px;
+    gap: 1.25em;
     padding: 1rem;
 
     img {
@@ -157,10 +157,9 @@
 
 .detail-block-image {
     img {
-        aspect-ratio: 2/1;
-        object-position: 100% 10%;
+        aspect-ratio: 1/1;
+        object-position: 100% 20%;
         padding: 1em;
-
     }
 
     blockquote {
@@ -173,15 +172,16 @@
         display: none;
     }
 
-    blockquote {}
 }
 
 .colleague-ids {
     display: flex;
     background-color: var(--background-medium);
-    border-radius: 8px;
+    border-radius: .5em;
     padding: .8em;
-    width: min-content;
+    min-width: min-content;
+    max-width: max-content;
+    flex-wrap: wrap;
     gap: .5em;
 
     >a {
@@ -245,8 +245,8 @@
             --background-color-hover: transparent;
             --content-color-hover: var(--content-color);
             aspect-ratio: 1/1;
-            width: 44px;
-            height: 44px;
+            width: 3em;
+            height: 3em;
         }
     }
 }
