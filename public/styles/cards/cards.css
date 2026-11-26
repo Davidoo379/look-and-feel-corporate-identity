@@ -1,4 +1,7 @@
 article {
+    h3 {
+        max-width: 20em;
+    }
 
     .institute,
     .subSpecialism {

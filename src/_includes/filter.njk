@@ -2,18 +2,18 @@
   <legend class="hidden">{{ title }}</legend>
   <details open>
     <summary>{{ title }}</summary>
-    <div>
-      {%- for option in options -%}
-        <label>
-          <input
-            type="checkbox"
-            name="{{ name }}"
-            class="rounded-checkbox"
-          >
-          {{ option }}
-        </label>
-      {%- endfor -%}
-    </div>
+
+    {%- for option in options -%}
+      <label>
+        <input
+          type="checkbox"
+          name="{{ name }}"
+          class="rounded-checkbox"
+        >
+        {{ option }}
+      </label>
+    {%- endfor -%}
+
     <button
       id="clear-fieldset-button"
       type="button"

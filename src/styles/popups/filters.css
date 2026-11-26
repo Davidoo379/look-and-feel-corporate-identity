@@ -36,7 +36,7 @@
         height: max-content;
         white-space: nowrap;
         overflow: hidden;
-
+        gap: .5em;
     }
 
     summary {
@@ -48,7 +48,7 @@
         height: 1.5em;
     }
 
-    details div {
+    details::details-content {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(auto-fit, 1fr);
@@ -57,8 +57,9 @@
         gap: .5em;
     }
 
-    details>.button-plain {
-        --content-color: var(--text-blue)
+    details>.button-underline {
+        --content-color: var(--text-blue);
+        text-align: end;
     }
 
     .button-raised {
